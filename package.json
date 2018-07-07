@@ -1,0 +1,27 @@
+{
+  "name": "ds.js",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "description": "An inmutable implementation of Data Structures",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": [
+    "Data",
+    "Structures",
+    "Javascript",
+    "Inmutable",
+    "dependecies",
+    "free",
+    "data"
+  ],
+  "author": "Jose Roberto Quevedo",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}

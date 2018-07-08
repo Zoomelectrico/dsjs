@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">Home | ds.js</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="An inmutable implementation of Data Structures"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="ds.js"><meta property="twitter:description" content="An inmutable implementation of Data Structures"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ArrayList.js~ArrayList.html">ArrayList</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#errors">errors</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-error">error</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#helper">helper</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isArray">isArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isFunction">isFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isNotArray">isNotArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isNotFunction">isNotFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isNotNull">isNotNull</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isNotUndefined">isNotUndefined</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isNull">isNull</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isUndefined">isUndefined</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="ds-js">DS-JS</h1><p>This is an implementation of the most common data structure in JavaScript (ES 2015). The interest thing is the DS are immutable elements so whenever you apply a operation to an DS object you will get a new instance of the element.</p>
+<p>Es una breve implementaci&#xF3;n de las estructuras de datos m&#xE1;s comunes en JavaScript (ES 2015).
+Lo interesante de esta libreria es que es una implementaci&#xF3;n inmutable es decir todos las operaciones realizadas devuelven una nueva instancia de la estructura de datos utilizada</p>
+<p>To install you must execute the following command</p>
+<p>Para instalarla solo deberas ejecutar el siguiente comando:</p>
+<pre><code class="lang-shell"><code class="source-code prettyprint">  $ npm install --save ds-js</code>
+</code></pre>
+<p>Once installed the only thing you need to do is require in your file and start playing</p>
+<p>Una vez instala la Librer&#xED;a solo necesitas hacer lo siguiente para tenerla disponible en tu programas:</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">const DS = require(&apos;ds-js&apos;);
+
+// For example you want to use an ArrayList
+// Por ejemplo quieres usar una Lista
+const LinkedList = DS.ArrayLsit;
+
+// We create an instance of the list and ready
+// Creamos una instancia de la lista y listo podemos empezar a aplicar m&#xE9;todos
+let l = new LinkedList();
+
+let list = l.addFirst(1);</code>
+</code></pre>
+<hr>
+<h3 id="project-status--estructuras-de-datos-implementadas">Project Status- Estructuras de Datos Implementadas</h3><ul>
+<li>[x] Listas</li>
+<li>[x] Array List</li>
+<li>[ ] Pila</li>
+<li>[ ] Cola</li>
+<li>[ ] &#xC1;rbol Binario de Busqueda</li>
+<li>[ ] Hash Map</li>
+</ul>
+<h3 id="docs---documentaci&#xF3;n">Docs - Documentaci&#xF3;n</h3><p>To chechk the docs follow this <a href="">link</a></p>
+<p>Para revisar la documentaci&#xF3;n deber&#xE1;s ir al siguiente enlace <a href="">haz click aqu&#xED;</a></p>
+<h4 id="contributors---colaboradores">Contributors - Colaboradores</h4><ul>
+<li>Jos&#xE9; Roberto Quevedo <a href="https://github.com/zoomelectrico">(@zoomelectrico)</a></li>
+</ul>
+<h3 id="license---licensia">License - Licensia</h3><p>MIT</p>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

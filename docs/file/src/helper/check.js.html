@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/helper/check.js | ds.js</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="An inmutable implementation of Data Structures"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="ds.js"><meta property="twitter:description" content="An inmutable implementation of Data Structures"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ArrayList.js~ArrayList.html">ArrayList</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#errors">errors</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-error">error</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#helper">helper</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isArray">isArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isFunction">isFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isNotArray">isNotArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isNotFunction">isNotFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isNotNull">isNotNull</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isNotUndefined">isNotUndefined</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isNull">isNull</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isUndefined">isUndefined</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/helper/check.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * @function isNotNull
+ * This is a helpers function that check if an element isn&apos;t null
+ * @param {any} data the element to check
+ * @return true if the element isn&apos;t null or false otherwise
+ * @access public
+ * @since 0.1.0
+ */
+export function isNotNull(data) {
+    return data !== null;
+}
+
+/**
+ * @function isNotUndefined
+ * This is a helpers function that check if an element isn&apos;t undefined
+ * @param {any} data the element to check
+ * @return true if the element isn&apos;t undefined or false otherwise
+ * @access public
+ * @since 0.1.0
+ */
+export function isNotUndefined(data) {
+    return typeof data !== &quot;undefined&quot;;
+}
+
+/**
+ * @function isNull
+ * This is a helpers function that check if an element is null
+ * @param {any} data the element to check
+ * @return true if the element is null or false otherwise
+ * @access public
+ * @since 0.1.0
+ */
+export function isNull(data) {
+    return data === null;
+}
+
+/**
+ * @function isUndefined
+ * This is a helpers function that check if an element is undefined
+ * @param {any} data the element to check
+ * @return true if the element is undefined or false otherwise
+ * @access public
+ * @since 0.1.0
+ */
+export function isUndefined(data) {
+    return typeof data === &quot;undefined&quot;;
+}
+
+/**
+ * @function isFunction
+ * This is a helpers function that check if an element is a function
+ * @param {any} func the element to check
+ * @return true if the element is function or false otherwise
+ * @access public
+ * @since 0.1.0
+ */
+export function isFunction(func) {
+    return typeof func === &quot;function&quot;;
+}
+
+/**
+ * @function isNotFunction
+ * This is a helpers function that check if an element isn&apos;t function
+ * @param {any} func the element to check
+ * @return true if the element isn&apos;t function or false otherwise
+ * @access public
+ * @since 0.1.0
+ */
+export function isNotFunction(func) {
+    return typeof func !== &quot;function&quot;;
+}
+
+/**
+ * @function isArray
+ * This is a helpers function that check if an element is an Array
+ * @param {any} collection the element to check
+ * @return true if the element is an Array or false otherwise
+ * @access public
+ * @since 0.1.0
+ */
+export function isArray(collection) {
+    return collection instanceof Array;
+}
+
+/**
+ * @function isNotArray
+ * This is a helpers function that check if an element is&apos;t an Array
+ * @param {any} collection the element to check
+ * @return true if the element is&apos;t an Array or false otherwise
+ * @access public
+ * @since 0.1.0
+ */
+export function isNotArray(collection) {
+    return !(collection instanceof Array);
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

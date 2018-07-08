@@ -1,13 +1,17 @@
 # DS-JS
 This is an implementation of the most common data structure in JavaScript (ES 2015). The interest thing is the DS are immutable elements so whenever you apply a operation to an DS object you will get a new instance of the element.
+
 Es una breve implementación de las estructuras de datos más comunes en JavaScript (ES 2015).
 Lo interesante de esta libreria es que es una implementación inmutable es decir todos las operaciones realizadas devuelven una nueva instancia de la estructura de datos utilizada
+
 To install you must execute the following command
+
 Para instalarla solo deberas ejecutar el siguiente comando:
 ```shell
   $ npm install --save ds-js
 ```
 Once installed the only thing you need to do is require in your file and start playing
+
 Una vez instala la Librería solo necesitas hacer lo siguiente para tenerla disponible en tu programas:
 ```javascript
 const DS = require('ds-js');
@@ -31,10 +35,11 @@ let list = l.addFirst(1);
 * [ ] Cola
 * [ ] Árbol Binario de Busqueda
 * [ ] Hash Map
-* [ ] Lista Circular
 
 ### Docs - Documentación
-Para revisar la documentación deberás ir al siguiente enlace [haz click aquí](https://docs-ds-ts.firebaseapp.com/)
+To chechk the docs follow this [link]()
+
+Para revisar la documentación deberás ir al siguiente enlace [haz click aquí]()
 
 #### Contributors - Colaboradores
 

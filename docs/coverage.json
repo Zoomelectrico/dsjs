@@ -1,0 +1,26 @@
+{
+  "coverage": "92.59%",
+  "expectCount": 27,
+  "actualCount": 25,
+  "files": {
+    "src/ArrayList.js": {
+      "expectCount": 18,
+      "actualCount": 17,
+      "undocumentLines": [
+        18
+      ]
+    },
+    "src/errors/errors.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "src/helper/check.js": {
+      "expectCount": 8,
+      "actualCount": 8,
+      "undocumentLines": []
+    }
+  }
+}

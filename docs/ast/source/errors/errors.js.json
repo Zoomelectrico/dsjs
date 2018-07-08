@@ -1,0 +1,5219 @@
+{
+  "type": "File",
+  "start": 0,
+  "end": 1421,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 16,
+      "column": 21
+    }
+  },
+  "program": {
+    "type": "Program",
+    "start": 0,
+    "end": 1421,
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 0
+      },
+      "end": {
+        "line": 16,
+        "column": 21
+      }
+    },
+    "sourceType": "module",
+    "body": [
+      {
+        "type": "Identifier",
+        "start": 0,
+        "end": 1398,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 14,
+            "column": 2
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 6,
+            "end": 1397,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 6
+              },
+              "end": {
+                "line": 14,
+                "column": 1
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 6,
+              "end": 11,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 6
+                },
+                "end": {
+                  "line": 1,
+                  "column": 11
+                },
+                "identifierName": "error"
+              },
+              "name": "error"
+            },
+            "init": {
+              "type": "ObjectExpression",
+              "start": 14,
+              "end": 1397,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 14
+                },
+                "end": {
+                  "line": 14,
+                  "column": 1
+                }
+              },
+              "properties": [
+                {
+                  "type": "ObjectProperty",
+                  "start": 20,
+                  "end": 124,
+                  "loc": {
+                    "start": {
+                      "line": 2,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 108
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "StringLiteral",
+                    "start": 20,
+                    "end": 25,
+                    "loc": {
+                      "start": {
+                        "line": 2,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 2,
+                        "column": 9
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "001",
+                      "raw": "\"001\""
+                    },
+                    "value": "001"
+                  },
+                  "value": {
+                    "type": "NewExpression",
+                    "start": 28,
+                    "end": 124,
+                    "loc": {
+                      "start": {
+                        "line": 2,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 2,
+                        "column": 108
+                      }
+                    },
+                    "callee": {
+                      "type": "Identifier",
+                      "start": 32,
+                      "end": 37,
+                      "loc": {
+                        "start": {
+                          "line": 2,
+                          "column": 16
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 21
+                        },
+                        "identifierName": "Error"
+                      },
+                      "name": "Error"
+                    },
+                    "arguments": [
+                      {
+                        "type": "StringLiteral",
+                        "start": 38,
+                        "end": 123,
+                        "loc": {
+                          "start": {
+                            "line": 2,
+                            "column": 22
+                          },
+                          "end": {
+                            "line": 2,
+                            "column": 107
+                          }
+                        },
+                        "extra": {
+                          "rawValue": "OMG, You have broken the library.\nError Code: 001\nCheck the docs for more details",
+                          "raw": "\"OMG, You have broken the library.\\nError Code: 001\\nCheck the docs for more details\""
+                        },
+                        "value": "OMG, You have broken the library.\nError Code: 001\nCheck the docs for more details"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "ObjectProperty",
+                  "start": 130,
+                  "end": 234,
+                  "loc": {
+                    "start": {
+                      "line": 3,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 108
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "StringLiteral",
+                    "start": 130,
+                    "end": 135,
+                    "loc": {
+                      "start": {
+                        "line": 3,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 3,
+                        "column": 9
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "100",
+                      "raw": "\"100\""
+                    },
+                    "value": "100"
+                  },
+                  "value": {
+                    "type": "NewExpression",
+                    "start": 138,
+                    "end": 234,
+                    "loc": {
+                      "start": {
+                        "line": 3,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 3,
+                        "column": 108
+                      }
+                    },
+                    "callee": {
+                      "type": "Identifier",
+                      "start": 142,
+                      "end": 147,
+                      "loc": {
+                        "start": {
+                          "line": 3,
+                          "column": 16
+                        },
+                        "end": {
+                          "line": 3,
+                          "column": 21
+                        },
+                        "identifierName": "Error"
+                      },
+                      "name": "Error"
+                    },
+                    "arguments": [
+                      {
+                        "type": "StringLiteral",
+                        "start": 148,
+                        "end": 233,
+                        "loc": {
+                          "start": {
+                            "line": 3,
+                            "column": 22
+                          },
+                          "end": {
+                            "line": 3,
+                            "column": 107
+                          }
+                        },
+                        "extra": {
+                          "rawValue": "The Data parameter can't be null.\nError Code: 100\nCheck the docs for more details",
+                          "raw": "\"The Data parameter can't be null.\\nError Code: 100\\nCheck the docs for more details\""
+                        },
+                        "value": "The Data parameter can't be null.\nError Code: 100\nCheck the docs for more details"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "ObjectProperty",
+                  "start": 240,
+                  "end": 349,
+                  "loc": {
+                    "start": {
+                      "line": 4,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 113
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "StringLiteral",
+                    "start": 240,
+                    "end": 245,
+                    "loc": {
+                      "start": {
+                        "line": 4,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 4,
+                        "column": 9
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "101",
+                      "raw": "\"101\""
+                    },
+                    "value": "101"
+                  },
+                  "value": {
+                    "type": "NewExpression",
+                    "start": 248,
+                    "end": 349,
+                    "loc": {
+                      "start": {
+                        "line": 4,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 4,
+                        "column": 113
+                      }
+                    },
+                    "callee": {
+                      "type": "Identifier",
+                      "start": 252,
+                      "end": 257,
+                      "loc": {
+                        "start": {
+                          "line": 4,
+                          "column": 16
+                        },
+                        "end": {
+                          "line": 4,
+                          "column": 21
+                        },
+                        "identifierName": "Error"
+                      },
+                      "name": "Error"
+                    },
+                    "arguments": [
+                      {
+                        "type": "StringLiteral",
+                        "start": 258,
+                        "end": 348,
+                        "loc": {
+                          "start": {
+                            "line": 4,
+                            "column": 22
+                          },
+                          "end": {
+                            "line": 4,
+                            "column": 112
+                          }
+                        },
+                        "extra": {
+                          "rawValue": "The Data parameter can't be undefined.\nError Code: 101\nCheck the docs for more details",
+                          "raw": "\"The Data parameter can't be undefined.\\nError Code: 101\\nCheck the docs for more details\""
+                        },
+                        "value": "The Data parameter can't be undefined.\nError Code: 101\nCheck the docs for more details"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "ObjectProperty",
+                  "start": 355,
+                  "end": 465,
+                  "loc": {
+                    "start": {
+                      "line": 5,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 5,
+                      "column": 114
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "StringLiteral",
+                    "start": 355,
+                    "end": 360,
+                    "loc": {
+                      "start": {
+                        "line": 5,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 5,
+                        "column": 9
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "102",
+                      "raw": "\"102\""
+                    },
+                    "value": "102"
+                  },
+                  "value": {
+                    "type": "NewExpression",
+                    "start": 363,
+                    "end": 465,
+                    "loc": {
+                      "start": {
+                        "line": 5,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 5,
+                        "column": 114
+                      }
+                    },
+                    "callee": {
+                      "type": "Identifier",
+                      "start": 367,
+                      "end": 372,
+                      "loc": {
+                        "start": {
+                          "line": 5,
+                          "column": 16
+                        },
+                        "end": {
+                          "line": 5,
+                          "column": 21
+                        },
+                        "identifierName": "Error"
+                      },
+                      "name": "Error"
+                    },
+                    "arguments": [
+                      {
+                        "type": "StringLiteral",
+                        "start": 373,
+                        "end": 464,
+                        "loc": {
+                          "start": {
+                            "line": 5,
+                            "column": 22
+                          },
+                          "end": {
+                            "line": 5,
+                            "column": 113
+                          }
+                        },
+                        "extra": {
+                          "rawValue": "The Collection parameter can't be null.\nError Code: 102\nCheck the docs for more details",
+                          "raw": "\"The Collection parameter can't be null.\\nError Code: 102\\nCheck the docs for more details\""
+                        },
+                        "value": "The Collection parameter can't be null.\nError Code: 102\nCheck the docs for more details"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "ObjectProperty",
+                  "start": 471,
+                  "end": 586,
+                  "loc": {
+                    "start": {
+                      "line": 6,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 6,
+                      "column": 119
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "StringLiteral",
+                    "start": 471,
+                    "end": 476,
+                    "loc": {
+                      "start": {
+                        "line": 6,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 6,
+                        "column": 9
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "103",
+                      "raw": "\"103\""
+                    },
+                    "value": "103"
+                  },
+                  "value": {
+                    "type": "NewExpression",
+                    "start": 479,
+                    "end": 586,
+                    "loc": {
+                      "start": {
+                        "line": 6,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 6,
+                        "column": 119
+                      }
+                    },
+                    "callee": {
+                      "type": "Identifier",
+                      "start": 483,
+                      "end": 488,
+                      "loc": {
+                        "start": {
+                          "line": 6,
+                          "column": 16
+                        },
+                        "end": {
+                          "line": 6,
+                          "column": 21
+                        },
+                        "identifierName": "Error"
+                      },
+                      "name": "Error"
+                    },
+                    "arguments": [
+                      {
+                        "type": "StringLiteral",
+                        "start": 489,
+                        "end": 585,
+                        "loc": {
+                          "start": {
+                            "line": 6,
+                            "column": 22
+                          },
+                          "end": {
+                            "line": 6,
+                            "column": 118
+                          }
+                        },
+                        "extra": {
+                          "rawValue": "The Collection parameter can't be undefined.\nError Code: 103\nCheck the docs for more details",
+                          "raw": "\"The Collection parameter can't be undefined.\\nError Code: 103\\nCheck the docs for more details\""
+                        },
+                        "value": "The Collection parameter can't be undefined.\nError Code: 103\nCheck the docs for more details"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "ObjectProperty",
+                  "start": 592,
+                  "end": 705,
+                  "loc": {
+                    "start": {
+                      "line": 7,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 7,
+                      "column": 117
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "StringLiteral",
+                    "start": 592,
+                    "end": 597,
+                    "loc": {
+                      "start": {
+                        "line": 7,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 9
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "104",
+                      "raw": "\"104\""
+                    },
+                    "value": "104"
+                  },
+                  "value": {
+                    "type": "NewExpression",
+                    "start": 600,
+                    "end": 705,
+                    "loc": {
+                      "start": {
+                        "line": 7,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 117
+                      }
+                    },
+                    "callee": {
+                      "type": "Identifier",
+                      "start": 604,
+                      "end": 609,
+                      "loc": {
+                        "start": {
+                          "line": 7,
+                          "column": 16
+                        },
+                        "end": {
+                          "line": 7,
+                          "column": 21
+                        },
+                        "identifierName": "Error"
+                      },
+                      "name": "Error"
+                    },
+                    "arguments": [
+                      {
+                        "type": "StringLiteral",
+                        "start": 610,
+                        "end": 704,
+                        "loc": {
+                          "start": {
+                            "line": 7,
+                            "column": 22
+                          },
+                          "end": {
+                            "line": 7,
+                            "column": 116
+                          }
+                        },
+                        "extra": {
+                          "rawValue": "The Collection parameter must be an Array.\nError Code: 104\nCheck the docs for more details",
+                          "raw": "\"The Collection parameter must be an Array.\\nError Code: 104\\nCheck the docs for more details\""
+                        },
+                        "value": "The Collection parameter must be an Array.\nError Code: 104\nCheck the docs for more details"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "ObjectProperty",
+                  "start": 711,
+                  "end": 816,
+                  "loc": {
+                    "start": {
+                      "line": 8,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 8,
+                      "column": 109
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "StringLiteral",
+                    "start": 711,
+                    "end": 716,
+                    "loc": {
+                      "start": {
+                        "line": 8,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 9
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "110",
+                      "raw": "\"110\""
+                    },
+                    "value": "110"
+                  },
+                  "value": {
+                    "type": "NewExpression",
+                    "start": 719,
+                    "end": 816,
+                    "loc": {
+                      "start": {
+                        "line": 8,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 109
+                      }
+                    },
+                    "callee": {
+                      "type": "Identifier",
+                      "start": 723,
+                      "end": 728,
+                      "loc": {
+                        "start": {
+                          "line": 8,
+                          "column": 16
+                        },
+                        "end": {
+                          "line": 8,
+                          "column": 21
+                        },
+                        "identifierName": "Error"
+                      },
+                      "name": "Error"
+                    },
+                    "arguments": [
+                      {
+                        "type": "StringLiteral",
+                        "start": 729,
+                        "end": 815,
+                        "loc": {
+                          "start": {
+                            "line": 8,
+                            "column": 22
+                          },
+                          "end": {
+                            "line": 8,
+                            "column": 108
+                          }
+                        },
+                        "extra": {
+                          "rawValue": "The index parameter can't be null.\nError Code: 110\nCheck the docs for more details",
+                          "raw": "\"The index parameter can't be null.\\nError Code: 110\\nCheck the docs for more details\""
+                        },
+                        "value": "The index parameter can't be null.\nError Code: 110\nCheck the docs for more details"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "ObjectProperty",
+                  "start": 822,
+                  "end": 932,
+                  "loc": {
+                    "start": {
+                      "line": 9,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 9,
+                      "column": 114
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "StringLiteral",
+                    "start": 822,
+                    "end": 827,
+                    "loc": {
+                      "start": {
+                        "line": 9,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 9
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "111",
+                      "raw": "\"111\""
+                    },
+                    "value": "111"
+                  },
+                  "value": {
+                    "type": "NewExpression",
+                    "start": 830,
+                    "end": 932,
+                    "loc": {
+                      "start": {
+                        "line": 9,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 114
+                      }
+                    },
+                    "callee": {
+                      "type": "Identifier",
+                      "start": 834,
+                      "end": 839,
+                      "loc": {
+                        "start": {
+                          "line": 9,
+                          "column": 16
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 21
+                        },
+                        "identifierName": "Error"
+                      },
+                      "name": "Error"
+                    },
+                    "arguments": [
+                      {
+                        "type": "StringLiteral",
+                        "start": 840,
+                        "end": 931,
+                        "loc": {
+                          "start": {
+                            "line": 9,
+                            "column": 22
+                          },
+                          "end": {
+                            "line": 9,
+                            "column": 113
+                          }
+                        },
+                        "extra": {
+                          "rawValue": "The index parameter can't be undefined.\nError Code: 111\nCheck the docs for more details",
+                          "raw": "\"The index parameter can't be undefined.\\nError Code: 111\\nCheck the docs for more details\""
+                        },
+                        "value": "The index parameter can't be undefined.\nError Code: 111\nCheck the docs for more details"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "ObjectProperty",
+                  "start": 938,
+                  "end": 1037,
+                  "loc": {
+                    "start": {
+                      "line": 10,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 10,
+                      "column": 103
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "StringLiteral",
+                    "start": 938,
+                    "end": 943,
+                    "loc": {
+                      "start": {
+                        "line": 10,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 10,
+                        "column": 9
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "112",
+                      "raw": "\"112\""
+                    },
+                    "value": "112"
+                  },
+                  "value": {
+                    "type": "NewExpression",
+                    "start": 946,
+                    "end": 1037,
+                    "loc": {
+                      "start": {
+                        "line": 10,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 10,
+                        "column": 103
+                      }
+                    },
+                    "callee": {
+                      "type": "Identifier",
+                      "start": 950,
+                      "end": 955,
+                      "loc": {
+                        "start": {
+                          "line": 10,
+                          "column": 16
+                        },
+                        "end": {
+                          "line": 10,
+                          "column": 21
+                        },
+                        "identifierName": "Error"
+                      },
+                      "name": "Error"
+                    },
+                    "arguments": [
+                      {
+                        "type": "StringLiteral",
+                        "start": 956,
+                        "end": 1036,
+                        "loc": {
+                          "start": {
+                            "line": 10,
+                            "column": 22
+                          },
+                          "end": {
+                            "line": 10,
+                            "column": 102
+                          }
+                        },
+                        "extra": {
+                          "rawValue": "The index must be a integer.\nError Code: 112\nCheck the docs for more details",
+                          "raw": "\"The index must be a integer.\\nError Code: 112\\nCheck the docs for more details\""
+                        },
+                        "value": "The index must be a integer.\nError Code: 112\nCheck the docs for more details"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "ObjectProperty",
+                  "start": 1043,
+                  "end": 1166,
+                  "loc": {
+                    "start": {
+                      "line": 11,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 11,
+                      "column": 127
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "StringLiteral",
+                    "start": 1043,
+                    "end": 1048,
+                    "loc": {
+                      "start": {
+                        "line": 11,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 9
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "113",
+                      "raw": "\"113\""
+                    },
+                    "value": "113"
+                  },
+                  "value": {
+                    "type": "NewExpression",
+                    "start": 1051,
+                    "end": 1166,
+                    "loc": {
+                      "start": {
+                        "line": 11,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 127
+                      }
+                    },
+                    "callee": {
+                      "type": "Identifier",
+                      "start": 1055,
+                      "end": 1060,
+                      "loc": {
+                        "start": {
+                          "line": 11,
+                          "column": 16
+                        },
+                        "end": {
+                          "line": 11,
+                          "column": 21
+                        },
+                        "identifierName": "Error"
+                      },
+                      "name": "Error"
+                    },
+                    "arguments": [
+                      {
+                        "type": "StringLiteral",
+                        "start": 1061,
+                        "end": 1165,
+                        "loc": {
+                          "start": {
+                            "line": 11,
+                            "column": 22
+                          },
+                          "end": {
+                            "line": 11,
+                            "column": 126
+                          }
+                        },
+                        "extra": {
+                          "rawValue": "The index can't greater or equal than the list size.\nError Code: 113\nCheck the docs for more details",
+                          "raw": "\"The index can't greater or equal than the list size.\\nError Code: 113\\nCheck the docs for more details\""
+                        },
+                        "value": "The index can't greater or equal than the list size.\nError Code: 113\nCheck the docs for more details"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "ObjectProperty",
+                  "start": 1172,
+                  "end": 1276,
+                  "loc": {
+                    "start": {
+                      "line": 12,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 12,
+                      "column": 108
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "StringLiteral",
+                    "start": 1172,
+                    "end": 1177,
+                    "loc": {
+                      "start": {
+                        "line": 12,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 9
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "200",
+                      "raw": "\"200\""
+                    },
+                    "value": "200"
+                  },
+                  "value": {
+                    "type": "NewExpression",
+                    "start": 1180,
+                    "end": 1276,
+                    "loc": {
+                      "start": {
+                        "line": 12,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 108
+                      }
+                    },
+                    "callee": {
+                      "type": "Identifier",
+                      "start": 1184,
+                      "end": 1189,
+                      "loc": {
+                        "start": {
+                          "line": 12,
+                          "column": 16
+                        },
+                        "end": {
+                          "line": 12,
+                          "column": 21
+                        },
+                        "identifierName": "Error"
+                      },
+                      "name": "Error"
+                    },
+                    "arguments": [
+                      {
+                        "type": "StringLiteral",
+                        "start": 1190,
+                        "end": 1275,
+                        "loc": {
+                          "start": {
+                            "line": 12,
+                            "column": 22
+                          },
+                          "end": {
+                            "line": 12,
+                            "column": 107
+                          }
+                        },
+                        "extra": {
+                          "rawValue": "Can't iterate over an empty list.\nError Code: 200\nCheck the docs for more details",
+                          "raw": "\"Can't iterate over an empty list.\\nError Code: 200\\nCheck the docs for more details\""
+                        },
+                        "value": "Can't iterate over an empty list.\nError Code: 200\nCheck the docs for more details"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "ObjectProperty",
+                  "start": 1282,
+                  "end": 1395,
+                  "loc": {
+                    "start": {
+                      "line": 13,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 13,
+                      "column": 117
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "StringLiteral",
+                    "start": 1282,
+                    "end": 1287,
+                    "loc": {
+                      "start": {
+                        "line": 13,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 9
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "300",
+                      "raw": "\"300\""
+                    },
+                    "value": "300"
+                  },
+                  "value": {
+                    "type": "NewExpression",
+                    "start": 1290,
+                    "end": 1395,
+                    "loc": {
+                      "start": {
+                        "line": 13,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 117
+                      }
+                    },
+                    "callee": {
+                      "type": "Identifier",
+                      "start": 1294,
+                      "end": 1299,
+                      "loc": {
+                        "start": {
+                          "line": 13,
+                          "column": 16
+                        },
+                        "end": {
+                          "line": 13,
+                          "column": 21
+                        },
+                        "identifierName": "Error"
+                      },
+                      "name": "Error"
+                    },
+                    "arguments": [
+                      {
+                        "type": "StringLiteral",
+                        "start": 1300,
+                        "end": 1394,
+                        "loc": {
+                          "start": {
+                            "line": 13,
+                            "column": 22
+                          },
+                          "end": {
+                            "line": 13,
+                            "column": 116
+                          }
+                        },
+                        "extra": {
+                          "rawValue": "Tha Callback parameter must be a function.\nError Code: 300\nCheck the docs for more details",
+                          "raw": "\"Tha Callback parameter must be a function.\\nError Code: 300\\nCheck the docs for more details\""
+                        },
+                        "value": "Tha Callback parameter must be a function.\nError Code: 300\nCheck the docs for more details"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "kind": "const",
+        "name": "_",
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      {
+        "type": "Identifier",
+        "start": 1400,
+        "end": 1421,
+        "loc": {
+          "start": {
+            "line": 16,
+            "column": 0
+          },
+          "end": {
+            "line": 16,
+            "column": 21
+          }
+        },
+        "declaration": {
+          "type": "Identifier",
+          "start": 1415,
+          "end": 1420,
+          "loc": {
+            "start": {
+              "line": 16,
+              "column": 15
+            },
+            "end": {
+              "line": 16,
+              "column": 20
+            },
+            "identifierName": "error"
+          },
+          "name": "error"
+        },
+        "name": "_",
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      {
+        "type": "ExportDefaultDeclaration",
+        "start": 1400,
+        "end": 1421,
+        "loc": {
+          "start": {
+            "line": 16,
+            "column": 0
+          },
+          "end": {
+            "line": 16,
+            "column": 21
+          }
+        },
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 0,
+          "end": 1398,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 14,
+              "column": 2
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 6,
+              "end": 1397,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 6
+                },
+                "end": {
+                  "line": 14,
+                  "column": 1
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 6,
+                "end": 11,
+                "loc": {
+                  "start": {
+                    "line": 1,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 11
+                  },
+                  "identifierName": "error"
+                },
+                "name": "error"
+              },
+              "init": {
+                "type": "ObjectExpression",
+                "start": 14,
+                "end": 1397,
+                "loc": {
+                  "start": {
+                    "line": 1,
+                    "column": 14
+                  },
+                  "end": {
+                    "line": 14,
+                    "column": 1
+                  }
+                },
+                "properties": [
+                  {
+                    "type": "ObjectProperty",
+                    "start": 20,
+                    "end": 124,
+                    "loc": {
+                      "start": {
+                        "line": 2,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 2,
+                        "column": 108
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "StringLiteral",
+                      "start": 20,
+                      "end": 25,
+                      "loc": {
+                        "start": {
+                          "line": 2,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 9
+                        }
+                      },
+                      "extra": {
+                        "rawValue": "001",
+                        "raw": "\"001\""
+                      },
+                      "value": "001"
+                    },
+                    "value": {
+                      "type": "NewExpression",
+                      "start": 28,
+                      "end": 124,
+                      "loc": {
+                        "start": {
+                          "line": 2,
+                          "column": 12
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 108
+                        }
+                      },
+                      "callee": {
+                        "type": "Identifier",
+                        "start": 32,
+                        "end": 37,
+                        "loc": {
+                          "start": {
+                            "line": 2,
+                            "column": 16
+                          },
+                          "end": {
+                            "line": 2,
+                            "column": 21
+                          },
+                          "identifierName": "Error"
+                        },
+                        "name": "Error"
+                      },
+                      "arguments": [
+                        {
+                          "type": "StringLiteral",
+                          "start": 38,
+                          "end": 123,
+                          "loc": {
+                            "start": {
+                              "line": 2,
+                              "column": 22
+                            },
+                            "end": {
+                              "line": 2,
+                              "column": 107
+                            }
+                          },
+                          "extra": {
+                            "rawValue": "OMG, You have broken the library.\nError Code: 001\nCheck the docs for more details",
+                            "raw": "\"OMG, You have broken the library.\\nError Code: 001\\nCheck the docs for more details\""
+                          },
+                          "value": "OMG, You have broken the library.\nError Code: 001\nCheck the docs for more details"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "ObjectProperty",
+                    "start": 130,
+                    "end": 234,
+                    "loc": {
+                      "start": {
+                        "line": 3,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 3,
+                        "column": 108
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "StringLiteral",
+                      "start": 130,
+                      "end": 135,
+                      "loc": {
+                        "start": {
+                          "line": 3,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 3,
+                          "column": 9
+                        }
+                      },
+                      "extra": {
+                        "rawValue": "100",
+                        "raw": "\"100\""
+                      },
+                      "value": "100"
+                    },
+                    "value": {
+                      "type": "NewExpression",
+                      "start": 138,
+                      "end": 234,
+                      "loc": {
+                        "start": {
+                          "line": 3,
+                          "column": 12
+                        },
+                        "end": {
+                          "line": 3,
+                          "column": 108
+                        }
+                      },
+                      "callee": {
+                        "type": "Identifier",
+                        "start": 142,
+                        "end": 147,
+                        "loc": {
+                          "start": {
+                            "line": 3,
+                            "column": 16
+                          },
+                          "end": {
+                            "line": 3,
+                            "column": 21
+                          },
+                          "identifierName": "Error"
+                        },
+                        "name": "Error"
+                      },
+                      "arguments": [
+                        {
+                          "type": "StringLiteral",
+                          "start": 148,
+                          "end": 233,
+                          "loc": {
+                            "start": {
+                              "line": 3,
+                              "column": 22
+                            },
+                            "end": {
+                              "line": 3,
+                              "column": 107
+                            }
+                          },
+                          "extra": {
+                            "rawValue": "The Data parameter can't be null.\nError Code: 100\nCheck the docs for more details",
+                            "raw": "\"The Data parameter can't be null.\\nError Code: 100\\nCheck the docs for more details\""
+                          },
+                          "value": "The Data parameter can't be null.\nError Code: 100\nCheck the docs for more details"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "ObjectProperty",
+                    "start": 240,
+                    "end": 349,
+                    "loc": {
+                      "start": {
+                        "line": 4,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 4,
+                        "column": 113
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "StringLiteral",
+                      "start": 240,
+                      "end": 245,
+                      "loc": {
+                        "start": {
+                          "line": 4,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 4,
+                          "column": 9
+                        }
+                      },
+                      "extra": {
+                        "rawValue": "101",
+                        "raw": "\"101\""
+                      },
+                      "value": "101"
+                    },
+                    "value": {
+                      "type": "NewExpression",
+                      "start": 248,
+                      "end": 349,
+                      "loc": {
+                        "start": {
+                          "line": 4,
+                          "column": 12
+                        },
+                        "end": {
+                          "line": 4,
+                          "column": 113
+                        }
+                      },
+                      "callee": {
+                        "type": "Identifier",
+                        "start": 252,
+                        "end": 257,
+                        "loc": {
+                          "start": {
+                            "line": 4,
+                            "column": 16
+                          },
+                          "end": {
+                            "line": 4,
+                            "column": 21
+                          },
+                          "identifierName": "Error"
+                        },
+                        "name": "Error"
+                      },
+                      "arguments": [
+                        {
+                          "type": "StringLiteral",
+                          "start": 258,
+                          "end": 348,
+                          "loc": {
+                            "start": {
+                              "line": 4,
+                              "column": 22
+                            },
+                            "end": {
+                              "line": 4,
+                              "column": 112
+                            }
+                          },
+                          "extra": {
+                            "rawValue": "The Data parameter can't be undefined.\nError Code: 101\nCheck the docs for more details",
+                            "raw": "\"The Data parameter can't be undefined.\\nError Code: 101\\nCheck the docs for more details\""
+                          },
+                          "value": "The Data parameter can't be undefined.\nError Code: 101\nCheck the docs for more details"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "ObjectProperty",
+                    "start": 355,
+                    "end": 465,
+                    "loc": {
+                      "start": {
+                        "line": 5,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 5,
+                        "column": 114
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "StringLiteral",
+                      "start": 355,
+                      "end": 360,
+                      "loc": {
+                        "start": {
+                          "line": 5,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 5,
+                          "column": 9
+                        }
+                      },
+                      "extra": {
+                        "rawValue": "102",
+                        "raw": "\"102\""
+                      },
+                      "value": "102"
+                    },
+                    "value": {
+                      "type": "NewExpression",
+                      "start": 363,
+                      "end": 465,
+                      "loc": {
+                        "start": {
+                          "line": 5,
+                          "column": 12
+                        },
+                        "end": {
+                          "line": 5,
+                          "column": 114
+                        }
+                      },
+                      "callee": {
+                        "type": "Identifier",
+                        "start": 367,
+                        "end": 372,
+                        "loc": {
+                          "start": {
+                            "line": 5,
+                            "column": 16
+                          },
+                          "end": {
+                            "line": 5,
+                            "column": 21
+                          },
+                          "identifierName": "Error"
+                        },
+                        "name": "Error"
+                      },
+                      "arguments": [
+                        {
+                          "type": "StringLiteral",
+                          "start": 373,
+                          "end": 464,
+                          "loc": {
+                            "start": {
+                              "line": 5,
+                              "column": 22
+                            },
+                            "end": {
+                              "line": 5,
+                              "column": 113
+                            }
+                          },
+                          "extra": {
+                            "rawValue": "The Collection parameter can't be null.\nError Code: 102\nCheck the docs for more details",
+                            "raw": "\"The Collection parameter can't be null.\\nError Code: 102\\nCheck the docs for more details\""
+                          },
+                          "value": "The Collection parameter can't be null.\nError Code: 102\nCheck the docs for more details"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "ObjectProperty",
+                    "start": 471,
+                    "end": 586,
+                    "loc": {
+                      "start": {
+                        "line": 6,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 6,
+                        "column": 119
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "StringLiteral",
+                      "start": 471,
+                      "end": 476,
+                      "loc": {
+                        "start": {
+                          "line": 6,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 6,
+                          "column": 9
+                        }
+                      },
+                      "extra": {
+                        "rawValue": "103",
+                        "raw": "\"103\""
+                      },
+                      "value": "103"
+                    },
+                    "value": {
+                      "type": "NewExpression",
+                      "start": 479,
+                      "end": 586,
+                      "loc": {
+                        "start": {
+                          "line": 6,
+                          "column": 12
+                        },
+                        "end": {
+                          "line": 6,
+                          "column": 119
+                        }
+                      },
+                      "callee": {
+                        "type": "Identifier",
+                        "start": 483,
+                        "end": 488,
+                        "loc": {
+                          "start": {
+                            "line": 6,
+                            "column": 16
+                          },
+                          "end": {
+                            "line": 6,
+                            "column": 21
+                          },
+                          "identifierName": "Error"
+                        },
+                        "name": "Error"
+                      },
+                      "arguments": [
+                        {
+                          "type": "StringLiteral",
+                          "start": 489,
+                          "end": 585,
+                          "loc": {
+                            "start": {
+                              "line": 6,
+                              "column": 22
+                            },
+                            "end": {
+                              "line": 6,
+                              "column": 118
+                            }
+                          },
+                          "extra": {
+                            "rawValue": "The Collection parameter can't be undefined.\nError Code: 103\nCheck the docs for more details",
+                            "raw": "\"The Collection parameter can't be undefined.\\nError Code: 103\\nCheck the docs for more details\""
+                          },
+                          "value": "The Collection parameter can't be undefined.\nError Code: 103\nCheck the docs for more details"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "ObjectProperty",
+                    "start": 592,
+                    "end": 705,
+                    "loc": {
+                      "start": {
+                        "line": 7,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 117
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "StringLiteral",
+                      "start": 592,
+                      "end": 597,
+                      "loc": {
+                        "start": {
+                          "line": 7,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 7,
+                          "column": 9
+                        }
+                      },
+                      "extra": {
+                        "rawValue": "104",
+                        "raw": "\"104\""
+                      },
+                      "value": "104"
+                    },
+                    "value": {
+                      "type": "NewExpression",
+                      "start": 600,
+                      "end": 705,
+                      "loc": {
+                        "start": {
+                          "line": 7,
+                          "column": 12
+                        },
+                        "end": {
+                          "line": 7,
+                          "column": 117
+                        }
+                      },
+                      "callee": {
+                        "type": "Identifier",
+                        "start": 604,
+                        "end": 609,
+                        "loc": {
+                          "start": {
+                            "line": 7,
+                            "column": 16
+                          },
+                          "end": {
+                            "line": 7,
+                            "column": 21
+                          },
+                          "identifierName": "Error"
+                        },
+                        "name": "Error"
+                      },
+                      "arguments": [
+                        {
+                          "type": "StringLiteral",
+                          "start": 610,
+                          "end": 704,
+                          "loc": {
+                            "start": {
+                              "line": 7,
+                              "column": 22
+                            },
+                            "end": {
+                              "line": 7,
+                              "column": 116
+                            }
+                          },
+                          "extra": {
+                            "rawValue": "The Collection parameter must be an Array.\nError Code: 104\nCheck the docs for more details",
+                            "raw": "\"The Collection parameter must be an Array.\\nError Code: 104\\nCheck the docs for more details\""
+                          },
+                          "value": "The Collection parameter must be an Array.\nError Code: 104\nCheck the docs for more details"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "ObjectProperty",
+                    "start": 711,
+                    "end": 816,
+                    "loc": {
+                      "start": {
+                        "line": 8,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 109
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "StringLiteral",
+                      "start": 711,
+                      "end": 716,
+                      "loc": {
+                        "start": {
+                          "line": 8,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 8,
+                          "column": 9
+                        }
+                      },
+                      "extra": {
+                        "rawValue": "110",
+                        "raw": "\"110\""
+                      },
+                      "value": "110"
+                    },
+                    "value": {
+                      "type": "NewExpression",
+                      "start": 719,
+                      "end": 816,
+                      "loc": {
+                        "start": {
+                          "line": 8,
+                          "column": 12
+                        },
+                        "end": {
+                          "line": 8,
+                          "column": 109
+                        }
+                      },
+                      "callee": {
+                        "type": "Identifier",
+                        "start": 723,
+                        "end": 728,
+                        "loc": {
+                          "start": {
+                            "line": 8,
+                            "column": 16
+                          },
+                          "end": {
+                            "line": 8,
+                            "column": 21
+                          },
+                          "identifierName": "Error"
+                        },
+                        "name": "Error"
+                      },
+                      "arguments": [
+                        {
+                          "type": "StringLiteral",
+                          "start": 729,
+                          "end": 815,
+                          "loc": {
+                            "start": {
+                              "line": 8,
+                              "column": 22
+                            },
+                            "end": {
+                              "line": 8,
+                              "column": 108
+                            }
+                          },
+                          "extra": {
+                            "rawValue": "The index parameter can't be null.\nError Code: 110\nCheck the docs for more details",
+                            "raw": "\"The index parameter can't be null.\\nError Code: 110\\nCheck the docs for more details\""
+                          },
+                          "value": "The index parameter can't be null.\nError Code: 110\nCheck the docs for more details"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "ObjectProperty",
+                    "start": 822,
+                    "end": 932,
+                    "loc": {
+                      "start": {
+                        "line": 9,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 114
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "StringLiteral",
+                      "start": 822,
+                      "end": 827,
+                      "loc": {
+                        "start": {
+                          "line": 9,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 9
+                        }
+                      },
+                      "extra": {
+                        "rawValue": "111",
+                        "raw": "\"111\""
+                      },
+                      "value": "111"
+                    },
+                    "value": {
+                      "type": "NewExpression",
+                      "start": 830,
+                      "end": 932,
+                      "loc": {
+                        "start": {
+                          "line": 9,
+                          "column": 12
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 114
+                        }
+                      },
+                      "callee": {
+                        "type": "Identifier",
+                        "start": 834,
+                        "end": 839,
+                        "loc": {
+                          "start": {
+                            "line": 9,
+                            "column": 16
+                          },
+                          "end": {
+                            "line": 9,
+                            "column": 21
+                          },
+                          "identifierName": "Error"
+                        },
+                        "name": "Error"
+                      },
+                      "arguments": [
+                        {
+                          "type": "StringLiteral",
+                          "start": 840,
+                          "end": 931,
+                          "loc": {
+                            "start": {
+                              "line": 9,
+                              "column": 22
+                            },
+                            "end": {
+                              "line": 9,
+                              "column": 113
+                            }
+                          },
+                          "extra": {
+                            "rawValue": "The index parameter can't be undefined.\nError Code: 111\nCheck the docs for more details",
+                            "raw": "\"The index parameter can't be undefined.\\nError Code: 111\\nCheck the docs for more details\""
+                          },
+                          "value": "The index parameter can't be undefined.\nError Code: 111\nCheck the docs for more details"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "ObjectProperty",
+                    "start": 938,
+                    "end": 1037,
+                    "loc": {
+                      "start": {
+                        "line": 10,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 10,
+                        "column": 103
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "StringLiteral",
+                      "start": 938,
+                      "end": 943,
+                      "loc": {
+                        "start": {
+                          "line": 10,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 10,
+                          "column": 9
+                        }
+                      },
+                      "extra": {
+                        "rawValue": "112",
+                        "raw": "\"112\""
+                      },
+                      "value": "112"
+                    },
+                    "value": {
+                      "type": "NewExpression",
+                      "start": 946,
+                      "end": 1037,
+                      "loc": {
+                        "start": {
+                          "line": 10,
+                          "column": 12
+                        },
+                        "end": {
+                          "line": 10,
+                          "column": 103
+                        }
+                      },
+                      "callee": {
+                        "type": "Identifier",
+                        "start": 950,
+                        "end": 955,
+                        "loc": {
+                          "start": {
+                            "line": 10,
+                            "column": 16
+                          },
+                          "end": {
+                            "line": 10,
+                            "column": 21
+                          },
+                          "identifierName": "Error"
+                        },
+                        "name": "Error"
+                      },
+                      "arguments": [
+                        {
+                          "type": "StringLiteral",
+                          "start": 956,
+                          "end": 1036,
+                          "loc": {
+                            "start": {
+                              "line": 10,
+                              "column": 22
+                            },
+                            "end": {
+                              "line": 10,
+                              "column": 102
+                            }
+                          },
+                          "extra": {
+                            "rawValue": "The index must be a integer.\nError Code: 112\nCheck the docs for more details",
+                            "raw": "\"The index must be a integer.\\nError Code: 112\\nCheck the docs for more details\""
+                          },
+                          "value": "The index must be a integer.\nError Code: 112\nCheck the docs for more details"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "ObjectProperty",
+                    "start": 1043,
+                    "end": 1166,
+                    "loc": {
+                      "start": {
+                        "line": 11,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 127
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "StringLiteral",
+                      "start": 1043,
+                      "end": 1048,
+                      "loc": {
+                        "start": {
+                          "line": 11,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 11,
+                          "column": 9
+                        }
+                      },
+                      "extra": {
+                        "rawValue": "113",
+                        "raw": "\"113\""
+                      },
+                      "value": "113"
+                    },
+                    "value": {
+                      "type": "NewExpression",
+                      "start": 1051,
+                      "end": 1166,
+                      "loc": {
+                        "start": {
+                          "line": 11,
+                          "column": 12
+                        },
+                        "end": {
+                          "line": 11,
+                          "column": 127
+                        }
+                      },
+                      "callee": {
+                        "type": "Identifier",
+                        "start": 1055,
+                        "end": 1060,
+                        "loc": {
+                          "start": {
+                            "line": 11,
+                            "column": 16
+                          },
+                          "end": {
+                            "line": 11,
+                            "column": 21
+                          },
+                          "identifierName": "Error"
+                        },
+                        "name": "Error"
+                      },
+                      "arguments": [
+                        {
+                          "type": "StringLiteral",
+                          "start": 1061,
+                          "end": 1165,
+                          "loc": {
+                            "start": {
+                              "line": 11,
+                              "column": 22
+                            },
+                            "end": {
+                              "line": 11,
+                              "column": 126
+                            }
+                          },
+                          "extra": {
+                            "rawValue": "The index can't greater or equal than the list size.\nError Code: 113\nCheck the docs for more details",
+                            "raw": "\"The index can't greater or equal than the list size.\\nError Code: 113\\nCheck the docs for more details\""
+                          },
+                          "value": "The index can't greater or equal than the list size.\nError Code: 113\nCheck the docs for more details"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "ObjectProperty",
+                    "start": 1172,
+                    "end": 1276,
+                    "loc": {
+                      "start": {
+                        "line": 12,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 108
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "StringLiteral",
+                      "start": 1172,
+                      "end": 1177,
+                      "loc": {
+                        "start": {
+                          "line": 12,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 12,
+                          "column": 9
+                        }
+                      },
+                      "extra": {
+                        "rawValue": "200",
+                        "raw": "\"200\""
+                      },
+                      "value": "200"
+                    },
+                    "value": {
+                      "type": "NewExpression",
+                      "start": 1180,
+                      "end": 1276,
+                      "loc": {
+                        "start": {
+                          "line": 12,
+                          "column": 12
+                        },
+                        "end": {
+                          "line": 12,
+                          "column": 108
+                        }
+                      },
+                      "callee": {
+                        "type": "Identifier",
+                        "start": 1184,
+                        "end": 1189,
+                        "loc": {
+                          "start": {
+                            "line": 12,
+                            "column": 16
+                          },
+                          "end": {
+                            "line": 12,
+                            "column": 21
+                          },
+                          "identifierName": "Error"
+                        },
+                        "name": "Error"
+                      },
+                      "arguments": [
+                        {
+                          "type": "StringLiteral",
+                          "start": 1190,
+                          "end": 1275,
+                          "loc": {
+                            "start": {
+                              "line": 12,
+                              "column": 22
+                            },
+                            "end": {
+                              "line": 12,
+                              "column": 107
+                            }
+                          },
+                          "extra": {
+                            "rawValue": "Can't iterate over an empty list.\nError Code: 200\nCheck the docs for more details",
+                            "raw": "\"Can't iterate over an empty list.\\nError Code: 200\\nCheck the docs for more details\""
+                          },
+                          "value": "Can't iterate over an empty list.\nError Code: 200\nCheck the docs for more details"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "ObjectProperty",
+                    "start": 1282,
+                    "end": 1395,
+                    "loc": {
+                      "start": {
+                        "line": 13,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 117
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "StringLiteral",
+                      "start": 1282,
+                      "end": 1287,
+                      "loc": {
+                        "start": {
+                          "line": 13,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 13,
+                          "column": 9
+                        }
+                      },
+                      "extra": {
+                        "rawValue": "300",
+                        "raw": "\"300\""
+                      },
+                      "value": "300"
+                    },
+                    "value": {
+                      "type": "NewExpression",
+                      "start": 1290,
+                      "end": 1395,
+                      "loc": {
+                        "start": {
+                          "line": 13,
+                          "column": 12
+                        },
+                        "end": {
+                          "line": 13,
+                          "column": 117
+                        }
+                      },
+                      "callee": {
+                        "type": "Identifier",
+                        "start": 1294,
+                        "end": 1299,
+                        "loc": {
+                          "start": {
+                            "line": 13,
+                            "column": 16
+                          },
+                          "end": {
+                            "line": 13,
+                            "column": 21
+                          },
+                          "identifierName": "Error"
+                        },
+                        "name": "Error"
+                      },
+                      "arguments": [
+                        {
+                          "type": "StringLiteral",
+                          "start": 1300,
+                          "end": 1394,
+                          "loc": {
+                            "start": {
+                              "line": 13,
+                              "column": 22
+                            },
+                            "end": {
+                              "line": 13,
+                              "column": 116
+                            }
+                          },
+                          "extra": {
+                            "rawValue": "Tha Callback parameter must be a function.\nError Code: 300\nCheck the docs for more details",
+                            "raw": "\"Tha Callback parameter must be a function.\\nError Code: 300\\nCheck the docs for more details\""
+                          },
+                          "value": "Tha Callback parameter must be a function.\nError Code: 300\nCheck the docs for more details"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [],
+          "trailingComments": []
+        }
+      }
+    ],
+    "directives": []
+  },
+  "comments": [],
+  "tokens": [
+    {
+      "type": {
+        "label": "const",
+        "keyword": "const",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "const",
+      "start": 0,
+      "end": 5,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "error",
+      "start": 6,
+      "end": 11,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 6
+        },
+        "end": {
+          "line": 1,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 12,
+      "end": 13,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 12
+        },
+        "end": {
+          "line": 1,
+          "column": 13
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 14,
+      "end": 15,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 14
+        },
+        "end": {
+          "line": 1,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "001",
+      "start": 20,
+      "end": 25,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 4
+        },
+        "end": {
+          "line": 2,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 26,
+      "end": 27,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 10
+        },
+        "end": {
+          "line": 2,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "new",
+        "keyword": "new",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "new",
+      "start": 28,
+      "end": 31,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 12
+        },
+        "end": {
+          "line": 2,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "Error",
+      "start": 32,
+      "end": 37,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 16
+        },
+        "end": {
+          "line": 2,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 37,
+      "end": 38,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 21
+        },
+        "end": {
+          "line": 2,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "OMG, You have broken the library.\nError Code: 001\nCheck the docs for more details",
+      "start": 38,
+      "end": 123,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 22
+        },
+        "end": {
+          "line": 2,
+          "column": 107
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 123,
+      "end": 124,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 107
+        },
+        "end": {
+          "line": 2,
+          "column": 108
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 124,
+      "end": 125,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 108
+        },
+        "end": {
+          "line": 2,
+          "column": 109
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "100",
+      "start": 130,
+      "end": 135,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 4
+        },
+        "end": {
+          "line": 3,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 136,
+      "end": 137,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 10
+        },
+        "end": {
+          "line": 3,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "new",
+        "keyword": "new",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "new",
+      "start": 138,
+      "end": 141,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 12
+        },
+        "end": {
+          "line": 3,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "Error",
+      "start": 142,
+      "end": 147,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 16
+        },
+        "end": {
+          "line": 3,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 147,
+      "end": 148,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 21
+        },
+        "end": {
+          "line": 3,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "The Data parameter can't be null.\nError Code: 100\nCheck the docs for more details",
+      "start": 148,
+      "end": 233,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 22
+        },
+        "end": {
+          "line": 3,
+          "column": 107
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 233,
+      "end": 234,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 107
+        },
+        "end": {
+          "line": 3,
+          "column": 108
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 234,
+      "end": 235,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 108
+        },
+        "end": {
+          "line": 3,
+          "column": 109
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "101",
+      "start": 240,
+      "end": 245,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 4
+        },
+        "end": {
+          "line": 4,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 246,
+      "end": 247,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 10
+        },
+        "end": {
+          "line": 4,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "new",
+        "keyword": "new",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "new",
+      "start": 248,
+      "end": 251,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 12
+        },
+        "end": {
+          "line": 4,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "Error",
+      "start": 252,
+      "end": 257,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 16
+        },
+        "end": {
+          "line": 4,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 257,
+      "end": 258,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 21
+        },
+        "end": {
+          "line": 4,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "The Data parameter can't be undefined.\nError Code: 101\nCheck the docs for more details",
+      "start": 258,
+      "end": 348,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 22
+        },
+        "end": {
+          "line": 4,
+          "column": 112
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 348,
+      "end": 349,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 112
+        },
+        "end": {
+          "line": 4,
+          "column": 113
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 349,
+      "end": 350,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 113
+        },
+        "end": {
+          "line": 4,
+          "column": 114
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "102",
+      "start": 355,
+      "end": 360,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 4
+        },
+        "end": {
+          "line": 5,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 361,
+      "end": 362,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 10
+        },
+        "end": {
+          "line": 5,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "new",
+        "keyword": "new",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "new",
+      "start": 363,
+      "end": 366,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 12
+        },
+        "end": {
+          "line": 5,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "Error",
+      "start": 367,
+      "end": 372,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 16
+        },
+        "end": {
+          "line": 5,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 372,
+      "end": 373,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 21
+        },
+        "end": {
+          "line": 5,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "The Collection parameter can't be null.\nError Code: 102\nCheck the docs for more details",
+      "start": 373,
+      "end": 464,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 22
+        },
+        "end": {
+          "line": 5,
+          "column": 113
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 464,
+      "end": 465,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 113
+        },
+        "end": {
+          "line": 5,
+          "column": 114
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 465,
+      "end": 466,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 114
+        },
+        "end": {
+          "line": 5,
+          "column": 115
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "103",
+      "start": 471,
+      "end": 476,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 4
+        },
+        "end": {
+          "line": 6,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 477,
+      "end": 478,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 10
+        },
+        "end": {
+          "line": 6,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "new",
+        "keyword": "new",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "new",
+      "start": 479,
+      "end": 482,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 12
+        },
+        "end": {
+          "line": 6,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "Error",
+      "start": 483,
+      "end": 488,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 16
+        },
+        "end": {
+          "line": 6,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 488,
+      "end": 489,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 21
+        },
+        "end": {
+          "line": 6,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "The Collection parameter can't be undefined.\nError Code: 103\nCheck the docs for more details",
+      "start": 489,
+      "end": 585,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 22
+        },
+        "end": {
+          "line": 6,
+          "column": 118
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 585,
+      "end": 586,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 118
+        },
+        "end": {
+          "line": 6,
+          "column": 119
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 586,
+      "end": 587,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 119
+        },
+        "end": {
+          "line": 6,
+          "column": 120
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "104",
+      "start": 592,
+      "end": 597,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 4
+        },
+        "end": {
+          "line": 7,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 598,
+      "end": 599,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 10
+        },
+        "end": {
+          "line": 7,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "new",
+        "keyword": "new",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "new",
+      "start": 600,
+      "end": 603,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 12
+        },
+        "end": {
+          "line": 7,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "Error",
+      "start": 604,
+      "end": 609,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 16
+        },
+        "end": {
+          "line": 7,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 609,
+      "end": 610,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 21
+        },
+        "end": {
+          "line": 7,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "The Collection parameter must be an Array.\nError Code: 104\nCheck the docs for more details",
+      "start": 610,
+      "end": 704,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 22
+        },
+        "end": {
+          "line": 7,
+          "column": 116
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 704,
+      "end": 705,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 116
+        },
+        "end": {
+          "line": 7,
+          "column": 117
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 705,
+      "end": 706,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 117
+        },
+        "end": {
+          "line": 7,
+          "column": 118
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "110",
+      "start": 711,
+      "end": 716,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 4
+        },
+        "end": {
+          "line": 8,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 717,
+      "end": 718,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 10
+        },
+        "end": {
+          "line": 8,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "new",
+        "keyword": "new",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "new",
+      "start": 719,
+      "end": 722,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 12
+        },
+        "end": {
+          "line": 8,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "Error",
+      "start": 723,
+      "end": 728,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 16
+        },
+        "end": {
+          "line": 8,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 728,
+      "end": 729,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 21
+        },
+        "end": {
+          "line": 8,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "The index parameter can't be null.\nError Code: 110\nCheck the docs for more details",
+      "start": 729,
+      "end": 815,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 22
+        },
+        "end": {
+          "line": 8,
+          "column": 108
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 815,
+      "end": 816,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 108
+        },
+        "end": {
+          "line": 8,
+          "column": 109
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 816,
+      "end": 817,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 109
+        },
+        "end": {
+          "line": 8,
+          "column": 110
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "111",
+      "start": 822,
+      "end": 827,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 4
+        },
+        "end": {
+          "line": 9,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 828,
+      "end": 829,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 10
+        },
+        "end": {
+          "line": 9,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "new",
+        "keyword": "new",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "new",
+      "start": 830,
+      "end": 833,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 12
+        },
+        "end": {
+          "line": 9,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "Error",
+      "start": 834,
+      "end": 839,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 16
+        },
+        "end": {
+          "line": 9,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 839,
+      "end": 840,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 21
+        },
+        "end": {
+          "line": 9,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "The index parameter can't be undefined.\nError Code: 111\nCheck the docs for more details",
+      "start": 840,
+      "end": 931,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 22
+        },
+        "end": {
+          "line": 9,
+          "column": 113
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 931,
+      "end": 932,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 113
+        },
+        "end": {
+          "line": 9,
+          "column": 114
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 932,
+      "end": 933,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 114
+        },
+        "end": {
+          "line": 9,
+          "column": 115
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "112",
+      "start": 938,
+      "end": 943,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 4
+        },
+        "end": {
+          "line": 10,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 944,
+      "end": 945,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 10
+        },
+        "end": {
+          "line": 10,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "new",
+        "keyword": "new",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "new",
+      "start": 946,
+      "end": 949,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 12
+        },
+        "end": {
+          "line": 10,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "Error",
+      "start": 950,
+      "end": 955,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 16
+        },
+        "end": {
+          "line": 10,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 955,
+      "end": 956,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 21
+        },
+        "end": {
+          "line": 10,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "The index must be a integer.\nError Code: 112\nCheck the docs for more details",
+      "start": 956,
+      "end": 1036,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 22
+        },
+        "end": {
+          "line": 10,
+          "column": 102
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1036,
+      "end": 1037,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 102
+        },
+        "end": {
+          "line": 10,
+          "column": 103
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1037,
+      "end": 1038,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 103
+        },
+        "end": {
+          "line": 10,
+          "column": 104
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "113",
+      "start": 1043,
+      "end": 1048,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 4
+        },
+        "end": {
+          "line": 11,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1049,
+      "end": 1050,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 10
+        },
+        "end": {
+          "line": 11,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "new",
+        "keyword": "new",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "new",
+      "start": 1051,
+      "end": 1054,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 12
+        },
+        "end": {
+          "line": 11,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "Error",
+      "start": 1055,
+      "end": 1060,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 16
+        },
+        "end": {
+          "line": 11,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1060,
+      "end": 1061,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 21
+        },
+        "end": {
+          "line": 11,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "The index can't greater or equal than the list size.\nError Code: 113\nCheck the docs for more details",
+      "start": 1061,
+      "end": 1165,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 22
+        },
+        "end": {
+          "line": 11,
+          "column": 126
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1165,
+      "end": 1166,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 126
+        },
+        "end": {
+          "line": 11,
+          "column": 127
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1166,
+      "end": 1167,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 127
+        },
+        "end": {
+          "line": 11,
+          "column": 128
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "200",
+      "start": 1172,
+      "end": 1177,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 4
+        },
+        "end": {
+          "line": 12,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1178,
+      "end": 1179,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 10
+        },
+        "end": {
+          "line": 12,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "new",
+        "keyword": "new",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "new",
+      "start": 1180,
+      "end": 1183,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 12
+        },
+        "end": {
+          "line": 12,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "Error",
+      "start": 1184,
+      "end": 1189,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 16
+        },
+        "end": {
+          "line": 12,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1189,
+      "end": 1190,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 21
+        },
+        "end": {
+          "line": 12,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "Can't iterate over an empty list.\nError Code: 200\nCheck the docs for more details",
+      "start": 1190,
+      "end": 1275,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 22
+        },
+        "end": {
+          "line": 12,
+          "column": 107
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1275,
+      "end": 1276,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 107
+        },
+        "end": {
+          "line": 12,
+          "column": 108
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1276,
+      "end": 1277,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 108
+        },
+        "end": {
+          "line": 12,
+          "column": 109
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "300",
+      "start": 1282,
+      "end": 1287,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 4
+        },
+        "end": {
+          "line": 13,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1288,
+      "end": 1289,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 10
+        },
+        "end": {
+          "line": 13,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "new",
+        "keyword": "new",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "new",
+      "start": 1290,
+      "end": 1293,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 12
+        },
+        "end": {
+          "line": 13,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "Error",
+      "start": 1294,
+      "end": 1299,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 16
+        },
+        "end": {
+          "line": 13,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1299,
+      "end": 1300,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 21
+        },
+        "end": {
+          "line": 13,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "Tha Callback parameter must be a function.\nError Code: 300\nCheck the docs for more details",
+      "start": 1300,
+      "end": 1394,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 22
+        },
+        "end": {
+          "line": 13,
+          "column": 116
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1394,
+      "end": 1395,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 116
+        },
+        "end": {
+          "line": 13,
+          "column": 117
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1396,
+      "end": 1397,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 0
+        },
+        "end": {
+          "line": 14,
+          "column": 1
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1397,
+      "end": 1398,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 1
+        },
+        "end": {
+          "line": 14,
+          "column": 2
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 1400,
+      "end": 1406,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 0
+        },
+        "end": {
+          "line": 16,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 1407,
+      "end": 1414,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 7
+        },
+        "end": {
+          "line": 16,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "error",
+      "start": 1415,
+      "end": 1420,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 15
+        },
+        "end": {
+          "line": 16,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1420,
+      "end": 1421,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 20
+        },
+        "end": {
+          "line": 16,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "eof",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1421,
+      "end": 1421,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 21
+        },
+        "end": {
+          "line": 16,
+          "column": 21
+        }
+      }
+    }
+  ]
+}

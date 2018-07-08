@@ -5,6 +5,7 @@ import error from './errors/errors';
  * @example
  * let list = new ArrayList();
  * @access public
+ * @author Jose Roberto Quevedo
  * @version 1.0.0
  * @since 0.1.0
  */

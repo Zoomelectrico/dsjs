@@ -142,8 +142,8 @@ export default class List {
           if(i === j) {
             vec.push(data);
           }
-          vec.push(this.array[i]);
-          if(i === this.array.length - 1) {
+          vec.push(this.array[j]);
+          if(j === this.array.length - 1) {
             return this.builder(vec);
           }
         }
@@ -257,12 +257,10 @@ export default class List {
           let vec = [];
           for (let j = 0; j < this.array.length; j++) {
             if(i !== j) {
-              vec.push(this.array[i]);
+              vec.push(this.array[j]);
             }
-            if(i === this.array.length - 1) {
-              return this.builder(vec);
-            }
-          } 
+          }
+          return this.builder(vec); 
         }
       } else if (isNaN(i)) {
         throw error["112"];
@@ -347,7 +345,7 @@ export default class List {
       for (let i = 0; i < vec.length; i++) {
         aux.push(callback(vec[i], i, vec));
         if(i === vec.length - 1) {
-          return this.builder(vec);
+          return this.builder(aux);
         } 
       }
     } else if (this.isEmpty()) {
@@ -392,10 +390,8 @@ export default class List {
       let json = {};
       for (let i = 0; i < this.array.length; i++) {
         json[i] = this.array[i];
-        if (i === this.array - 1) {
-          return json;
-        }
       }
+      return json;
     }
   }
 }

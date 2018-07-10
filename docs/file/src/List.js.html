@@ -1,15 +1,62 @@
-import { isNotNull, isNotUndefined, isNull, isUndefined, isFunction, isNotFunction, isArray, isNotArray } from './helper/check';
-import error from './errors/errors';
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/List.js | ds.js</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="An inmutable implementation of Data Structures"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="ds.js"><meta property="twitter:description" content="An inmutable implementation of Data Structures"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/List.js~List.html">List</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#errors">errors</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-error">error</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#helper">helper</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isArray">isArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isFunction">isFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isNotArray">isNotArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isNotFunction">isNotFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isNotNull">isNotNull</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isNotUndefined">isNotUndefined</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isNull">isNull</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isUndefined">isUndefined</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/List.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { isNotNull, isNotUndefined, isNull, isUndefined, isFunction, isNotFunction, isArray, isNotArray } from &apos;./helper/check&apos;;
+import error from &apos;./errors/errors&apos;;
+
 /**
- * ArrayList class, this class allow you to use a LinkedList DS based on an array
+ * List class, this class allow you to use a LinkedList DS based on an array
  * @example
- * let list = new ArrayList();
+ * let list = new List();
  * @access public
  * @author Jose Roberto Quevedo
  * @version 1.0.0
  * @since 0.1.0
  */
-export default class ArrayList {
+export default class List {
   /**
    * @constructor this is constructor of the class, here an empty array is initialize
    * @since 0.1.0
@@ -27,7 +74,7 @@ export default class ArrayList {
    * @param {Array} array
    */
   builder(array) {
-    let list = new ArrayList();
+    let list = new List();
     list.array = array;
     return list;
   } 
@@ -37,12 +84,12 @@ export default class ArrayList {
    * This method say if a list is empty or not.
    * @access public
    * @since 0.1.0
-   * @return { ArrayList } true if the list is empty or false otherwaise
+   * @return { List } true if the list is empty or false otherwaise
    * @example
    * let boolean = list.isEmpty();
    */
   isEmpty() {
-    return this.array.length <= 0;
+    return this.array.length &lt;= 0;
   }
 
   /**
@@ -50,7 +97,7 @@ export default class ArrayList {
    * this method say what is the size of the list
    * @access public
    * @since 0.1.0
-   * @return { ArrayList } 0 if the list is empty or an positive integer representing the list size
+   * @return { List } 0 if the list is empty or an positive integer representing the list size
    * @example
    * let boolean = list.isEmpty();
    */
@@ -64,7 +111,7 @@ export default class ArrayList {
    * @param {any} data the element than you whan to add to the list
    * @access public
    * @since 0.1.0
-   * @return { ArrayList } a new instance of the class with the elements of the other list and the new element added
+   * @return { List } a new instance of the class with the elements of the other list and the new element added
    * @throws {Error001} when shit go bad
    * @throws {Error100} when data is null
    * @throws {Error101} when data is undefined
@@ -72,14 +119,14 @@ export default class ArrayList {
    * let l = list.addFirst(1);
    */
   addFirst(data) {
-    if(isNotUndefined(data) && isNotNull(data)) {
+    if(isNotUndefined(data) &amp;&amp; isNotNull(data)) {
       return this.builder([data, ...this.array]);
     } else if (isNull(data)) {
-      throw error["100"];
+      throw error[&quot;100&quot;];
     } else if (isUndefined(data)) {
-      throw error["101"];
+      throw error[&quot;101&quot;];
     } else {
-      throw error["001"];
+      throw error[&quot;001&quot;];
     }
   }
 
@@ -89,7 +136,7 @@ export default class ArrayList {
    * @param {any} data the element than you whan to add to the list
    * @access public
    * @since 0.1.0
-   * @return { ArrayList } a new instance of the class with the elements of the other list and the new element added
+   * @return { List } a new instance of the class with the elements of the other list and the new element added
    * @throws {Error001} when shit go bad
    * @throws {Error100} when data is null
    * @throws {Error101} when data is undefined
@@ -97,14 +144,14 @@ export default class ArrayList {
    * let l = list.addLast(1);
    */
   addLast(data) {
-    if(isNotUndefined(data) && isNotNull(data)) {
+    if(isNotUndefined(data) &amp;&amp; isNotNull(data)) {
       return this.builder([...this.array, data]);
     } else if (isNull(data)) {
-      throw error["100"];
+      throw error[&quot;100&quot;];
     } else if (isUndefined(data)) {
-      throw error["101"];
+      throw error[&quot;101&quot;];
     } else {
-      throw error["001"];
+      throw error[&quot;001&quot;];
     }
   }
 
@@ -115,7 +162,7 @@ export default class ArrayList {
    * @param {number} i the index value in which to add the element [0, list.size())
    * @access public
    * @since 0.1.0
-   * @return { ArrayList } a new instance of the class with the elements of the other list and the new element added
+   * @return { List } a new instance of the class with the elements of the other list and the new element added
    * @throws {Error001} when shit go bad
    * @throws {Error100} when data is null
    * @throws {Error101} when data is undefined
@@ -126,18 +173,18 @@ export default class ArrayList {
    * let l = list.add(1, 0);
    */
   add(data, i) {
-    if(!isNaN(i) && isNotUndefined(data) && isNotUndefined(i) && isNotNull(data) && isNotNull(i)) {
+    if(!isNaN(i) &amp;&amp; isNotUndefined(data) &amp;&amp; isNotUndefined(i) &amp;&amp; isNotNull(data) &amp;&amp; isNotNull(i)) {
       if (i === 0) {
         return this.addFirst(data);
       } else if (i === this.size() - 1) {
         return this.addLast(data);
-      } else if (i < 0) {
+      } else if (i &lt; 0) {
         return this.add(data, this.size() + i);
-      } else if (i >= this.size()) {
-        throw error["113"];
+      } else if (i &gt;= this.size()) {
+        throw error[&quot;113&quot;];
       } else {
         let vec = [];
-        for (let j = 0; j < this.array.length; j++) {
+        for (let j = 0; j &lt; this.array.length; j++) {
           if(i === j) {
             vec.push(data);
           }
@@ -148,17 +195,17 @@ export default class ArrayList {
         }
       }
     } else if (isNull(data)) {
-      throw error["100"];
+      throw error[&quot;100&quot;];
     } else if (isUndefined(data)) {
-      throw error["101"];
+      throw error[&quot;101&quot;];
     } else if (isNull(i)) {
-      throw error["110"];
+      throw error[&quot;110&quot;];
     } else if (isUndefined(i)) {
-      throw error["111"];
+      throw error[&quot;111&quot;];
     } else  if (isNaN(i)) {
-      throw error["112"];
+      throw error[&quot;112&quot;];
     } else {
-      throw error["001"];
+      throw error[&quot;001&quot;];
     }
   }
 
@@ -168,25 +215,25 @@ export default class ArrayList {
    * @param {any[]} collection an Array of elements to add 
    * @access public
    * @since 0.1.0
-   * @return { ArrayList } a new instance of the class with the elements of the other list and the new elements added
+   * @return { List } a new instance of the class with the elements of the other list and the new elements added
    * @throws {Error001} when shit go bad
    * @throws {Error102} when collection is null
    * @throws {Error103} when collection is undefined
    * @throws {Error104} when collection is not an array
    * @example 
-   * let l = list.addAll([1,'a',3]);
+   * let l = list.addAll([1,&apos;a&apos;,3]);
    */
   addAll(collection) {
-    if(isNotUndefined(collection) && isNotNull(collection) && isArray(collection)) {
+    if(isNotUndefined(collection) &amp;&amp; isNotNull(collection) &amp;&amp; isArray(collection)) {
       return this.builder([...this.array, ...collection]);
     } else if (isNotArray(collection)) {
-      throw error["104"];
+      throw error[&quot;104&quot;];
     } else if (isNull(collection)) {
-      throw error["102"];
+      throw error[&quot;102&quot;];
     } else if (isUndefined(collection)) {
-      throw error["103"];
+      throw error[&quot;103&quot;];
     } else {
-      throw error["001"];
+      throw error[&quot;001&quot;];
     }
   }
 
@@ -195,7 +242,7 @@ export default class ArrayList {
    * This method allow you to delete the first element of the list  
    * @access public
    * @since 0.1.0
-   * @return { ArrayList } null is the list is empty or a new instance of the class with the elements of the other list except from the first
+   * @return { List } null is the list is empty or a new instance of the class with the elements of the other list except from the first
    * @example 
    * let l = list.deleteFirst();
    */
@@ -212,7 +259,7 @@ export default class ArrayList {
    * This method allow you to last the first element of the list  
    * @access public
    * @since 0.1.0
-   * @return { ArrayList } null is the list is empty or a new instance of the class with the elements of the other list except from the first
+   * @return { List } null is the list is empty or a new instance of the class with the elements of the other list except from the first
    * @example 
    * let l = list.deleteLast();
    */
@@ -230,7 +277,7 @@ export default class ArrayList {
    * @param {number} i the index of the element to eliminate [0, list.size())
    * @access public
    * @since 0.1.0
-   * @return { ArrayList } null if the list is empty a new instance of the class with the elements of the other list except the element i
+   * @return { List } null if the list is empty a new instance of the class with the elements of the other list except the element i
    * @throws {Error001} when shit go bad
    * @throws {Error110} when i is null
    * @throws {Error111} when i is undefined
@@ -243,18 +290,18 @@ export default class ArrayList {
     if(this.isEmpty()) {
       return null;
     } else {
-      if(isNotUndefined(i) && isNotNull(i) && !isNaN(i)) {
+      if(isNotUndefined(i) &amp;&amp; isNotNull(i) &amp;&amp; !isNaN(i)) {
         if(i === 0) {
           return this.deleteFirst();
         } else if (i === this.size() - 1) {
           return this.deleteLast();
-        } else if(i < 0) {
+        } else if(i &lt; 0) {
           this.delete(this.size() + i);
-        } else if (i >= this.size()) {
-          throw error["113"];
+        } else if (i &gt;= this.size()) {
+          throw error[&quot;113&quot;];
         } else {
           let vec = [];
-          for (let j = 0; j < this.array.length; j++) {
+          for (let j = 0; j &lt; this.array.length; j++) {
             if(i !== j) {
               vec.push(this.array[i]);
             }
@@ -264,13 +311,13 @@ export default class ArrayList {
           } 
         }
       } else if (isNaN(i)) {
-        throw error["112"];
+        throw error[&quot;112&quot;];
       } else  if (isNull(i)) {
-        throw error["110"];
+        throw error[&quot;110&quot;];
       } else if (isUndefined(i)) {
-        throw error["111"];
+        throw error[&quot;111&quot;];
       } else {
-        throw error["001"];
+        throw error[&quot;001&quot;];
       }
     }
   }
@@ -286,13 +333,13 @@ export default class ArrayList {
    */
   clear() {
     if(!this.isEmpty()) {
-      console.warn("DS.js Warning: You're clearing the list all the data will be erased. You have 5s to cancel the operation");
-      setTimeout(() => {
-        console.log("DS.js Warning: The data is being erased...");
+      console.warn(&quot;DS.js Warning: You&apos;re clearing the list all the data will be erased. You have 5s to cancel the operation&quot;);
+      setTimeout(() =&gt; {
+        console.log(&quot;DS.js Warning: The data is being erased...&quot;);
         this.array = [];
       }, 5000);
     } else {
-      console.log("Your list doesn't have any data to delete");
+      console.log(&quot;Your list doesn&apos;t have any data to delete&quot;);
     }
   }
 
@@ -306,23 +353,23 @@ export default class ArrayList {
    * @throws {Error200} when the list is empty
    * @throws {Error300} when callback is not a function 
    * @example
-   * list.forEach((x,i,vec) => {
+   * list.forEach((x,i,vec) =&gt; {
    *  console.log(`Value: ${x}, Index: ${i}`);
    * });
    */
   forEach(callback) {
-    if(isFunction(callback) && !this.isEmpty()) {
+    if(isFunction(callback) &amp;&amp; !this.isEmpty()) {
       let vec = this.array;
       let list = this.builder(vec);
-      for (let i = 0; i < vec.length; i++) {
+      for (let i = 0; i &lt; vec.length; i++) {
         callback(vec[i], i, list);  
       } 
     } else if (this.isEmpty()) {
-      throw error["200"];
+      throw error[&quot;200&quot;];
     } else if (isNotFunction(callback)) {
-      throw error["300"];
+      throw error[&quot;300&quot;];
     } else {
-      throw error["001"]
+      throw error[&quot;001&quot;]
     }
   }
 
@@ -335,26 +382,26 @@ export default class ArrayList {
    * @throws {Error001} when shit go bad
    * @throws {Error200} when the list is empty
    * @throws {Error300} when callback is not a function
-   * @return { ArrayList } An instance of the class with the mutated elements 
+   * @return { List } An instance of the class with the mutated elements 
    * @example 
-   * let l = list.map((x,i,vec) => x * x);
+   * let l = list.map((x,i,vec) =&gt; x * x);
    */
   map(callback) {
-    if(!this.isEmpty() && isFunction(callback)) {
+    if(!this.isEmpty() &amp;&amp; isFunction(callback)) {
       let vec = this.array;
       let aux = [];
-      for (let i = 0; i < vec.length; i++) {
+      for (let i = 0; i &lt; vec.length; i++) {
         aux.push(callback(vec[i], i, vec));
         if(i === vec.length - 1) {
           return this.builder(vec);
         } 
       }
     } else if (this.isEmpty()) {
-      throw error["200"];
+      throw error[&quot;200&quot;];
     } else if (isNotFunction(callback)) {
-      throw error["300"];
+      throw error[&quot;300&quot;];
     } else {
-      throw error["001"];
+      throw error[&quot;001&quot;];
     }
   }
 
@@ -389,7 +436,7 @@ export default class ArrayList {
       return null;
     } else {
       let json = {};
-      for (let i = 0; i < this.array.length; i++) {
+      for (let i = 0; i &lt; this.array.length; i++) {
         json[i] = this.array[i];
         if (i === this.array - 1) {
           return json;
@@ -397,4 +444,20 @@ export default class ArrayList {
       }
     }
   }
-}
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

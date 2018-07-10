@@ -16,7 +16,7 @@ Una vez instala la Librería solo necesitas hacer lo siguiente para tenerla disp
 ```javascript
 const DS = require('ds-js');
 
-// For example you want to use an ArrayList
+// For example you want to use an List
 // Por ejemplo quieres usar una Lista
 const LinkedList = DS.ArrayLsit;
 

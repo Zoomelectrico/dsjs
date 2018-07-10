@@ -1,92 +1,62 @@
-import { isNotUndefined, isNotNull, isNotFunction, isNotArray, isUndefined, isNull, isFunction, isArray } from './helper/check';
+import { isNotNull, isNotUndefined, isNull, isUndefined, isFunction, isNotFunction, isArray, isNotArray } from './helper/check';
 import error from './errors/errors';
-import Node from './Node';
 
 /**
- * @class
- * @since 0.2.0
- * @access public
- * @author Jose Roberto Quevedo
+ * List class, this class allow you to use a LinkedList DS based on an array
  * @example
  * let list = new List();
+ * @access public
+ * @author Jose Roberto Quevedo
+ * @version 1.0.0
+ * @since 0.1.0
  */
 export default class List {
- 
   /**
-  * @constructor
-  * @access public
-  * @since 0.2.0 
-  */
+   * @constructor this is constructor of the class, here an empty array is initialize
+   * @since 0.1.0
+   * @access public
+   */
   constructor() {
-    this.head = null;
-    this.tail = null;
+    this.array = [];
   }
 
   /**
    * @function builder
+   * This method is an interface for the class to create a list from the operation aplided to the other;
    * @access private
-   * @since 0.2.0
-   * @param {List} list 
-   * @return 
+   * @since 0.1.0
+   * @param {Array} array
    */
-  builder(list) {
-    let node = list.head;
-    let newList = new List();
-    while (node) {
-      newList.addLastP(list);
-    }
-    return newList;
-  }
+  builder(array) {
+    let list = new List();
+    list.array = array;
+    return list;
+  } 
 
   /**
    * @function isEmpty
+   * This method say if a list is empty or not.
    * @access public
-   * @since 0.2.0
-   * @return
+   * @since 0.1.0
+   * @return { List } true if the list is empty or false otherwaise
    * @example
-   * let bool = list.isEmpty();
+   * let boolean = list.isEmpty();
    */
-  isEmpty = () => isNull(head);
-
-  /**
-   * @function size
-   * @access public
-   * @since 0.2.0
-   * @return {number}
-   * @example
-   * let size = list.size();
-   */
-  size() {
-    if (this.isEmpty()) {
-      return 0;
-    } else {
-      let aux = this.head;
-      let i = 0;
-      while(aux) {
-        aux = aux.getNext();
-        i++;
-      }
-      return i;
-    }
+  isEmpty() {
+    return this.array.length <= 0;
   }
 
   /**
-   * @function addFirstP
-   * @param {any} data
-   * @access private
-   * @since 0.2.0 
+   * @function size
+   * this method say what is the size of the list
+   * @access public
+   * @since 0.1.0
+   * @return { List } 0 if the list is empty or an positive integer representing the list size
+   * @example
+   * let boolean = list.isEmpty();
    */
-  addFirstP(data) {
-    if (this.isEmpty()) {
-      this.head = this.tail = new Node(data);
-      this.head.setNext(this.tail);
-      this.tail.setPrev(head);
-    } else {
-      let node = new Node(data);
-      node.setNext(this.head);
-      this.head.setPrev(node);
-      this.head = node;
-    }
+  size() {
+    return this.array.length;
   }
 
   /**
@@ -94,7 +64,7 @@ export default class List {
    * This method allow you to add an element in the first position of the list 
    * @param {any} data the element than you whan to add to the list
    * @access public
-   * @since 0.2.0
+   * @since 0.1.0
    * @return { List } a new instance of the class with the elements of the other list and the new element added
    * @throws {Error001} when shit go bad
    * @throws {Error100} when data is null
@@ -103,35 +73,14 @@ export default class List {
    * let l = list.addFirst(1);
    */
   addFirst(data) {
-    if (isNotUndefined(data) && isNotNull(data)) {
-      let list = this.builder(this);
-      list.addFirstP(data);
-      return list;
+    if(isNotUndefined(data) && isNotNull(data)) {
+      return this.builder([data, ...this.array]);
     } else if (isNull(data)) {
-      throw error["101"];
+      throw error["100"];
     } else if (isUndefined(data)) {
-      throw error["102"];
+      throw error["101"];
     } else {
       throw error["001"];
-    }
-  }
-
-  /**
-   * @function addLastP
-   * @param {any} data
-   * @access private
-   * @since 0.2.0 
-   */
-  addLastP(data) {
-    if (this.isEmpty()) {
-      this.head = this.head = new Node(data);
-      this.head.setNext(this.tail);
-      this.tail.setPrev(this.head);
-    } else {
-      let node = new Node(data);
-      this.tail.setNext(node);
-      node.setPrev(this.tail);
-      this.tail = node;
     }
   }
 
@@ -140,7 +89,7 @@ export default class List {
    * This method allow you to add an element in the last position of the list 
    * @param {any} data the element than you whan to add to the list
    * @access public
-   * @since 0.2.0
+   * @since 0.1.0
    * @return { List } a new instance of the class with the elements of the other list and the new element added
    * @throws {Error001} when shit go bad
    * @throws {Error100} when data is null
@@ -149,53 +98,24 @@ export default class List {
    * let l = list.addLast(1);
    */
   addLast(data) {
-    if (isNotUndefined(data) && isNotNull(data)) {
-      let list = this.builder(this);
-      list.addLastP(data);
-      return list;
+    if(isNotUndefined(data) && isNotNull(data)) {
+      return this.builder([...this.array, data]);
     } else if (isNull(data)) {
-      throw error["101"];
+      throw error["100"];
     } else if (isUndefined(data)) {
-      throw error["102"];
+      throw error["101"];
     } else {
       throw error["001"];
     }
   }
 
   /**
-   * @function addP
-   * @param {any} data
-   * @param {number} i
-   * @access private
-   * @since 0.2.0 
-   */
-  add(data, i) {
-    if (isNotUndefined(data) &&  isNotUndefined(i) && isNotNull(data) && isNotNull(i) && !isNaN(i)) {
-      let list = this.builder(this);
-      list.addP(data, i);
-      return list;
-    } else if (isNull(data)) {
-      throw error["101"];
-    } else if (isUndefined(data)) {
-      throw error["102"];
-    } else if (isNull(i)) {
-      throw error["110"]; 
-    } else if (isUndefined(i)) {
-      throw error["111"];
-    } else if (isNaN(i)) {
-      throw error["112"];
-    } else {
-      throw error["001"];
-    }
-  }
-  
-  /**
    * @function add
    * This method allow you to add an element in the position i of the list 
    * @param {any} data the element than you whan to add to the list
    * @param {number} i the index value in which to add the element [0, list.size())
    * @access public
-   * @since 0.2.0
+   * @since 0.1.0
    * @return { List } a new instance of the class with the elements of the other list and the new element added
    * @throws {Error001} when shit go bad
    * @throws {Error100} when data is null
@@ -206,37 +126,68 @@ export default class List {
    * @example 
    * let l = list.add(1, 0);
    */
-  addP(data, i) {
-    if (this.isEmpty() || i === 0) {
-      this.addFirstP(data);
-    } else if (i === size() - 1) {
-      this.addLastP(data);
-    } else if (i < 0) {
-      this.addP(data, this.size() + i);
-    } else if (i >= this.size()) {
-      throw error["113"];
-    } else {
-      let node = new Node(data);
-      let aux = this.head;
-      for (let j = 0; j < i; j++) {
-        aux = aux.getNext();
+  add(data, i) {
+    if(!isNaN(i) && isNotUndefined(data) && isNotUndefined(i) && isNotNull(data) && isNotNull(i)) {
+      if (i === 0) {
+        return this.addFirst(data);
+      } else if (i === this.size() - 1) {
+        return this.addLast(data);
+      } else if (i < 0) {
+        return this.add(data, this.size() + i);
+      } else if (i >= this.size()) {
+        throw error["113"];
+      } else {
+        let vec = [];
+        for (let j = 0; j < this.array.length; j++) {
+          if(i === j) {
+            vec.push(data);
+          }
+          vec.push(this.array[i]);
+          if(i === this.array.length - 1) {
+            return this.builder(vec);
+          }
+        }
       }
-      node.setNext(aux.getNext())
-      node.setPrev(aux);
-      aux.getNext().setPrev(node);
-      aux.setNext(node);
+    } else if (isNull(data)) {
+      throw error["100"];
+    } else if (isUndefined(data)) {
+      throw error["101"];
+    } else if (isNull(i)) {
+      throw error["110"];
+    } else if (isUndefined(i)) {
+      throw error["111"];
+    } else  if (isNaN(i)) {
+      throw error["112"];
+    } else {
+      throw error["001"];
     }
   }
 
-  deleteFirstP() {
-    if (this.isEmpty()) {
-      return null;
+  /**
+   * @function addAll
+   * This method allow you to add an collection of elements to the list 
+   * @param {any[]} collection an Array of elements to add 
+   * @access public
+   * @since 0.1.0
+   * @return { List } a new instance of the class with the elements of the other list and the new elements added
+   * @throws {Error001} when shit go bad
+   * @throws {Error102} when collection is null
+   * @throws {Error103} when collection is undefined
+   * @throws {Error104} when collection is not an array
+   * @example 
+   * let l = list.addAll([1,'a',3]);
+   */
+  addAll(collection) {
+    if(isNotUndefined(collection) && isNotNull(collection) && isArray(collection)) {
+      return this.builder([...this.array, ...collection]);
+    } else if (isNotArray(collection)) {
+      throw error["104"];
+    } else if (isNull(collection)) {
+      throw error["102"];
+    } else if (isUndefined(collection)) {
+      throw error["103"];
     } else {
-      let temp = this.head;
-      this.head = this.head.getNext();
-      this.head.setPrev(null);
-      temp.setNext(null);
-      return temp.getData();
+      throw error["001"];
     }
   }
 
@@ -244,30 +195,16 @@ export default class List {
    * @function deleteFirst
    * This method allow you to delete the first element of the list  
    * @access public
-   * @since 0.2.0
+   * @since 0.1.0
    * @return { List } null is the list is empty or a new instance of the class with the elements of the other list except from the first
    * @example 
-   * let { l, data } = list.deleteFirst();
+   * let l = list.deleteFirst();
    */
   deleteFirst() {
-    if (this.isEmpty()) {
+    if(this.isEmpty()) {
       return null;
     } else {
-      let list = this.builder(this);
-      let data = list.deleteFirstP();
-      return { list, data };
-    }
-  }
-
-  deleteLastP() {
-    if (this.isEmpty()) {
-      return null;
-    } else {
-      let temp = this.tail;
-      this.tail = this.tail.getPrev();
-      this.tail.setNext(null);
-      temp.setPrev(null);
-      return temp.getData();
+      return this.builder(this.array.slice(1, this.array.length));
     }
   }
 
@@ -275,44 +212,25 @@ export default class List {
    * @function deleteLast
    * This method allow you to last the first element of the list  
    * @access public
-   * @since 0.2.0
+   * @since 0.1.0
    * @return { List } null is the list is empty or a new instance of the class with the elements of the other list except from the first
    * @example 
-   * let { l, data } = list.deleteLast();
+   * let l = list.deleteLast();
    */
   deleteLast() {
     if(this.isEmpty()) {
       return null;
     } else {
-      let list = this.builder(this);
-      let data = this.deleteLastP();
-      return { list, data };
+      return this.builder(this.array.slice(0, this.array.length - 1));
     }
   }
-
-  deleteP(i) {
-    if(this.isEmpty()) {
-      return null 
-    } else {
-      let aux = this.head;
-      for (let j = 0; j < i; j++) {
-        aux = aux.getNext();
-      }
-      let temp = aux.getNext();
-      aux.getNext().getNext().setPrev(aux);
-      aux.setNext(aux.getNext().getNext());
-      temp.setNext(null);
-      temp.setPrev(null);
-      return temp.getData();
-    }
-  } 
 
   /**
    * @function delete
    * This method allow you to delete the element i from the list
    * @param {number} i the index of the element to eliminate [0, list.size())
    * @access public
-   * @since 0.2.0
+   * @since 0.1.0
    * @return { List } null if the list is empty a new instance of the class with the elements of the other list except the element i
    * @throws {Error001} when shit go bad
    * @throws {Error110} when i is null
@@ -320,7 +238,7 @@ export default class List {
    * @throws {Error112} when i is Not a Number
    * @throws {Error113} when i is bigger than the list size
    * @example 
-   * let { list, data } = list.delete(0);
+   * let l = list.delete(0);
    */
   delete(i) {
     if(this.isEmpty()) {
@@ -336,9 +254,15 @@ export default class List {
         } else if (i >= this.size()) {
           throw error["113"];
         } else {
-          let list = this.builder(this);
-          let data = list.delete(i);
-          return { list, data };
+          let vec = [];
+          for (let j = 0; j < this.array.length; j++) {
+            if(i !== j) {
+              vec.push(this.array[i]);
+            }
+            if(i === this.array.length - 1) {
+              return this.builder(vec);
+            }
+          } 
         }
       } else if (isNaN(i)) {
         throw error["112"];
@@ -357,7 +281,7 @@ export default class List {
    * WARNING: This method delete all the element of the original list.
    * This should be used carefully
    * @access public
-   * @since 0.2.0
+   * @since 0.1.0
    * @example
    * list.clear();
    */
@@ -366,7 +290,7 @@ export default class List {
       console.warn("DS.js Warning: You're clearing the list all the data will be erased. You have 5s to cancel the operation");
       setTimeout(() => {
         console.log("DS.js Warning: The data is being erased...");
-        this.head = this.tail = null;
+        this.array = [];
       }, 5000);
     } else {
       console.log("Your list doesn't have any data to delete");
@@ -376,7 +300,7 @@ export default class List {
   /**
    * @function forEach
    * This method allow us to iterate over the list
-   * @param {function (value: any, i: number, list: List)} callback this is a callback function that will be execute for every element in the list, it should not mutated the element of the list
+   * @param {function (value: any, i: number, vec: array)} callback this is a callback function that will be execute for every element in the list, it should not mutated the element of the list
    * @since 0.1.0
    * @access public
    * @throws {Error001} when shit go bad
@@ -389,11 +313,10 @@ export default class List {
    */
   forEach(callback) {
     if(isFunction(callback) && !this.isEmpty()) {
-      let aux = this.head;
-      let list = this.builder(this);
-      for (let i = 0; i < list.size(); i++) {
-        callback(aux.getData(), i, list);  
-        aux = aux.getNext();
+      let vec = this.array;
+      let list = this.builder(vec);
+      for (let i = 0; i < vec.length; i++) {
+        callback(vec[i], i, list);  
       } 
     } else if (this.isEmpty()) {
       throw error["200"];
@@ -408,7 +331,7 @@ export default class List {
    * @function map
    * This method allow us to map over the list
    * @param {function (value: any, i: number, vec: array)} callback this is a callback function that will be execute for every element in the list, and it should mutated the element of the list
-   * @since 0.2.0
+   * @since 0.1.0
    * @access public
    * @throws {Error001} when shit go bad
    * @throws {Error200} when the list is empty
@@ -419,13 +342,12 @@ export default class List {
    */
   map(callback) {
     if(!this.isEmpty() && isFunction(callback)) {
-      let aux = this.head;
-      let l = new List();
-      const list = this.builder(this);
-      for (let i = 0; i < list.size(); i++) {
-        l.addLastP(callback(aux.getData(), i, list));
-        if(i === list.size() - 1) {
-          return l;
+      let vec = this.array;
+      let aux = [];
+      for (let i = 0; i < vec.length; i++) {
+        aux.push(callback(vec[i], i, vec));
+        if(i === vec.length - 1) {
+          return this.builder(vec);
         } 
       }
     } else if (this.isEmpty()) {
@@ -437,5 +359,43 @@ export default class List {
     }
   }
 
+  /**
+   * @function toString
+   * This method convert the current list to and string, just like this: 1,2,3,4
+   * @access public
+   * @since 0.1.0
+   * @return null if the list is empty or a string representig the list
+   * @example
+   * let string = list.string();
+   */
+  toString() {
+    if(this.isEmpty()) {
+      return null;
+    } else {
+      return this.array.join();
+    }
+  }
 
+  /**
+   * @function toJSON
+   * This method parse the list to a JSON
+   * @access public
+   * @since 0.1.0
+   * @return null if the list is empty or an object representing the list
+   * @example
+   * let json = list.toJSON();
+   */
+  toJSON() {
+    if(this.isEmpty()) {
+      return null;
+    } else {
+      let json = {};
+      for (let i = 0; i < this.array.length; i++) {
+        json[i] = this.array[i];
+        if (i === this.array - 1) {
+          return json;
+        }
+      }
+    }
+  }
 }

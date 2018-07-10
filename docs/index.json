@@ -566,10 +566,10 @@
   {
     "__docId__": 48,
     "kind": "file",
-    "name": "src/ArrayList.js",
-    "content": "import { isNotNull, isNotUndefined, isNull, isUndefined, isFunction, isNotFunction, isArray, isNotArray } from './helper/check';\nimport error from './errors/errors';\n/**\n * ArrayList class, this class allow you to use a LinkedList DS based on an array\n * @example\n * let list = new ArrayList();\n * @access public\n * @version 1.0.0\n * @since 0.1.0\n */\nexport default class ArrayList {\n  /**\n   * @constructor this is constructor of the class, here an empty array is initialize\n   * @since 0.1.0\n   * @access public\n   */\n  constructor() {\n    this.array = [];\n  }\n\n  /**\n   * @function builder\n   * This method is an interface for the class to create a list from the operation aplided to the other;\n   * @access private\n   * @since 0.1.0\n   * @param {Array} array\n   */\n  builder(array) {\n    let list = new ArrayList();\n    list.array = array;\n    return list;\n  } \n\n  /**\n   * @function isEmpty\n   * This method say if a list is empty or not.\n   * @access public\n   * @since 0.1.0\n   * @return { ArrayList } true if the list is empty or false otherwaise\n   * @example\n   * let boolean = list.isEmpty();\n   */\n  isEmpty() {\n    return this.array.length <= 0;\n  }\n\n  /**\n   * @function size\n   * this method say what is the size of the list\n   * @access public\n   * @since 0.1.0\n   * @return { ArrayList } 0 if the list is empty or an positive integer representing the list size\n   * @example\n   * let boolean = list.isEmpty();\n   */\n  size() {\n    return this.array.length;\n  }\n\n  /**\n   * @function addFirst\n   * This method allow you to add an element in the first position of the list \n   * @param {any} data the element than you whan to add to the list\n   * @access public\n   * @since 0.1.0\n   * @return { ArrayList } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @example \n   * let l = list.addFirst(1);\n   */\n  addFirst(data) {\n    if(isNotUndefined(data) && isNotNull(data)) {\n      return this.builder([data, ...this.array]);\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function addLast\n   * This method allow you to add an element in the last position of the list \n   * @param {any} data the element than you whan to add to the list\n   * @access public\n   * @since 0.1.0\n   * @return { ArrayList } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @example \n   * let l = list.addLast(1);\n   */\n  addLast(data) {\n    if(isNotUndefined(data) && isNotNull(data)) {\n      return this.builder([...this.array, data]);\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function add\n   * This method allow you to add an element in the position i of the list \n   * @param {any} data the element than you whan to add to the list\n   * @param {number} i the index value in which to add the element [0, list.size())\n   * @access public\n   * @since 0.1.0\n   * @return { ArrayList } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @throws {Error110} when the index is null\n   * @throws {Error111} when the index is undefined\n   * @throws {Error112} when the index is Not a Number\n   * @example \n   * let l = list.add(1, 0);\n   */\n  add(data, i) {\n    if(!isNaN(i) && isNotUndefined(data) && isNotUndefined(i) && isNotNull(data) && isNotNull(i)) {\n      if (i === 0) {\n        return this.addFirst(data);\n      } else if (i === this.size() - 1) {\n        return this.addLast(data);\n      } else if (i < 0) {\n        return this.add(data, this.size() + i);\n      } else if (i >= this.size()) {\n        throw error[\"113\"];\n      } else {\n        let vec = [];\n        for (let j = 0; j < this.array.length; j++) {\n          if(i === j) {\n            vec.push(data);\n          }\n          vec.push(this.array[i]);\n          if(i === this.array.length - 1) {\n            return this.builder(vec);\n          }\n        }\n      }\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else if (isNull(i)) {\n      throw error[\"110\"];\n    } else if (isUndefined(i)) {\n      throw error[\"111\"];\n    } else  if (isNaN(i)) {\n      throw error[\"112\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function addAll\n   * This method allow you to add an collection of elements to the list \n   * @param {any[]} collection an Array of elements to add \n   * @access public\n   * @since 0.1.0\n   * @return { ArrayList } a new instance of the class with the elements of the other list and the new elements added\n   * @throws {Error001} when shit go bad\n   * @throws {Error102} when collection is null\n   * @throws {Error103} when collection is undefined\n   * @throws {Error104} when collection is not an array\n   * @example \n   * let l = list.addAll([1,'a',3]);\n   */\n  addAll(collection) {\n    if(isNotUndefined(collection) && isNotNull(collection) && isArray(collection)) {\n      return this.builder([...this.array, ...collection]);\n    } else if (isNotArray(collection)) {\n      throw error[\"104\"];\n    } else if (isNull(collection)) {\n      throw error[\"102\"];\n    } else if (isUndefined(collection)) {\n      throw error[\"103\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function deleteFirst\n   * This method allow you to delete the first element of the list  \n   * @access public\n   * @since 0.1.0\n   * @return { ArrayList } null is the list is empty or a new instance of the class with the elements of the other list except from the first\n   * @example \n   * let l = list.deleteFirst();\n   */\n  deleteFirst() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.builder(this.array.slice(1, this.array.length));\n    }\n  }\n\n  /**\n   * @function deleteLast\n   * This method allow you to last the first element of the list  \n   * @access public\n   * @since 0.1.0\n   * @return { ArrayList } null is the list is empty or a new instance of the class with the elements of the other list except from the first\n   * @example \n   * let l = list.deleteLast();\n   */\n  deleteLast() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.builder(this.array.slice(0, this.array.length - 1));\n    }\n  }\n\n  /**\n   * @function delete\n   * This method allow you to delete the element i from the list\n   * @param {number} i the index of the element to eliminate [0, list.size())\n   * @access public\n   * @since 0.1.0\n   * @return { ArrayList } null if the list is empty a new instance of the class with the elements of the other list except the element i\n   * @throws {Error001} when shit go bad\n   * @throws {Error110} when i is null\n   * @throws {Error111} when i is undefined\n   * @throws {Error112} when i is Not a Number\n   * @throws {Error113} when i is bigger than the list size\n   * @example \n   * let l = list.delete(0);\n   */\n  delete(i) {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      if(isNotUndefined(i) && isNotNull(i) && !isNaN(i)) {\n        if(i === 0) {\n          return this.deleteFirst();\n        } else if (i === this.size() - 1) {\n          return this.deleteLast();\n        } else if(i < 0) {\n          this.delete(this.size() + i);\n        } else if (i >= this.size()) {\n          throw error[\"113\"];\n        } else {\n          let vec = [];\n          for (let j = 0; j < this.array.length; j++) {\n            if(i !== j) {\n              vec.push(this.array[i]);\n            }\n            if(i === this.array.length - 1) {\n              return this.builder(vec);\n            }\n          } \n        }\n      } else if (isNaN(i)) {\n        throw error[\"112\"];\n      } else  if (isNull(i)) {\n        throw error[\"110\"];\n      } else if (isUndefined(i)) {\n        throw error[\"111\"];\n      } else {\n        throw error[\"001\"];\n      }\n    }\n  }\n\n  /**\n   * @function clear\n   * WARNING: This method delete all the element of the original list.\n   * This should be used carefully\n   * @access public\n   * @since 0.1.0\n   * @example\n   * list.clear();\n   */\n  clear() {\n    if(!this.isEmpty()) {\n      console.warn(\"DS.js Warning: You're clearing the list all the data will be erased. You have 5s to cancel the operation\");\n      setTimeout(() => {\n        console.log(\"DS.js Warning: The data is being erased...\");\n        this.array = [];\n      }, 5000);\n    } else {\n      console.log(\"Your list doesn't have any data to delete\");\n    }\n  }\n\n  /**\n   * @function forEach\n   * This method allow us to iterate over the list\n   * @param {function (value: any, i: number, vec: array)} callback this is a callback function that will be execute for every element in the list, it should not mutated the element of the list\n   * @since 0.1.0\n   * @access public\n   * @throws {Error001} when shit go bad\n   * @throws {Error200} when the list is empty\n   * @throws {Error300} when callback is not a function \n   * @example\n   * list.forEach((x,i,vec) => {\n   *  console.log(`Value: ${x}, Index: ${i}`);\n   * });\n   */\n  forEach(callback) {\n    if(isFunction(callback) && !this.isEmpty()) {\n      let vec = this.array;\n      let list = this.builder(vec);\n      for (let i = 0; i < vec.length; i++) {\n        callback(vec[i], i, list);  \n      } \n    } else if (this.isEmpty()) {\n      throw error[\"200\"];\n    } else if (isNotFunction(callback)) {\n      throw error[\"300\"];\n    } else {\n      throw error[\"001\"]\n    }\n  }\n\n  /**\n   * @function map\n   * This method allow us to map over the list\n   * @param {function (value: any, i: number, vec: array)} callback this is a callback function that will be execute for every element in the list, and it should mutated the element of the list\n   * @since 0.1.0\n   * @access public\n   * @throws {Error001} when shit go bad\n   * @throws {Error200} when the list is empty\n   * @throws {Error300} when callback is not a function\n   * @return { ArrayList } An instance of the class with the mutated elements \n   * @example \n   * let l = list.map((x,i,vec) => x * x);\n   */\n  map(callback) {\n    if(!this.isEmpty() && isFunction(callback)) {\n      let vec = this.array;\n      let aux = [];\n      for (let i = 0; i < vec.length; i++) {\n        aux.push(callback(vec[i], i, vec));\n        if(i === vec.length - 1) {\n          return this.builder(vec);\n        } \n      }\n    } else if (this.isEmpty()) {\n      throw error[\"200\"];\n    } else if (isNotFunction(callback)) {\n      throw error[\"300\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function toString\n   * This method convert the current list to and string, just like this: 1,2,3,4\n   * @access public\n   * @since 0.1.0\n   * @return null if the list is empty or a string representig the list\n   * @example\n   * let string = list.string();\n   */\n  toString() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.array.join();\n    }\n  }\n\n  /**\n   * @function toJSON\n   * This method parse the list to a JSON\n   * @access public\n   * @since 0.1.0\n   * @return null if the list is empty or an object representing the list\n   * @example\n   * let json = list.toJSON();\n   */\n  toJSON() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      let json = {};\n      for (let i = 0; i < this.array.length; i++) {\n        json[i] = this.array[i];\n        if (i === this.array - 1) {\n          return json;\n        }\n      }\n    }\n  }\n}",
+    "name": "src/List.js",
+    "content": "import { isNotNull, isNotUndefined, isNull, isUndefined, isFunction, isNotFunction, isArray, isNotArray } from './helper/check';\nimport error from './errors/errors';\n\n/**\n * List class, this class allow you to use a LinkedList DS based on an array\n * @example\n * let list = new List();\n * @access public\n * @author Jose Roberto Quevedo\n * @version 1.0.0\n * @since 0.1.0\n */\nexport default class List {\n  /**\n   * @constructor this is constructor of the class, here an empty array is initialize\n   * @since 0.1.0\n   * @access public\n   */\n  constructor() {\n    this.array = [];\n  }\n\n  /**\n   * @function builder\n   * This method is an interface for the class to create a list from the operation aplided to the other;\n   * @access private\n   * @since 0.1.0\n   * @param {Array} array\n   */\n  builder(array) {\n    let list = new List();\n    list.array = array;\n    return list;\n  } \n\n  /**\n   * @function isEmpty\n   * This method say if a list is empty or not.\n   * @access public\n   * @since 0.1.0\n   * @return { List } true if the list is empty or false otherwaise\n   * @example\n   * let boolean = list.isEmpty();\n   */\n  isEmpty() {\n    return this.array.length <= 0;\n  }\n\n  /**\n   * @function size\n   * this method say what is the size of the list\n   * @access public\n   * @since 0.1.0\n   * @return { List } 0 if the list is empty or an positive integer representing the list size\n   * @example\n   * let boolean = list.isEmpty();\n   */\n  size() {\n    return this.array.length;\n  }\n\n  /**\n   * @function addFirst\n   * This method allow you to add an element in the first position of the list \n   * @param {any} data the element than you whan to add to the list\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @example \n   * let l = list.addFirst(1);\n   */\n  addFirst(data) {\n    if(isNotUndefined(data) && isNotNull(data)) {\n      return this.builder([data, ...this.array]);\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function addLast\n   * This method allow you to add an element in the last position of the list \n   * @param {any} data the element than you whan to add to the list\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @example \n   * let l = list.addLast(1);\n   */\n  addLast(data) {\n    if(isNotUndefined(data) && isNotNull(data)) {\n      return this.builder([...this.array, data]);\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function add\n   * This method allow you to add an element in the position i of the list \n   * @param {any} data the element than you whan to add to the list\n   * @param {number} i the index value in which to add the element [0, list.size())\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @throws {Error110} when the index is null\n   * @throws {Error111} when the index is undefined\n   * @throws {Error112} when the index is Not a Number\n   * @example \n   * let l = list.add(1, 0);\n   */\n  add(data, i) {\n    if(!isNaN(i) && isNotUndefined(data) && isNotUndefined(i) && isNotNull(data) && isNotNull(i)) {\n      if (i === 0) {\n        return this.addFirst(data);\n      } else if (i === this.size() - 1) {\n        return this.addLast(data);\n      } else if (i < 0) {\n        return this.add(data, this.size() + i);\n      } else if (i >= this.size()) {\n        throw error[\"113\"];\n      } else {\n        let vec = [];\n        for (let j = 0; j < this.array.length; j++) {\n          if(i === j) {\n            vec.push(data);\n          }\n          vec.push(this.array[i]);\n          if(i === this.array.length - 1) {\n            return this.builder(vec);\n          }\n        }\n      }\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else if (isNull(i)) {\n      throw error[\"110\"];\n    } else if (isUndefined(i)) {\n      throw error[\"111\"];\n    } else  if (isNaN(i)) {\n      throw error[\"112\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function addAll\n   * This method allow you to add an collection of elements to the list \n   * @param {any[]} collection an Array of elements to add \n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new elements added\n   * @throws {Error001} when shit go bad\n   * @throws {Error102} when collection is null\n   * @throws {Error103} when collection is undefined\n   * @throws {Error104} when collection is not an array\n   * @example \n   * let l = list.addAll([1,'a',3]);\n   */\n  addAll(collection) {\n    if(isNotUndefined(collection) && isNotNull(collection) && isArray(collection)) {\n      return this.builder([...this.array, ...collection]);\n    } else if (isNotArray(collection)) {\n      throw error[\"104\"];\n    } else if (isNull(collection)) {\n      throw error[\"102\"];\n    } else if (isUndefined(collection)) {\n      throw error[\"103\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function deleteFirst\n   * This method allow you to delete the first element of the list  \n   * @access public\n   * @since 0.1.0\n   * @return { List } null is the list is empty or a new instance of the class with the elements of the other list except from the first\n   * @example \n   * let l = list.deleteFirst();\n   */\n  deleteFirst() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.builder(this.array.slice(1, this.array.length));\n    }\n  }\n\n  /**\n   * @function deleteLast\n   * This method allow you to last the first element of the list  \n   * @access public\n   * @since 0.1.0\n   * @return { List } null is the list is empty or a new instance of the class with the elements of the other list except from the first\n   * @example \n   * let l = list.deleteLast();\n   */\n  deleteLast() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.builder(this.array.slice(0, this.array.length - 1));\n    }\n  }\n\n  /**\n   * @function delete\n   * This method allow you to delete the element i from the list\n   * @param {number} i the index of the element to eliminate [0, list.size())\n   * @access public\n   * @since 0.1.0\n   * @return { List } null if the list is empty a new instance of the class with the elements of the other list except the element i\n   * @throws {Error001} when shit go bad\n   * @throws {Error110} when i is null\n   * @throws {Error111} when i is undefined\n   * @throws {Error112} when i is Not a Number\n   * @throws {Error113} when i is bigger than the list size\n   * @example \n   * let l = list.delete(0);\n   */\n  delete(i) {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      if(isNotUndefined(i) && isNotNull(i) && !isNaN(i)) {\n        if(i === 0) {\n          return this.deleteFirst();\n        } else if (i === this.size() - 1) {\n          return this.deleteLast();\n        } else if(i < 0) {\n          this.delete(this.size() + i);\n        } else if (i >= this.size()) {\n          throw error[\"113\"];\n        } else {\n          let vec = [];\n          for (let j = 0; j < this.array.length; j++) {\n            if(i !== j) {\n              vec.push(this.array[i]);\n            }\n            if(i === this.array.length - 1) {\n              return this.builder(vec);\n            }\n          } \n        }\n      } else if (isNaN(i)) {\n        throw error[\"112\"];\n      } else  if (isNull(i)) {\n        throw error[\"110\"];\n      } else if (isUndefined(i)) {\n        throw error[\"111\"];\n      } else {\n        throw error[\"001\"];\n      }\n    }\n  }\n\n  /**\n   * @function clear\n   * WARNING: This method delete all the element of the original list.\n   * This should be used carefully\n   * @access public\n   * @since 0.1.0\n   * @example\n   * list.clear();\n   */\n  clear() {\n    if(!this.isEmpty()) {\n      console.warn(\"DS.js Warning: You're clearing the list all the data will be erased. You have 5s to cancel the operation\");\n      setTimeout(() => {\n        console.log(\"DS.js Warning: The data is being erased...\");\n        this.array = [];\n      }, 5000);\n    } else {\n      console.log(\"Your list doesn't have any data to delete\");\n    }\n  }\n\n  /**\n   * @function forEach\n   * This method allow us to iterate over the list\n   * @param {function (value: any, i: number, vec: array)} callback this is a callback function that will be execute for every element in the list, it should not mutated the element of the list\n   * @since 0.1.0\n   * @access public\n   * @throws {Error001} when shit go bad\n   * @throws {Error200} when the list is empty\n   * @throws {Error300} when callback is not a function \n   * @example\n   * list.forEach((x,i,vec) => {\n   *  console.log(`Value: ${x}, Index: ${i}`);\n   * });\n   */\n  forEach(callback) {\n    if(isFunction(callback) && !this.isEmpty()) {\n      let vec = this.array;\n      let list = this.builder(vec);\n      for (let i = 0; i < vec.length; i++) {\n        callback(vec[i], i, list);  \n      } \n    } else if (this.isEmpty()) {\n      throw error[\"200\"];\n    } else if (isNotFunction(callback)) {\n      throw error[\"300\"];\n    } else {\n      throw error[\"001\"]\n    }\n  }\n\n  /**\n   * @function map\n   * This method allow us to map over the list\n   * @param {function (value: any, i: number, vec: array)} callback this is a callback function that will be execute for every element in the list, and it should mutated the element of the list\n   * @since 0.1.0\n   * @access public\n   * @throws {Error001} when shit go bad\n   * @throws {Error200} when the list is empty\n   * @throws {Error300} when callback is not a function\n   * @return { List } An instance of the class with the mutated elements \n   * @example \n   * let l = list.map((x,i,vec) => x * x);\n   */\n  map(callback) {\n    if(!this.isEmpty() && isFunction(callback)) {\n      let vec = this.array;\n      let aux = [];\n      for (let i = 0; i < vec.length; i++) {\n        aux.push(callback(vec[i], i, vec));\n        if(i === vec.length - 1) {\n          return this.builder(vec);\n        } \n      }\n    } else if (this.isEmpty()) {\n      throw error[\"200\"];\n    } else if (isNotFunction(callback)) {\n      throw error[\"300\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function toString\n   * This method convert the current list to and string, just like this: 1,2,3,4\n   * @access public\n   * @since 0.1.0\n   * @return null if the list is empty or a string representig the list\n   * @example\n   * let string = list.string();\n   */\n  toString() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.array.join();\n    }\n  }\n\n  /**\n   * @function toJSON\n   * This method parse the list to a JSON\n   * @access public\n   * @since 0.1.0\n   * @return null if the list is empty or an object representing the list\n   * @example\n   * let json = list.toJSON();\n   */\n  toJSON() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      let json = {};\n      for (let i = 0; i < this.array.length; i++) {\n        json[i] = this.array[i];\n        if (i === this.array - 1) {\n          return json;\n        }\n      }\n    }\n  }\n}",
     "static": true,
-    "longname": "/home/zoomelectrico/Desktop/work/DSJS/src/ArrayList.js",
+    "longname": "/home/zoomelectrico/Desktop/work/DSJS/src/List.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -577,35 +577,41 @@
   {
     "__docId__": 49,
     "kind": "class",
-    "name": "ArrayList",
-    "memberof": "src/ArrayList.js",
+    "name": "List",
+    "memberof": "src/List.js",
     "static": true,
-    "longname": "src/ArrayList.js~ArrayList",
+    "longname": "src/List.js~List",
     "access": "public",
     "export": true,
-    "importPath": "ds.js/src/ArrayList.js",
-    "importStyle": "ArrayList",
-    "description": "ArrayList class, this class allow you to use a LinkedList DS based on an array",
+    "importPath": "ds.js/src/List.js",
+    "importStyle": "List",
+    "description": "List class, this class allow you to use a LinkedList DS based on an array",
     "examples": [
-      "let list = new ArrayList();"
+      "let list = new List();"
     ],
-    "lineNumber": 11,
+    "lineNumber": 13,
     "since": "0.1.0",
     "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@author",
+        "tagValue": "Jose Roberto Quevedo"
+      }
+    ],
     "interface": false
   },
   {
     "__docId__": 50,
     "kind": "constructor",
     "name": "constructor",
-    "memberof": "src/ArrayList.js~ArrayList",
+    "memberof": "src/List.js~List",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/ArrayList.js~ArrayList#constructor",
+    "longname": "src/List.js~List#constructor",
     "access": "public",
     "description": "",
-    "lineNumber": 17,
+    "lineNumber": 19,
     "since": "0.1.0",
     "unknown": [
       {
@@ -618,12 +624,12 @@
     "__docId__": 51,
     "kind": "member",
     "name": "array",
-    "memberof": "src/ArrayList.js~ArrayList",
+    "memberof": "src/List.js~List",
     "static": false,
-    "longname": "src/ArrayList.js~ArrayList#array",
+    "longname": "src/List.js~List#array",
     "access": "public",
     "description": null,
-    "lineNumber": 18,
+    "lineNumber": 20,
     "undocument": true,
     "type": {
       "types": [
@@ -635,14 +641,14 @@
     "__docId__": 52,
     "kind": "method",
     "name": "builder",
-    "memberof": "src/ArrayList.js~ArrayList",
+    "memberof": "src/List.js~List",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/ArrayList.js~ArrayList#builder",
+    "longname": "src/List.js~List#builder",
     "access": "private",
     "description": "",
-    "lineNumber": 28,
+    "lineNumber": 30,
     "since": "0.1.0",
     "unknown": [
       {
@@ -672,17 +678,17 @@
     "__docId__": 53,
     "kind": "method",
     "name": "isEmpty",
-    "memberof": "src/ArrayList.js~ArrayList",
+    "memberof": "src/List.js~List",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/ArrayList.js~ArrayList#isEmpty",
+    "longname": "src/List.js~List#isEmpty",
     "access": "public",
     "description": "",
     "examples": [
       "let boolean = list.isEmpty();"
     ],
-    "lineNumber": 43,
+    "lineNumber": 45,
     "since": "0.1.0",
     "unknown": [
       {
@@ -693,7 +699,7 @@
     "return": {
       "nullable": null,
       "types": [
-        " ArrayList "
+        " List "
       ],
       "spread": false,
       "description": "true if the list is empty or false otherwaise"
@@ -704,17 +710,17 @@
     "__docId__": 54,
     "kind": "method",
     "name": "size",
-    "memberof": "src/ArrayList.js~ArrayList",
+    "memberof": "src/List.js~List",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/ArrayList.js~ArrayList#size",
+    "longname": "src/List.js~List#size",
     "access": "public",
     "description": "",
     "examples": [
       "let boolean = list.isEmpty();"
     ],
-    "lineNumber": 56,
+    "lineNumber": 58,
     "since": "0.1.0",
     "unknown": [
       {
@@ -725,7 +731,7 @@
     "return": {
       "nullable": null,
       "types": [
-        " ArrayList "
+        " List "
       ],
       "spread": false,
       "description": "0 if the list is empty or an positive integer representing the list size"
@@ -736,17 +742,17 @@
     "__docId__": 55,
     "kind": "method",
     "name": "addFirst",
-    "memberof": "src/ArrayList.js~ArrayList",
+    "memberof": "src/List.js~List",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/ArrayList.js~ArrayList#addFirst",
+    "longname": "src/List.js~List#addFirst",
     "access": "public",
     "description": "",
     "examples": [
       "let l = list.addFirst(1);"
     ],
-    "lineNumber": 73,
+    "lineNumber": 75,
     "since": "0.1.0",
     "unknown": [
       {
@@ -769,7 +775,7 @@
     "return": {
       "nullable": null,
       "types": [
-        " ArrayList "
+        " List "
       ],
       "spread": false,
       "description": "a new instance of the class with the elements of the other list and the new element added"
@@ -799,17 +805,17 @@
     "__docId__": 56,
     "kind": "method",
     "name": "addLast",
-    "memberof": "src/ArrayList.js~ArrayList",
+    "memberof": "src/List.js~List",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/ArrayList.js~ArrayList#addLast",
+    "longname": "src/List.js~List#addLast",
     "access": "public",
     "description": "",
     "examples": [
       "let l = list.addLast(1);"
     ],
-    "lineNumber": 98,
+    "lineNumber": 100,
     "since": "0.1.0",
     "unknown": [
       {
@@ -832,7 +838,7 @@
     "return": {
       "nullable": null,
       "types": [
-        " ArrayList "
+        " List "
       ],
       "spread": false,
       "description": "a new instance of the class with the elements of the other list and the new element added"
@@ -862,17 +868,17 @@
     "__docId__": 57,
     "kind": "method",
     "name": "add",
-    "memberof": "src/ArrayList.js~ArrayList",
+    "memberof": "src/List.js~List",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/ArrayList.js~ArrayList#add",
+    "longname": "src/List.js~List#add",
     "access": "public",
     "description": "",
     "examples": [
       "let l = list.add(1, 0);"
     ],
-    "lineNumber": 127,
+    "lineNumber": 129,
     "since": "0.1.0",
     "unknown": [
       {
@@ -905,7 +911,7 @@
     "return": {
       "nullable": null,
       "types": [
-        " ArrayList "
+        " List "
       ],
       "spread": false,
       "description": "a new instance of the class with the elements of the other list and the new element added"
@@ -953,17 +959,17 @@
     "__docId__": 58,
     "kind": "method",
     "name": "addAll",
-    "memberof": "src/ArrayList.js~ArrayList",
+    "memberof": "src/List.js~List",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/ArrayList.js~ArrayList#addAll",
+    "longname": "src/List.js~List#addAll",
     "access": "public",
     "description": "",
     "examples": [
       "let l = list.addAll([1,'a',3]);"
     ],
-    "lineNumber": 178,
+    "lineNumber": 180,
     "since": "0.1.0",
     "unknown": [
       {
@@ -986,7 +992,7 @@
     "return": {
       "nullable": null,
       "types": [
-        " ArrayList "
+        " List "
       ],
       "spread": false,
       "description": "a new instance of the class with the elements of the other list and the new elements added"
@@ -1022,17 +1028,17 @@
     "__docId__": 59,
     "kind": "method",
     "name": "deleteFirst",
-    "memberof": "src/ArrayList.js~ArrayList",
+    "memberof": "src/List.js~List",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/ArrayList.js~ArrayList#deleteFirst",
+    "longname": "src/List.js~List#deleteFirst",
     "access": "public",
     "description": "",
     "examples": [
       "let l = list.deleteFirst();"
     ],
-    "lineNumber": 201,
+    "lineNumber": 203,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1043,7 +1049,7 @@
     "return": {
       "nullable": null,
       "types": [
-        " ArrayList "
+        " List "
       ],
       "spread": false,
       "description": "null is the list is empty or a new instance of the class with the elements of the other list except from the first"
@@ -1054,17 +1060,17 @@
     "__docId__": 60,
     "kind": "method",
     "name": "deleteLast",
-    "memberof": "src/ArrayList.js~ArrayList",
+    "memberof": "src/List.js~List",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/ArrayList.js~ArrayList#deleteLast",
+    "longname": "src/List.js~List#deleteLast",
     "access": "public",
     "description": "",
     "examples": [
       "let l = list.deleteLast();"
     ],
-    "lineNumber": 218,
+    "lineNumber": 220,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1075,7 +1081,7 @@
     "return": {
       "nullable": null,
       "types": [
-        " ArrayList "
+        " List "
       ],
       "spread": false,
       "description": "null is the list is empty or a new instance of the class with the elements of the other list except from the first"
@@ -1086,17 +1092,17 @@
     "__docId__": 61,
     "kind": "method",
     "name": "delete",
-    "memberof": "src/ArrayList.js~ArrayList",
+    "memberof": "src/List.js~List",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/ArrayList.js~ArrayList#delete",
+    "longname": "src/List.js~List#delete",
     "access": "public",
     "description": "",
     "examples": [
       "let l = list.delete(0);"
     ],
-    "lineNumber": 241,
+    "lineNumber": 243,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1119,7 +1125,7 @@
     "return": {
       "nullable": null,
       "types": [
-        " ArrayList "
+        " List "
       ],
       "spread": false,
       "description": "null if the list is empty a new instance of the class with the elements of the other list except the element i"
@@ -1161,17 +1167,17 @@
     "__docId__": 62,
     "kind": "method",
     "name": "clear",
-    "memberof": "src/ArrayList.js~ArrayList",
+    "memberof": "src/List.js~List",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/ArrayList.js~ArrayList#clear",
+    "longname": "src/List.js~List#clear",
     "access": "public",
     "description": "",
     "examples": [
       "list.clear();"
     ],
-    "lineNumber": 286,
+    "lineNumber": 288,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1186,17 +1192,17 @@
     "__docId__": 64,
     "kind": "method",
     "name": "forEach",
-    "memberof": "src/ArrayList.js~ArrayList",
+    "memberof": "src/List.js~List",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/ArrayList.js~ArrayList#forEach",
+    "longname": "src/List.js~List#forEach",
     "access": "public",
     "description": "",
     "examples": [
       "list.forEach((x,i,vec) => {\n console.log(`Value: ${x}, Index: ${i}`);\n});"
     ],
-    "lineNumber": 312,
+    "lineNumber": 314,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1242,17 +1248,17 @@
     "__docId__": 65,
     "kind": "method",
     "name": "map",
-    "memberof": "src/ArrayList.js~ArrayList",
+    "memberof": "src/List.js~List",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/ArrayList.js~ArrayList#map",
+    "longname": "src/List.js~List#map",
     "access": "public",
     "description": "",
     "examples": [
       "let l = list.map((x,i,vec) => x * x);"
     ],
-    "lineNumber": 341,
+    "lineNumber": 343,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1275,7 +1281,7 @@
     "return": {
       "nullable": null,
       "types": [
-        " ArrayList "
+        " List "
       ],
       "spread": false,
       "description": "An instance of the class with the mutated elements"
@@ -1305,17 +1311,17 @@
     "__docId__": 66,
     "kind": "method",
     "name": "toString",
-    "memberof": "src/ArrayList.js~ArrayList",
+    "memberof": "src/List.js~List",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/ArrayList.js~ArrayList#toString",
+    "longname": "src/List.js~List#toString",
     "access": "public",
     "description": "",
     "examples": [
       "let string = list.string();"
     ],
-    "lineNumber": 369,
+    "lineNumber": 371,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1337,17 +1343,17 @@
     "__docId__": 67,
     "kind": "method",
     "name": "toJSON",
-    "memberof": "src/ArrayList.js~ArrayList",
+    "memberof": "src/List.js~List",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/ArrayList.js~ArrayList#toJSON",
+    "longname": "src/List.js~List#toJSON",
     "access": "public",
     "description": "",
     "examples": [
       "let json = list.toJSON();"
     ],
-    "lineNumber": 386,
+    "lineNumber": 388,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1369,7 +1375,7 @@
     "__docId__": 68,
     "kind": "file",
     "name": "src/errors/errors.js",
-    "content": "const error = {\n    \"001\" : new Error(\"OMG, You have broken the library.\\nError Code: 001\\nCheck the docs for more details\"),\n    \"100\" : new Error(\"The Data parameter can't be null.\\nError Code: 100\\nCheck the docs for more details\"),\n    \"101\" : new Error(\"The Data parameter can't be undefined.\\nError Code: 101\\nCheck the docs for more details\"),\n    \"102\" : new Error(\"The Collection parameter can't be null.\\nError Code: 102\\nCheck the docs for more details\"),\n    \"103\" : new Error(\"The Collection parameter can't be undefined.\\nError Code: 103\\nCheck the docs for more details\"),\n    \"104\" : new Error(\"The Collection parameter must be an Array.\\nError Code: 104\\nCheck the docs for more details\"),\n    \"110\" : new Error(\"The index parameter can't be null.\\nError Code: 110\\nCheck the docs for more details\"),\n    \"111\" : new Error(\"The index parameter can't be undefined.\\nError Code: 111\\nCheck the docs for more details\"),\n    \"112\" : new Error(\"The index must be a integer.\\nError Code: 112\\nCheck the docs for more details\"),\n    \"113\" : new Error(\"The index can't greater or equal than the list size.\\nError Code: 113\\nCheck the docs for more details\"),\n    \"200\" : new Error(\"Can't iterate over an empty list.\\nError Code: 200\\nCheck the docs for more details\"),\n    \"300\" : new Error(\"Tha Callback parameter must be a function.\\nError Code: 300\\nCheck the docs for more details\")\n};\n\nexport default error;",
+    "content": "/**\n * @constant\n * @author Jose Roberto Quevedo\n * @since 0.1.0\n * @version 1.0.0\n * @description\n * This object POJO contain the most commmon errors of our library the codes are the following\n * \"001\" : \"OMG, You have broken the library.\n * \"100\" : \"The Data parameter can't be null.\n*  \"101\" : \"The Data parameter can't be undefined.\n*  \"102\" : \"The Collection parameter can't be null.\n*  \"103\" : \"The Collection parameter can't be undefined.\n*  \"104\" : \"The Collection parameter must be an Array.\n*  \"110\" : \"The index parameter can't be null.\n*  \"111\" : \"The index parameter can't be undefined.\n*  \"112\" : \"The index must be a integer.\n*  \"113\" : \"The index can't greater or equal than the list size.\n*  \"200\" : \"Can't iterate over an empty list.\n*  \"300\" : \"Tha Callback parameter must be a function.\n * @example\n * throw error[\"001\"]\n */\nconst error = {\n    \"001\" : new Error(\"OMG, You have broken the library.\\nError Code: 001\\nCheck the docs for more details\"),\n    \"100\" : new Error(\"The Data parameter can't be null.\\nError Code: 100\\nCheck the docs for more details\"),\n    \"101\" : new Error(\"The Data parameter can't be undefined.\\nError Code: 101\\nCheck the docs for more details\"),\n    \"102\" : new Error(\"The Collection parameter can't be null.\\nError Code: 102\\nCheck the docs for more details\"),\n    \"103\" : new Error(\"The Collection parameter can't be undefined.\\nError Code: 103\\nCheck the docs for more details\"),\n    \"104\" : new Error(\"The Collection parameter must be an Array.\\nError Code: 104\\nCheck the docs for more details\"),\n    \"110\" : new Error(\"The index parameter can't be null.\\nError Code: 110\\nCheck the docs for more details\"),\n    \"111\" : new Error(\"The index parameter can't be undefined.\\nError Code: 111\\nCheck the docs for more details\"),\n    \"112\" : new Error(\"The index must be a integer.\\nError Code: 112\\nCheck the docs for more details\"),\n    \"113\" : new Error(\"The index can't greater or equal than the list size.\\nError Code: 113\\nCheck the docs for more details\"),\n    \"200\" : new Error(\"Can't iterate over an empty list.\\nError Code: 200\\nCheck the docs for more details\"),\n    \"300\" : new Error(\"Tha Callback parameter must be a function.\\nError Code: 300\\nCheck the docs for more details\")\n};\n\nexport default error;",
     "static": true,
     "longname": "/home/zoomelectrico/Desktop/work/DSJS/src/errors/errors.js",
     "access": "public",
@@ -1387,9 +1393,27 @@
     "export": true,
     "importPath": "ds.js/src/errors/errors.js",
     "importStyle": "error",
-    "description": null,
-    "lineNumber": 1,
-    "undocument": true,
+    "description": "",
+    "examples": [
+      "throw error[\"001\"]"
+    ],
+    "lineNumber": 23,
+    "since": "0.1.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@constant",
+        "tagValue": ""
+      },
+      {
+        "tagName": "@author",
+        "tagValue": "Jose Roberto Quevedo"
+      },
+      {
+        "tagName": "@description",
+        "tagValue": "This object POJO contain the most commmon errors of our library the codes are the following\n\"001\" : \"OMG, You have broken the library.\n\"100\" : \"The Data parameter can't be null.\n \"101\" : \"The Data parameter can't be undefined.\n \"102\" : \"The Collection parameter can't be null.\n \"103\" : \"The Collection parameter can't be undefined.\n \"104\" : \"The Collection parameter must be an Array.\n \"110\" : \"The index parameter can't be null.\n \"111\" : \"The index parameter can't be undefined.\n \"112\" : \"The index must be a integer.\n \"113\" : \"The index can't greater or equal than the list size.\n \"200\" : \"Can't iterate over an empty list.\n \"300\" : \"Tha Callback parameter must be a function."
+      }
+    ],
     "type": {
       "types": [
         "{\"001\": *, \"100\": *, \"101\": *, \"102\": *, \"103\": *, \"104\": *, \"110\": *, \"111\": *, \"112\": *, \"113\": *, \"200\": *, \"300\": *}"
@@ -1753,7 +1777,7 @@
   },
   {
     "kind": "index",
-    "content": "# DS-JS\nThis is an implementation of the most common data structure in JavaScript (ES 2015). The interest thing is the DS are immutable elements so whenever you apply a operation to an DS object you will get a new instance of the element.\n\nEs una breve implementación de las estructuras de datos más comunes en JavaScript (ES 2015).\nLo interesante de esta libreria es que es una implementación inmutable es decir todos las operaciones realizadas devuelven una nueva instancia de la estructura de datos utilizada\n\nTo install you must execute the following command\n\nPara instalarla solo deberas ejecutar el siguiente comando:\n```shell\n  $ npm install --save ds-js\n```\nOnce installed the only thing you need to do is require in your file and start playing\n\nUna vez instala la Librería solo necesitas hacer lo siguiente para tenerla disponible en tu programas:\n```javascript\nconst DS = require('ds-js');\n\n// For example you want to use an ArrayList\n// Por ejemplo quieres usar una Lista\nconst LinkedList = DS.ArrayLsit;\n\n// We create an instance of the list and ready\n// Creamos una instancia de la lista y listo podemos empezar a aplicar métodos\nlet l = new LinkedList();\n\nlet list = l.addFirst(1);\n```\n* * *\n### Project Status- Estructuras de Datos Implementadas\n\n* [x] Listas\n* [x] Array List\n* [ ] Pila\n* [ ] Cola\n* [ ] Árbol Binario de Busqueda\n* [ ] Hash Map\n\n### Docs - Documentación\nTo chechk the docs follow this [link]()\n\nPara revisar la documentación deberás ir al siguiente enlace [haz click aquí]()\n\n#### Contributors - Colaboradores\n\n* José Roberto Quevedo [\\(@zoomelectrico\\)](https://github.com/zoomelectrico)\n\n### License - Licensia\nMIT",
+    "content": "# DS-JS\nThis is an implementation of the most common data structure in JavaScript (ES 2015). The interest thing is the DS are immutable elements so whenever you apply a operation to an DS object you will get a new instance of the element.\n\nEs una breve implementación de las estructuras de datos más comunes en JavaScript (ES 2015).\nLo interesante de esta libreria es que es una implementación inmutable es decir todos las operaciones realizadas devuelven una nueva instancia de la estructura de datos utilizada\n\nTo install you must execute the following command\n\nPara instalarla solo deberas ejecutar el siguiente comando:\n```shell\n  $ npm install --save ds-js\n```\nOnce installed the only thing you need to do is require in your file and start playing\n\nUna vez instala la Librería solo necesitas hacer lo siguiente para tenerla disponible en tu programas:\n```javascript\nconst DS = require('ds-js');\n\n// For example you want to use an List\n// Por ejemplo quieres usar una Lista\nconst LinkedList = DS.ArrayLsit;\n\n// We create an instance of the list and ready\n// Creamos una instancia de la lista y listo podemos empezar a aplicar métodos\nlet l = new LinkedList();\n\nlet list = l.addFirst(1);\n```\n* * *\n### Project Status- Estructuras de Datos Implementadas\n\n* [x] Listas\n* [x] Array List\n* [ ] Pila\n* [ ] Cola\n* [ ] Árbol Binario de Busqueda\n* [ ] Hash Map\n\n### Docs - Documentación\nTo chechk the docs follow this [link]()\n\nPara revisar la documentación deberás ir al siguiente enlace [haz click aquí]()\n\n#### Contributors - Colaboradores\n\n* José Roberto Quevedo [\\(@zoomelectrico\\)](https://github.com/zoomelectrico)\n\n### License - Licensia\nMIT",
     "longname": "/home/zoomelectrico/Desktop/work/DSJS/README.md",
     "name": "./README.md",
     "static": true,

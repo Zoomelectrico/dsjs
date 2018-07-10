@@ -1,8 +1,8 @@
 window.esdocSearchIndex = [
   [
-    "ds.js/src/arraylist.js~arraylist",
-    "class/src/ArrayList.js~ArrayList.html",
-    "<span>ArrayList</span> <span class=\"search-result-import-path\">ds.js/src/ArrayList.js</span>",
+    "ds.js/src/list.js~list",
+    "class/src/List.js~List.html",
+    "<span>List</span> <span class=\"search-result-import-path\">ds.js/src/List.js</span>",
     "class"
   ],
   [
@@ -342,111 +342,111 @@ window.esdocSearchIndex = [
     "external"
   ],
   [
-    "src/arraylist.js",
-    "file/src/ArrayList.js.html",
-    "src/ArrayList.js",
+    "src/list.js",
+    "file/src/List.js.html",
+    "src/List.js",
     "file"
   ],
   [
-    "src/arraylist.js~arraylist#add",
-    "class/src/ArrayList.js~ArrayList.html#instance-method-add",
-    "src/ArrayList.js~ArrayList#add",
+    "src/list.js~list#add",
+    "class/src/List.js~List.html#instance-method-add",
+    "src/List.js~List#add",
     "method"
   ],
   [
-    "src/arraylist.js~arraylist#addall",
-    "class/src/ArrayList.js~ArrayList.html#instance-method-addAll",
-    "src/ArrayList.js~ArrayList#addAll",
+    "src/list.js~list#addall",
+    "class/src/List.js~List.html#instance-method-addAll",
+    "src/List.js~List#addAll",
     "method"
   ],
   [
-    "src/arraylist.js~arraylist#addfirst",
-    "class/src/ArrayList.js~ArrayList.html#instance-method-addFirst",
-    "src/ArrayList.js~ArrayList#addFirst",
+    "src/list.js~list#addfirst",
+    "class/src/List.js~List.html#instance-method-addFirst",
+    "src/List.js~List#addFirst",
     "method"
   ],
   [
-    "src/arraylist.js~arraylist#addlast",
-    "class/src/ArrayList.js~ArrayList.html#instance-method-addLast",
-    "src/ArrayList.js~ArrayList#addLast",
+    "src/list.js~list#addlast",
+    "class/src/List.js~List.html#instance-method-addLast",
+    "src/List.js~List#addLast",
     "method"
   ],
   [
-    "src/arraylist.js~arraylist#array",
-    "class/src/ArrayList.js~ArrayList.html#instance-member-array",
-    "src/ArrayList.js~ArrayList#array",
+    "src/list.js~list#array",
+    "class/src/List.js~List.html#instance-member-array",
+    "src/List.js~List#array",
     "member"
   ],
   [
-    "src/arraylist.js~arraylist#builder",
-    "class/src/ArrayList.js~ArrayList.html#instance-method-builder",
-    "src/ArrayList.js~ArrayList#builder",
+    "src/list.js~list#builder",
+    "class/src/List.js~List.html#instance-method-builder",
+    "src/List.js~List#builder",
     "method"
   ],
   [
-    "src/arraylist.js~arraylist#clear",
-    "class/src/ArrayList.js~ArrayList.html#instance-method-clear",
-    "src/ArrayList.js~ArrayList#clear",
+    "src/list.js~list#clear",
+    "class/src/List.js~List.html#instance-method-clear",
+    "src/List.js~List#clear",
     "method"
   ],
   [
-    "src/arraylist.js~arraylist#constructor",
-    "class/src/ArrayList.js~ArrayList.html#instance-constructor-constructor",
-    "src/ArrayList.js~ArrayList#constructor",
+    "src/list.js~list#constructor",
+    "class/src/List.js~List.html#instance-constructor-constructor",
+    "src/List.js~List#constructor",
     "method"
   ],
   [
-    "src/arraylist.js~arraylist#delete",
-    "class/src/ArrayList.js~ArrayList.html#instance-method-delete",
-    "src/ArrayList.js~ArrayList#delete",
+    "src/list.js~list#delete",
+    "class/src/List.js~List.html#instance-method-delete",
+    "src/List.js~List#delete",
     "method"
   ],
   [
-    "src/arraylist.js~arraylist#deletefirst",
-    "class/src/ArrayList.js~ArrayList.html#instance-method-deleteFirst",
-    "src/ArrayList.js~ArrayList#deleteFirst",
+    "src/list.js~list#deletefirst",
+    "class/src/List.js~List.html#instance-method-deleteFirst",
+    "src/List.js~List#deleteFirst",
     "method"
   ],
   [
-    "src/arraylist.js~arraylist#deletelast",
-    "class/src/ArrayList.js~ArrayList.html#instance-method-deleteLast",
-    "src/ArrayList.js~ArrayList#deleteLast",
+    "src/list.js~list#deletelast",
+    "class/src/List.js~List.html#instance-method-deleteLast",
+    "src/List.js~List#deleteLast",
     "method"
   ],
   [
-    "src/arraylist.js~arraylist#foreach",
-    "class/src/ArrayList.js~ArrayList.html#instance-method-forEach",
-    "src/ArrayList.js~ArrayList#forEach",
+    "src/list.js~list#foreach",
+    "class/src/List.js~List.html#instance-method-forEach",
+    "src/List.js~List#forEach",
     "method"
   ],
   [
-    "src/arraylist.js~arraylist#isempty",
-    "class/src/ArrayList.js~ArrayList.html#instance-method-isEmpty",
-    "src/ArrayList.js~ArrayList#isEmpty",
+    "src/list.js~list#isempty",
+    "class/src/List.js~List.html#instance-method-isEmpty",
+    "src/List.js~List#isEmpty",
     "method"
   ],
   [
-    "src/arraylist.js~arraylist#map",
-    "class/src/ArrayList.js~ArrayList.html#instance-method-map",
-    "src/ArrayList.js~ArrayList#map",
+    "src/list.js~list#map",
+    "class/src/List.js~List.html#instance-method-map",
+    "src/List.js~List#map",
     "method"
   ],
   [
-    "src/arraylist.js~arraylist#size",
-    "class/src/ArrayList.js~ArrayList.html#instance-method-size",
-    "src/ArrayList.js~ArrayList#size",
+    "src/list.js~list#size",
+    "class/src/List.js~List.html#instance-method-size",
+    "src/List.js~List#size",
     "method"
   ],
   [
-    "src/arraylist.js~arraylist#tojson",
-    "class/src/ArrayList.js~ArrayList.html#instance-method-toJSON",
-    "src/ArrayList.js~ArrayList#toJSON",
+    "src/list.js~list#tojson",
+    "class/src/List.js~List.html#instance-method-toJSON",
+    "src/List.js~List#toJSON",
     "method"
   ],
   [
-    "src/arraylist.js~arraylist#tostring",
-    "class/src/ArrayList.js~ArrayList.html#instance-method-toString",
-    "src/ArrayList.js~ArrayList#toString",
+    "src/list.js~list#tostring",
+    "class/src/List.js~List.html#instance-method-toString",
+    "src/List.js~List#toString",
     "method"
   ],
   [

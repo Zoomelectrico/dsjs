@@ -29,7 +29,7 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ArrayList.js~ArrayList.html">ArrayList</a></span></span></li>
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/List.js~List.html">List</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#errors">errors</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-error">error</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#helper">helper</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isArray">isArray</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isFunction">isFunction</a></span></span></li>
@@ -44,7 +44,29 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/errors/errors.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">const error = {
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * @constant
+ * @author Jose Roberto Quevedo
+ * @since 0.1.0
+ * @version 1.0.0
+ * @description
+ * This object POJO contain the most commmon errors of our library the codes are the following
+ * &quot;001&quot; : &quot;OMG, You have broken the library.
+ * &quot;100&quot; : &quot;The Data parameter can&apos;t be null.
+*  &quot;101&quot; : &quot;The Data parameter can&apos;t be undefined.
+*  &quot;102&quot; : &quot;The Collection parameter can&apos;t be null.
+*  &quot;103&quot; : &quot;The Collection parameter can&apos;t be undefined.
+*  &quot;104&quot; : &quot;The Collection parameter must be an Array.
+*  &quot;110&quot; : &quot;The index parameter can&apos;t be null.
+*  &quot;111&quot; : &quot;The index parameter can&apos;t be undefined.
+*  &quot;112&quot; : &quot;The index must be a integer.
+*  &quot;113&quot; : &quot;The index can&apos;t greater or equal than the list size.
+*  &quot;200&quot; : &quot;Can&apos;t iterate over an empty list.
+*  &quot;300&quot; : &quot;Tha Callback parameter must be a function.
+ * @example
+ * throw error[&quot;001&quot;]
+ */
+const error = {
     &quot;001&quot; : new Error(&quot;OMG, You have broken the library.\nError Code: 001\nCheck the docs for more details&quot;),
     &quot;100&quot; : new Error(&quot;The Data parameter can&apos;t be null.\nError Code: 100\nCheck the docs for more details&quot;),
     &quot;101&quot; : new Error(&quot;The Data parameter can&apos;t be undefined.\nError Code: 101\nCheck the docs for more details&quot;),

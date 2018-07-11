@@ -1,62 +1,62 @@
 window.esdocSearchIndex = [
   [
-    "list-js/src/list.js~list",
+    "listas/src/list.js~list",
     "class/src/List.js~List.html",
-    "<span>List</span> <span class=\"search-result-import-path\">list-js/src/List.js</span>",
+    "<span>List</span> <span class=\"search-result-import-path\">listas/src/List.js</span>",
     "class"
   ],
   [
-    "list-js/src/errors/errors.js~error",
+    "listas/src/errors/errors.js~error",
     "variable/index.html#static-variable-error",
-    "<span>error</span> <span class=\"search-result-import-path\">list-js/src/errors/errors.js</span>",
+    "<span>error</span> <span class=\"search-result-import-path\">listas/src/errors/errors.js</span>",
     "variable"
   ],
   [
-    "list-js/src/helper/check.js~isarray",
+    "listas/src/helper/check.js~isarray",
     "function/index.html#static-function-isArray",
-    "<span>isArray</span> <span class=\"search-result-import-path\">list-js/src/helper/check.js</span>",
+    "<span>isArray</span> <span class=\"search-result-import-path\">listas/src/helper/check.js</span>",
     "function"
   ],
   [
-    "list-js/src/helper/check.js~isfunction",
+    "listas/src/helper/check.js~isfunction",
     "function/index.html#static-function-isFunction",
-    "<span>isFunction</span> <span class=\"search-result-import-path\">list-js/src/helper/check.js</span>",
+    "<span>isFunction</span> <span class=\"search-result-import-path\">listas/src/helper/check.js</span>",
     "function"
   ],
   [
-    "list-js/src/helper/check.js~isnotarray",
+    "listas/src/helper/check.js~isnotarray",
     "function/index.html#static-function-isNotArray",
-    "<span>isNotArray</span> <span class=\"search-result-import-path\">list-js/src/helper/check.js</span>",
+    "<span>isNotArray</span> <span class=\"search-result-import-path\">listas/src/helper/check.js</span>",
     "function"
   ],
   [
-    "list-js/src/helper/check.js~isnotfunction",
+    "listas/src/helper/check.js~isnotfunction",
     "function/index.html#static-function-isNotFunction",
-    "<span>isNotFunction</span> <span class=\"search-result-import-path\">list-js/src/helper/check.js</span>",
+    "<span>isNotFunction</span> <span class=\"search-result-import-path\">listas/src/helper/check.js</span>",
     "function"
   ],
   [
-    "list-js/src/helper/check.js~isnotnull",
+    "listas/src/helper/check.js~isnotnull",
     "function/index.html#static-function-isNotNull",
-    "<span>isNotNull</span> <span class=\"search-result-import-path\">list-js/src/helper/check.js</span>",
+    "<span>isNotNull</span> <span class=\"search-result-import-path\">listas/src/helper/check.js</span>",
     "function"
   ],
   [
-    "list-js/src/helper/check.js~isnotundefined",
+    "listas/src/helper/check.js~isnotundefined",
     "function/index.html#static-function-isNotUndefined",
-    "<span>isNotUndefined</span> <span class=\"search-result-import-path\">list-js/src/helper/check.js</span>",
+    "<span>isNotUndefined</span> <span class=\"search-result-import-path\">listas/src/helper/check.js</span>",
     "function"
   ],
   [
-    "list-js/src/helper/check.js~isnull",
+    "listas/src/helper/check.js~isnull",
     "function/index.html#static-function-isNull",
-    "<span>isNull</span> <span class=\"search-result-import-path\">list-js/src/helper/check.js</span>",
+    "<span>isNull</span> <span class=\"search-result-import-path\">listas/src/helper/check.js</span>",
     "function"
   ],
   [
-    "list-js/src/helper/check.js~isundefined",
+    "listas/src/helper/check.js~isundefined",
     "function/index.html#static-function-isUndefined",
-    "<span>isUndefined</span> <span class=\"search-result-import-path\">list-js/src/helper/check.js</span>",
+    "<span>isUndefined</span> <span class=\"search-result-import-path\">listas/src/helper/check.js</span>",
     "function"
   ],
   [

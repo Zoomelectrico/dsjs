@@ -1,13 +1,13 @@
-# List-js
-List js is an library that implements the List Data Structure, but we implemented a inmutable version of this Data Stucture
+# Listas
+Listas js is an library that implements the List Data Structure, but we implemented a inmutable version of this Data Stucture
 
-List js es una libreria libre de dependencias la cual implementa a la Estructuras de Datos "Lista", lo interesante de esta libreria es que hace una implementación inmutable de las listas.
+Listas js es una libreria libre de dependencias la cual implementa a la Estructuras de Datos "Lista", lo interesante de esta libreria es que hace una implementación inmutable de las listas.
 
 To install you must execute the following command
 
 Para instalarla solo deberas ejecutar el siguiente comando:
 ```shell
-  $ npm install --save list-js
+  $ npm install --save al
 ```
 Once installed the only thing you need to do is require in your file and start playing
 
@@ -15,7 +15,7 @@ Una vez instala la Librería solo necesitas hacer lo siguiente para tenerla disp
 ```javascript
 // Require the Library
 // Importa la libreria
-const List = require('ds-js');
+const List = require('al');
 
 // We create an instance of the list and ready
 // Creamos una instancia de la lista y listo podemos empezar a aplicar métodos

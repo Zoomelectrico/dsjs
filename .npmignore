@@ -1,0 +1,10 @@
+/node_modules
+
+/src
+
+/docs
+
+/lib/**.test.js
+
+.babelrc
+.esdoc.json

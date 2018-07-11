@@ -1,7 +1,3 @@
-const AL = require('./lib/ArrayList').default;
+const L = require('./lib/List').default;
 
-const DS = {
-    ArrayList: AL
-};
-
-module.exports = DS;
+module.exports = L;

@@ -1,3 +1,25 @@
+/**
+ * @constant
+ * @author Jose Roberto Quevedo
+ * @since 0.1.0
+ * @version 1.0.0
+ * @description
+ * This object POJO contain the most commmon errors of our library the codes are the following
+ * "001" : "OMG, You have broken the library.
+ * "100" : "The Data parameter can't be null.
+*  "101" : "The Data parameter can't be undefined.
+*  "102" : "The Collection parameter can't be null.
+*  "103" : "The Collection parameter can't be undefined.
+*  "104" : "The Collection parameter must be an Array.
+*  "110" : "The index parameter can't be null.
+*  "111" : "The index parameter can't be undefined.
+*  "112" : "The index must be a integer.
+*  "113" : "The index can't greater or equal than the list size.
+*  "200" : "Can't iterate over an empty list.
+*  "300" : "Tha Callback parameter must be a function.
+ * @example
+ * throw error["001"]
+ */
 const error = {
     "001" : new Error("OMG, You have broken the library.\nError Code: 001\nCheck the docs for more details"),
     "100" : new Error("The Data parameter can't be null.\nError Code: 100\nCheck the docs for more details"),

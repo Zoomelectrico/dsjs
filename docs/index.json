@@ -1,0 +1,1794 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/List.js",
+    "content": "import { isNotNull, isNotUndefined, isNull, isUndefined, isFunction, isNotFunction, isArray, isNotArray } from './helper/check';\nimport error from './errors/errors';\n\n/**\n * List class, this class allow you to use a LinkedList DS based on an array\n * @example\n * let list = new List();\n * @access public\n * @author Jose Roberto Quevedo\n * @version 1.0.0\n * @since 0.1.0\n */\nexport default class List {\n  /**\n   * @constructor this is constructor of the class, here an empty array is initialize\n   * @since 0.1.0\n   * @access public\n   */\n  constructor() {\n    /**\n     * @member {Array} array this is a way for easy implementing list and for making the lib more quick\n     * @access private\n     * @since 0.1.0\n     */\n    this.array = [];\n  }\n\n  /**\n   * @function builder\n   * This method is an interface for the class to create a list from the operation aplided to the other;\n   * @access private\n   * @since 0.1.0\n   * @param {Array} array\n   */\n  builder(array) {\n    let list = new List();\n    list.array = array;\n    return list;\n  } \n\n  /**\n   * @function isEmpty\n   * This method say if a list is empty or not.\n   * @access public\n   * @since 0.1.0\n   * @return { List } true if the list is empty or false otherwaise\n   * @example\n   * let boolean = list.isEmpty();\n   */\n  isEmpty() {\n    return this.array.length <= 0;\n  }\n\n  /**\n   * @function size\n   * this method say what is the size of the list\n   * @access public\n   * @since 0.1.0\n   * @return { List } 0 if the list is empty or an positive integer representing the list size\n   * @example\n   * let boolean = list.isEmpty();\n   */\n  size() {\n    return this.array.length;\n  }\n\n  /**\n   * @function addFirst\n   * This method allow you to add an element in the first position of the list \n   * @param {any} data the element than you whan to add to the list\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @example \n   * let l = list.addFirst(1);\n   */\n  addFirst(data) {\n    if(isNotUndefined(data) && isNotNull(data)) {\n      return this.builder([data, ...this.array]);\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function addLast\n   * This method allow you to add an element in the last position of the list \n   * @param {any} data the element than you whan to add to the list\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @example \n   * let l = list.addLast(1);\n   */\n  addLast(data) {\n    if(isNotUndefined(data) && isNotNull(data)) {\n      return this.builder([...this.array, data]);\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function add\n   * This method allow you to add an element in the position i of the list \n   * @param {any} data the element than you whan to add to the list\n   * @param {number} i the index value in which to add the element [0, list.size())\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @throws {Error110} when the index is null\n   * @throws {Error111} when the index is undefined\n   * @throws {Error112} when the index is Not a Number\n   * @example \n   * let l = list.add(1, 0);\n   */\n  add(data, i) {\n    if(!isNaN(i) && isNotUndefined(data) && isNotUndefined(i) && isNotNull(data) && isNotNull(i)) {\n      if (i === 0) {\n        return this.addFirst(data);\n      } else if (i === this.size() - 1) {\n        return this.addLast(data);\n      } else if (i < 0) {\n        return this.add(data, this.size() + i);\n      } else if (i >= this.size()) {\n        throw error[\"113\"];\n      } else {\n        let vec = [];\n        for (let j = 0; j < this.array.length; j++) {\n          if(i === j) {\n            vec.push(data);\n          }\n          vec.push(this.array[j]);\n          if(j === this.array.length - 1) {\n            return this.builder(vec);\n          }\n        }\n      }\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else if (isNull(i)) {\n      throw error[\"110\"];\n    } else if (isUndefined(i)) {\n      throw error[\"111\"];\n    } else  if (isNaN(i)) {\n      throw error[\"112\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function addAll\n   * This method allow you to add an collection of elements to the list \n   * @param {any[]} collection an Array of elements to add \n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new elements added\n   * @throws {Error001} when shit go bad\n   * @throws {Error102} when collection is null\n   * @throws {Error103} when collection is undefined\n   * @throws {Error104} when collection is not an array\n   * @example \n   * let l = list.addAll([1,'a',3]);\n   */\n  addAll(collection) {\n    if(isNotUndefined(collection) && isNotNull(collection) && isArray(collection)) {\n      return this.builder([...this.array, ...collection]);\n    } else if (isNotArray(collection)) {\n      throw error[\"104\"];\n    } else if (isNull(collection)) {\n      throw error[\"102\"];\n    } else if (isUndefined(collection)) {\n      throw error[\"103\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function deleteFirst\n   * This method allow you to delete the first element of the list  \n   * @access public\n   * @since 0.1.0\n   * @return { List } null is the list is empty or a new instance of the class with the elements of the other list except from the first\n   * @example \n   * let l = list.deleteFirst();\n   */\n  deleteFirst() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.builder(this.array.slice(1, this.array.length));\n    }\n  }\n\n  /**\n   * @function deleteLast\n   * This method allow you to last the first element of the list  \n   * @access public\n   * @since 0.1.0\n   * @return { List } null is the list is empty or a new instance of the class with the elements of the other list except from the first\n   * @example \n   * let l = list.deleteLast();\n   */\n  deleteLast() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.builder(this.array.slice(0, this.array.length - 1));\n    }\n  }\n\n  /**\n   * @function delete\n   * This method allow you to delete the element i from the list\n   * @param {number} i the index of the element to eliminate [0, list.size())\n   * @access public\n   * @since 0.1.0\n   * @return { List } null if the list is empty a new instance of the class with the elements of the other list except the element i\n   * @throws {Error001} when shit go bad\n   * @throws {Error110} when i is null\n   * @throws {Error111} when i is undefined\n   * @throws {Error112} when i is Not a Number\n   * @throws {Error113} when i is bigger than the list size\n   * @example \n   * let l = list.delete(0);\n   */\n  delete(i) {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      if(isNotUndefined(i) && isNotNull(i) && !isNaN(i)) {\n        if(i === 0) {\n          return this.deleteFirst();\n        } else if (i === this.size() - 1) {\n          return this.deleteLast();\n        } else if(i < 0) {\n          this.delete(this.size() + i);\n        } else if (i >= this.size()) {\n          throw error[\"113\"];\n        } else {\n          let vec = [];\n          for (let j = 0; j < this.array.length; j++) {\n            if(i !== j) {\n              vec.push(this.array[j]);\n            }\n          }\n          return this.builder(vec); \n        }\n      } else if (isNaN(i)) {\n        throw error[\"112\"];\n      } else  if (isNull(i)) {\n        throw error[\"110\"];\n      } else if (isUndefined(i)) {\n        throw error[\"111\"];\n      } else {\n        throw error[\"001\"];\n      }\n    }\n  }\n\n  /**\n   * @function clear\n   * WARNING: This method delete all the element of the original list.\n   * This should be used carefully\n   * @access public\n   * @since 0.1.0\n   * @example\n   * list.clear();\n   */\n  clear() {\n    if(!this.isEmpty()) {\n      console.warn(\"DS.js Warning: You're clearing the list all the data will be erased. You have 5s to cancel the operation\");\n      setTimeout(() => {\n        console.log(\"DS.js Warning: The data is being erased...\");\n        this.array = [];\n      }, 5000);\n    } else {\n      console.log(\"Your list doesn't have any data to delete\");\n    }\n  }\n\n  /**\n   * @function forEach\n   * This method allow us to iterate over the list\n   * @param {function (value: any, i: number, vec: array)} callback this is a callback function that will be execute for every element in the list, it should not mutated the element of the list\n   * @since 0.1.0\n   * @access public\n   * @throws {Error001} when shit go bad\n   * @throws {Error200} when the list is empty\n   * @throws {Error300} when callback is not a function \n   * @example\n   * list.forEach((x,i,vec) => {\n   *  console.log(`Value: ${x}, Index: ${i}`);\n   * });\n   */\n  forEach(callback) {\n    if(isFunction(callback) && !this.isEmpty()) {\n      let vec = this.array;\n      let list = this.builder(vec);\n      for (let i = 0; i < vec.length; i++) {\n        callback(vec[i], i, list);  \n      } \n    } else if (this.isEmpty()) {\n      throw error[\"200\"];\n    } else if (isNotFunction(callback)) {\n      throw error[\"300\"];\n    } else {\n      throw error[\"001\"]\n    }\n  }\n\n  /**\n   * @function map\n   * This method allow us to map over the list\n   * @param {function (value: any, i: number, vec: array)} callback this is a callback function that will be execute for every element in the list, and it should mutated the element of the list\n   * @since 0.1.0\n   * @access public\n   * @throws {Error001} when shit go bad\n   * @throws {Error200} when the list is empty\n   * @throws {Error300} when callback is not a function\n   * @return { List } An instance of the class with the mutated elements \n   * @example \n   * let l = list.map((x,i,vec) => x * x);\n   */\n  map(callback) {\n    if(!this.isEmpty() && isFunction(callback)) {\n      let vec = this.array;\n      let aux = [];\n      for (let i = 0; i < vec.length; i++) {\n        aux.push(callback(vec[i], i, vec));\n        if(i === vec.length - 1) {\n          return this.builder(aux);\n        } \n      }\n    } else if (this.isEmpty()) {\n      throw error[\"200\"];\n    } else if (isNotFunction(callback)) {\n      throw error[\"300\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function toString\n   * This method convert the current list to and string, just like this: 1,2,3,4\n   * @access public\n   * @since 0.1.0\n   * @return null if the list is empty or a string representig the list\n   * @example\n   * let string = list.string();\n   */\n  toString() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.array.join();\n    }\n  }\n\n  /**\n   * @function toJSON\n   * This method parse the list to a JSON\n   * @access public\n   * @since 0.1.0\n   * @return null if the list is empty or an object representing the list\n   * @example\n   * let json = list.toJSON();\n   */\n  toJSON() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      let json = {};\n      for (let i = 0; i < this.array.length; i++) {\n        json[i] = this.array[i];\n      }\n      return json;\n    }\n  }\n}",
+    "static": true,
+    "longname": "/home/zoomelectrico/Desktop/work/DSJS/src/List.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "class",
+    "name": "List",
+    "memberof": "src/List.js",
+    "static": true,
+    "longname": "src/List.js~List",
+    "access": "public",
+    "export": true,
+    "importPath": "list-js/src/List.js",
+    "importStyle": "List",
+    "description": "List class, this class allow you to use a LinkedList DS based on an array",
+    "examples": [
+      "let list = new List();"
+    ],
+    "lineNumber": 13,
+    "since": "0.1.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@author",
+        "tagValue": "Jose Roberto Quevedo"
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 50,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 19,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@constructor",
+        "tagValue": "this is constructor of the class, here an empty array is initialize"
+      }
+    ]
+  },
+  {
+    "__docId__": 51,
+    "kind": "member",
+    "name": "array",
+    "memberof": "src/List.js~List",
+    "static": false,
+    "longname": "src/List.js~List#array",
+    "access": "private",
+    "description": "",
+    "lineNumber": 25,
+    "since": "0.1.0",
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "method",
+    "name": "builder",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#builder",
+    "access": "private",
+    "description": "",
+    "lineNumber": 35,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "builder\nThis method is an interface for the class to create a list from the operation aplided to the other;"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "array",
+        "description": ""
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 53,
+    "kind": "method",
+    "name": "isEmpty",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#isEmpty",
+    "access": "public",
+    "description": "",
+    "examples": [
+      "let boolean = list.isEmpty();"
+    ],
+    "lineNumber": 50,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "isEmpty\nThis method say if a list is empty or not."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        " List "
+      ],
+      "spread": false,
+      "description": "true if the list is empty or false otherwaise"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 54,
+    "kind": "method",
+    "name": "size",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#size",
+    "access": "public",
+    "description": "",
+    "examples": [
+      "let boolean = list.isEmpty();"
+    ],
+    "lineNumber": 63,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "size\nthis method say what is the size of the list"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        " List "
+      ],
+      "spread": false,
+      "description": "0 if the list is empty or an positive integer representing the list size"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 55,
+    "kind": "method",
+    "name": "addFirst",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#addFirst",
+    "access": "public",
+    "description": "",
+    "examples": [
+      "let l = list.addFirst(1);"
+    ],
+    "lineNumber": 80,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "addFirst\nThis method allow you to add an element in the first position of the list "
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "any"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "the element than you whan to add to the list"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        " List "
+      ],
+      "spread": false,
+      "description": "a new instance of the class with the elements of the other list and the new element added"
+    },
+    "throws": [
+      {
+        "types": [
+          "Error001"
+        ],
+        "description": "when shit go bad"
+      },
+      {
+        "types": [
+          "Error100"
+        ],
+        "description": "when data is null"
+      },
+      {
+        "types": [
+          "Error101"
+        ],
+        "description": "when data is undefined"
+      }
+    ]
+  },
+  {
+    "__docId__": 56,
+    "kind": "method",
+    "name": "addLast",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#addLast",
+    "access": "public",
+    "description": "",
+    "examples": [
+      "let l = list.addLast(1);"
+    ],
+    "lineNumber": 105,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "addLast\nThis method allow you to add an element in the last position of the list "
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "any"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "the element than you whan to add to the list"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        " List "
+      ],
+      "spread": false,
+      "description": "a new instance of the class with the elements of the other list and the new element added"
+    },
+    "throws": [
+      {
+        "types": [
+          "Error001"
+        ],
+        "description": "when shit go bad"
+      },
+      {
+        "types": [
+          "Error100"
+        ],
+        "description": "when data is null"
+      },
+      {
+        "types": [
+          "Error101"
+        ],
+        "description": "when data is undefined"
+      }
+    ]
+  },
+  {
+    "__docId__": 57,
+    "kind": "method",
+    "name": "add",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#add",
+    "access": "public",
+    "description": "",
+    "examples": [
+      "let l = list.add(1, 0);"
+    ],
+    "lineNumber": 134,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "add\nThis method allow you to add an element in the position i of the list "
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "any"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "the element than you whan to add to the list"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "i",
+        "description": "the index value in which to add the element [0, list.size())"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        " List "
+      ],
+      "spread": false,
+      "description": "a new instance of the class with the elements of the other list and the new element added"
+    },
+    "throws": [
+      {
+        "types": [
+          "Error001"
+        ],
+        "description": "when shit go bad"
+      },
+      {
+        "types": [
+          "Error100"
+        ],
+        "description": "when data is null"
+      },
+      {
+        "types": [
+          "Error101"
+        ],
+        "description": "when data is undefined"
+      },
+      {
+        "types": [
+          "Error110"
+        ],
+        "description": "when the index is null"
+      },
+      {
+        "types": [
+          "Error111"
+        ],
+        "description": "when the index is undefined"
+      },
+      {
+        "types": [
+          "Error112"
+        ],
+        "description": "when the index is Not a Number"
+      }
+    ]
+  },
+  {
+    "__docId__": 58,
+    "kind": "method",
+    "name": "addAll",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#addAll",
+    "access": "public",
+    "description": "",
+    "examples": [
+      "let l = list.addAll([1,'a',3]);"
+    ],
+    "lineNumber": 185,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "addAll\nThis method allow you to add an collection of elements to the list "
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "any[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "collection",
+        "description": "an Array of elements to add"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        " List "
+      ],
+      "spread": false,
+      "description": "a new instance of the class with the elements of the other list and the new elements added"
+    },
+    "throws": [
+      {
+        "types": [
+          "Error001"
+        ],
+        "description": "when shit go bad"
+      },
+      {
+        "types": [
+          "Error102"
+        ],
+        "description": "when collection is null"
+      },
+      {
+        "types": [
+          "Error103"
+        ],
+        "description": "when collection is undefined"
+      },
+      {
+        "types": [
+          "Error104"
+        ],
+        "description": "when collection is not an array"
+      }
+    ]
+  },
+  {
+    "__docId__": 59,
+    "kind": "method",
+    "name": "deleteFirst",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#deleteFirst",
+    "access": "public",
+    "description": "",
+    "examples": [
+      "let l = list.deleteFirst();"
+    ],
+    "lineNumber": 208,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "deleteFirst\nThis method allow you to delete the first element of the list  "
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        " List "
+      ],
+      "spread": false,
+      "description": "null is the list is empty or a new instance of the class with the elements of the other list except from the first"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 60,
+    "kind": "method",
+    "name": "deleteLast",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#deleteLast",
+    "access": "public",
+    "description": "",
+    "examples": [
+      "let l = list.deleteLast();"
+    ],
+    "lineNumber": 225,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "deleteLast\nThis method allow you to last the first element of the list  "
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        " List "
+      ],
+      "spread": false,
+      "description": "null is the list is empty or a new instance of the class with the elements of the other list except from the first"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 61,
+    "kind": "method",
+    "name": "delete",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#delete",
+    "access": "public",
+    "description": "",
+    "examples": [
+      "let l = list.delete(0);"
+    ],
+    "lineNumber": 248,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "delete\nThis method allow you to delete the element i from the list"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "i",
+        "description": "the index of the element to eliminate [0, list.size())"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        " List "
+      ],
+      "spread": false,
+      "description": "null if the list is empty a new instance of the class with the elements of the other list except the element i"
+    },
+    "throws": [
+      {
+        "types": [
+          "Error001"
+        ],
+        "description": "when shit go bad"
+      },
+      {
+        "types": [
+          "Error110"
+        ],
+        "description": "when i is null"
+      },
+      {
+        "types": [
+          "Error111"
+        ],
+        "description": "when i is undefined"
+      },
+      {
+        "types": [
+          "Error112"
+        ],
+        "description": "when i is Not a Number"
+      },
+      {
+        "types": [
+          "Error113"
+        ],
+        "description": "when i is bigger than the list size"
+      }
+    ]
+  },
+  {
+    "__docId__": 62,
+    "kind": "method",
+    "name": "clear",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#clear",
+    "access": "public",
+    "description": "",
+    "examples": [
+      "list.clear();"
+    ],
+    "lineNumber": 291,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "clear\nWARNING: This method delete all the element of the original list.\nThis should be used carefully"
+      }
+    ],
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 64,
+    "kind": "method",
+    "name": "forEach",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#forEach",
+    "access": "public",
+    "description": "",
+    "examples": [
+      "list.forEach((x,i,vec) => {\n console.log(`Value: ${x}, Index: ${i}`);\n});"
+    ],
+    "lineNumber": 317,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "forEach\nThis method allow us to iterate over the list"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function (value: any, i: number, vec: array)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "callback",
+        "description": "this is a callback function that will be execute for every element in the list, it should not mutated the element of the list"
+      }
+    ],
+    "throws": [
+      {
+        "types": [
+          "Error001"
+        ],
+        "description": "when shit go bad"
+      },
+      {
+        "types": [
+          "Error200"
+        ],
+        "description": "when the list is empty"
+      },
+      {
+        "types": [
+          "Error300"
+        ],
+        "description": "when callback is not a function"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 65,
+    "kind": "method",
+    "name": "map",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#map",
+    "access": "public",
+    "description": "",
+    "examples": [
+      "let l = list.map((x,i,vec) => x * x);"
+    ],
+    "lineNumber": 346,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "map\nThis method allow us to map over the list"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function (value: any, i: number, vec: array)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "callback",
+        "description": "this is a callback function that will be execute for every element in the list, and it should mutated the element of the list"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        " List "
+      ],
+      "spread": false,
+      "description": "An instance of the class with the mutated elements"
+    },
+    "throws": [
+      {
+        "types": [
+          "Error001"
+        ],
+        "description": "when shit go bad"
+      },
+      {
+        "types": [
+          "Error200"
+        ],
+        "description": "when the list is empty"
+      },
+      {
+        "types": [
+          "Error300"
+        ],
+        "description": "when callback is not a function"
+      }
+    ]
+  },
+  {
+    "__docId__": 66,
+    "kind": "method",
+    "name": "toString",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#toString",
+    "access": "public",
+    "description": "",
+    "examples": [
+      "let string = list.string();"
+    ],
+    "lineNumber": 374,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "toString\nThis method convert the current list to and string, just like this: 1,2,3,4"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "null if the list is empty or a string representig the list"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 67,
+    "kind": "method",
+    "name": "toJSON",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#toJSON",
+    "access": "public",
+    "description": "",
+    "examples": [
+      "let json = list.toJSON();"
+    ],
+    "lineNumber": 391,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "toJSON\nThis method parse the list to a JSON"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "null if the list is empty or an object representing the list"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 68,
+    "kind": "file",
+    "name": "src/errors/errors.js",
+    "content": "/**\n * @constant\n * @author Jose Roberto Quevedo\n * @since 0.1.0\n * @version 1.0.0\n * @description\n * This object POJO contain the most commmon errors of our library the codes are the following\n * \"001\" : \"OMG, You have broken the library.\n * \"100\" : \"The Data parameter can't be null.\n*  \"101\" : \"The Data parameter can't be undefined.\n*  \"102\" : \"The Collection parameter can't be null.\n*  \"103\" : \"The Collection parameter can't be undefined.\n*  \"104\" : \"The Collection parameter must be an Array.\n*  \"110\" : \"The index parameter can't be null.\n*  \"111\" : \"The index parameter can't be undefined.\n*  \"112\" : \"The index must be a integer.\n*  \"113\" : \"The index can't greater or equal than the list size.\n*  \"200\" : \"Can't iterate over an empty list.\n*  \"300\" : \"Tha Callback parameter must be a function.\n * @example\n * throw error[\"001\"]\n */\nconst error = {\n    \"001\" : new Error(\"OMG, You have broken the library.\\nError Code: 001\\nCheck the docs for more details\"),\n    \"100\" : new Error(\"The Data parameter can't be null.\\nError Code: 100\\nCheck the docs for more details\"),\n    \"101\" : new Error(\"The Data parameter can't be undefined.\\nError Code: 101\\nCheck the docs for more details\"),\n    \"102\" : new Error(\"The Collection parameter can't be null.\\nError Code: 102\\nCheck the docs for more details\"),\n    \"103\" : new Error(\"The Collection parameter can't be undefined.\\nError Code: 103\\nCheck the docs for more details\"),\n    \"104\" : new Error(\"The Collection parameter must be an Array.\\nError Code: 104\\nCheck the docs for more details\"),\n    \"110\" : new Error(\"The index parameter can't be null.\\nError Code: 110\\nCheck the docs for more details\"),\n    \"111\" : new Error(\"The index parameter can't be undefined.\\nError Code: 111\\nCheck the docs for more details\"),\n    \"112\" : new Error(\"The index must be a integer.\\nError Code: 112\\nCheck the docs for more details\"),\n    \"113\" : new Error(\"The index can't greater or equal than the list size.\\nError Code: 113\\nCheck the docs for more details\"),\n    \"200\" : new Error(\"Can't iterate over an empty list.\\nError Code: 200\\nCheck the docs for more details\"),\n    \"300\" : new Error(\"Tha Callback parameter must be a function.\\nError Code: 300\\nCheck the docs for more details\")\n};\n\nexport default error;",
+    "static": true,
+    "longname": "/home/zoomelectrico/Desktop/work/DSJS/src/errors/errors.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 69,
+    "kind": "variable",
+    "name": "error",
+    "memberof": "src/errors/errors.js",
+    "static": true,
+    "longname": "src/errors/errors.js~error",
+    "access": "public",
+    "export": true,
+    "importPath": "list-js/src/errors/errors.js",
+    "importStyle": "error",
+    "description": "",
+    "examples": [
+      "throw error[\"001\"]"
+    ],
+    "lineNumber": 23,
+    "since": "0.1.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@constant",
+        "tagValue": ""
+      },
+      {
+        "tagName": "@author",
+        "tagValue": "Jose Roberto Quevedo"
+      },
+      {
+        "tagName": "@description",
+        "tagValue": "This object POJO contain the most commmon errors of our library the codes are the following\n\"001\" : \"OMG, You have broken the library.\n\"100\" : \"The Data parameter can't be null.\n \"101\" : \"The Data parameter can't be undefined.\n \"102\" : \"The Collection parameter can't be null.\n \"103\" : \"The Collection parameter can't be undefined.\n \"104\" : \"The Collection parameter must be an Array.\n \"110\" : \"The index parameter can't be null.\n \"111\" : \"The index parameter can't be undefined.\n \"112\" : \"The index must be a integer.\n \"113\" : \"The index can't greater or equal than the list size.\n \"200\" : \"Can't iterate over an empty list.\n \"300\" : \"Tha Callback parameter must be a function."
+      }
+    ],
+    "type": {
+      "types": [
+        "{\"001\": *, \"100\": *, \"101\": *, \"102\": *, \"103\": *, \"104\": *, \"110\": *, \"111\": *, \"112\": *, \"113\": *, \"200\": *, \"300\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 70,
+    "kind": "file",
+    "name": "src/helper/check.js",
+    "content": "/**\n * @function isNotNull\n * This is a helpers function that check if an element isn't null\n * @param {any} data the element to check\n * @return true if the element isn't null or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isNotNull(data) {\n    return data !== null;\n}\n\n/**\n * @function isNotUndefined\n * This is a helpers function that check if an element isn't undefined\n * @param {any} data the element to check\n * @return true if the element isn't undefined or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isNotUndefined(data) {\n    return typeof data !== \"undefined\";\n}\n\n/**\n * @function isNull\n * This is a helpers function that check if an element is null\n * @param {any} data the element to check\n * @return true if the element is null or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isNull(data) {\n    return data === null;\n}\n\n/**\n * @function isUndefined\n * This is a helpers function that check if an element is undefined\n * @param {any} data the element to check\n * @return true if the element is undefined or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isUndefined(data) {\n    return typeof data === \"undefined\";\n}\n\n/**\n * @function isFunction\n * This is a helpers function that check if an element is a function\n * @param {any} func the element to check\n * @return true if the element is function or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isFunction(func) {\n    return typeof func === \"function\";\n}\n\n/**\n * @function isNotFunction\n * This is a helpers function that check if an element isn't function\n * @param {any} func the element to check\n * @return true if the element isn't function or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isNotFunction(func) {\n    return typeof func !== \"function\";\n}\n\n/**\n * @function isArray\n * This is a helpers function that check if an element is an Array\n * @param {any} collection the element to check\n * @return true if the element is an Array or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isArray(collection) {\n    return collection instanceof Array;\n}\n\n/**\n * @function isNotArray\n * This is a helpers function that check if an element is't an Array\n * @param {any} collection the element to check\n * @return true if the element is't an Array or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isNotArray(collection) {\n    return !(collection instanceof Array);\n}",
+    "static": true,
+    "longname": "/home/zoomelectrico/Desktop/work/DSJS/src/helper/check.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 71,
+    "kind": "function",
+    "name": "isNotNull",
+    "memberof": "src/helper/check.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helper/check.js~isNotNull",
+    "access": "public",
+    "export": true,
+    "importPath": "list-js/src/helper/check.js",
+    "importStyle": "{isNotNull}",
+    "description": "",
+    "lineNumber": 9,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "isNotNull\nThis is a helpers function that check if an element isn't null"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "any"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "the element to check"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "true if the element isn't null or false otherwise"
+    }
+  },
+  {
+    "__docId__": 72,
+    "kind": "function",
+    "name": "isNotUndefined",
+    "memberof": "src/helper/check.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helper/check.js~isNotUndefined",
+    "access": "public",
+    "export": true,
+    "importPath": "list-js/src/helper/check.js",
+    "importStyle": "{isNotUndefined}",
+    "description": "",
+    "lineNumber": 21,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "isNotUndefined\nThis is a helpers function that check if an element isn't undefined"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "any"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "the element to check"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "true if the element isn't undefined or false otherwise"
+    }
+  },
+  {
+    "__docId__": 73,
+    "kind": "function",
+    "name": "isNull",
+    "memberof": "src/helper/check.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helper/check.js~isNull",
+    "access": "public",
+    "export": true,
+    "importPath": "list-js/src/helper/check.js",
+    "importStyle": "{isNull}",
+    "description": "",
+    "lineNumber": 33,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "isNull\nThis is a helpers function that check if an element is null"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "any"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "the element to check"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "true if the element is null or false otherwise"
+    }
+  },
+  {
+    "__docId__": 74,
+    "kind": "function",
+    "name": "isUndefined",
+    "memberof": "src/helper/check.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helper/check.js~isUndefined",
+    "access": "public",
+    "export": true,
+    "importPath": "list-js/src/helper/check.js",
+    "importStyle": "{isUndefined}",
+    "description": "",
+    "lineNumber": 45,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "isUndefined\nThis is a helpers function that check if an element is undefined"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "any"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "the element to check"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "true if the element is undefined or false otherwise"
+    }
+  },
+  {
+    "__docId__": 75,
+    "kind": "function",
+    "name": "isFunction",
+    "memberof": "src/helper/check.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helper/check.js~isFunction",
+    "access": "public",
+    "export": true,
+    "importPath": "list-js/src/helper/check.js",
+    "importStyle": "{isFunction}",
+    "description": "",
+    "lineNumber": 57,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "isFunction\nThis is a helpers function that check if an element is a function"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "any"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "func",
+        "description": "the element to check"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "true if the element is function or false otherwise"
+    }
+  },
+  {
+    "__docId__": 76,
+    "kind": "function",
+    "name": "isNotFunction",
+    "memberof": "src/helper/check.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helper/check.js~isNotFunction",
+    "access": "public",
+    "export": true,
+    "importPath": "list-js/src/helper/check.js",
+    "importStyle": "{isNotFunction}",
+    "description": "",
+    "lineNumber": 69,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "isNotFunction\nThis is a helpers function that check if an element isn't function"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "any"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "func",
+        "description": "the element to check"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "true if the element isn't function or false otherwise"
+    }
+  },
+  {
+    "__docId__": 77,
+    "kind": "function",
+    "name": "isArray",
+    "memberof": "src/helper/check.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helper/check.js~isArray",
+    "access": "public",
+    "export": true,
+    "importPath": "list-js/src/helper/check.js",
+    "importStyle": "{isArray}",
+    "description": "",
+    "lineNumber": 81,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "isArray\nThis is a helpers function that check if an element is an Array"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "any"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "collection",
+        "description": "the element to check"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "true if the element is an Array or false otherwise"
+    }
+  },
+  {
+    "__docId__": 78,
+    "kind": "function",
+    "name": "isNotArray",
+    "memberof": "src/helper/check.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helper/check.js~isNotArray",
+    "access": "public",
+    "export": true,
+    "importPath": "list-js/src/helper/check.js",
+    "importStyle": "{isNotArray}",
+    "description": "",
+    "lineNumber": 93,
+    "since": "0.1.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "isNotArray\nThis is a helpers function that check if an element is't an Array"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "any"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "collection",
+        "description": "the element to check"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "true if the element is't an Array or false otherwise"
+    }
+  },
+  {
+    "kind": "index",
+    "content": "# List-js\nList js is an library that implements the List Data Structure, but we implemented a inmutable version of this Data Stucture\n\nList js es una libreria libre de dependencias la cual implementa a la Estructuras de Datos \"Lista\", lo interesante de esta libreria es que hace una implementación inmutable de las listas.\n\nTo install you must execute the following command\n\nPara instalarla solo deberas ejecutar el siguiente comando:\n```shell\n  $ npm install --save list-js\n```\nOnce installed the only thing you need to do is require in your file and start playing\n\nUna vez instala la Librería solo necesitas hacer lo siguiente para tenerla disponible en tu programas:\n```javascript\n// Require the Library\n// Importa la libreria\nconst List = require('ds-js');\n\n// We create an instance of the list and ready\n// Creamos una instancia de la lista y listo podemos empezar a aplicar métodos\nlet l = new List();\n\nlet list = l.addFirst(1);\n```\n* * *\n\n### Docs - Documentación\nTo chechk the docs follow this [link]()\n\nPara revisar la documentación deberás ir al siguiente enlace [haz click aquí]()\n\n#### Contributors - Colaboradores\n\n* José Roberto Quevedo [\\(@zoomelectrico\\)](https://github.com/zoomelectrico)\n\n### License - Licencia\nMIT\n\n### Community\nFeel free to fork and make some modification to the library and then make a Pull Request, or if you want to make ask for something else in the lib open an issue or email me to (jose.quevedo2011@gmail.com) \n",
+    "longname": "/home/zoomelectrico/Desktop/work/DSJS/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"list-js\",\n  \"version\": \"0.1.0\",\n  \"scripts\": {\n    \"build\": \"babel src -d lib\",\n    \"build-docs\": \"./node_modules/.bin/esdoc\",\n    \"test\": \"jest\"\n  },\n  \"description\": \"An inmutable implementation of Data Structures\",\n  \"main\": \"index.js\",\n  \"directories\": {\n    \"doc\": \"docs\"\n  },\n  \"keywords\": [\n    \"Data\",\n    \"Structures\",\n    \"Javascript\",\n    \"Inmutable\",\n    \"dependecies\",\n    \"free\",\n    \"data\"\n  ],\n  \"author\": \"Jose Roberto Quevedo\",\n  \"license\": \"MIT\",\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-preset-env\": \"^1.7.0\",\n    \"jest\": \"^23.3.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\"\n  }\n}\n",
+    "longname": "/home/zoomelectrico/Desktop/work/DSJS/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

@@ -45,24 +45,29 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/errors/errors.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
- * @constant
+ * @member {object} error 
+ * This object POJO contain the most commmon errors of our library the codes are the following
+ * &quot;001&quot; : OMG, You have broken the library.
+ * &quot;100&quot; : The Data parameter can&apos;t be null.
+ * &quot;101&quot; : The Data parameter can&apos;t be undefined.
+ * &quot;102&quot; : The Collection parameter can&apos;t be null.
+ * &quot;103&quot; : The Collection parameter can&apos;t be undefined.
+ * &quot;104&quot; : The Collection parameter must be an Array.
+ * &quot;110&quot; : The index parameter can&apos;t be null.
+ * &quot;111&quot; : The index parameter can&apos;t be undefined.
+ * &quot;112&quot; : The index must be a integer.
+ * &quot;113&quot; : The index can&apos;t greater or equal than the list size.
+ * &quot;200&quot; : Can&apos;t iterate over an empty list.
+ * &quot;300&quot; : Tha Callback parameter must be a function.
+ * &quot;401&quot; : The key parameter can&apos;t be null.
+ * &quot;402&quot; : The key parameter can&apos;t be undefined.
+ * &quot;500&quot; : Can&apos;t sort an empty list.
+ * &quot;501&quot; : The comparer callback can&apos;t be null.
+ * &quot;502&quot; : The comparer callback can&apos;t be undefined. 
+ * &quot;503&quot; : The comparer callback must be a function. 
  * @author Jose Roberto Quevedo
  * @since 0.1.0
  * @version 1.0.0
- * @description
- * This object POJO contain the most commmon errors of our library the codes are the following
- * &quot;001&quot; : &quot;OMG, You have broken the library.
- * &quot;100&quot; : &quot;The Data parameter can&apos;t be null.
-*  &quot;101&quot; : &quot;The Data parameter can&apos;t be undefined.
-*  &quot;102&quot; : &quot;The Collection parameter can&apos;t be null.
-*  &quot;103&quot; : &quot;The Collection parameter can&apos;t be undefined.
-*  &quot;104&quot; : &quot;The Collection parameter must be an Array.
-*  &quot;110&quot; : &quot;The index parameter can&apos;t be null.
-*  &quot;111&quot; : &quot;The index parameter can&apos;t be undefined.
-*  &quot;112&quot; : &quot;The index must be a integer.
-*  &quot;113&quot; : &quot;The index can&apos;t greater or equal than the list size.
-*  &quot;200&quot; : &quot;Can&apos;t iterate over an empty list.
-*  &quot;300&quot; : &quot;Tha Callback parameter must be a function.
  * @example
  * throw error[&quot;001&quot;]
  */
@@ -78,7 +83,13 @@ const error = {
     &quot;112&quot; : new Error(&quot;The index must be a integer.\nError Code: 112\nCheck the docs for more details&quot;),
     &quot;113&quot; : new Error(&quot;The index can&apos;t greater or equal than the list size.\nError Code: 113\nCheck the docs for more details&quot;),
     &quot;200&quot; : new Error(&quot;Can&apos;t iterate over an empty list.\nError Code: 200\nCheck the docs for more details&quot;),
-    &quot;300&quot; : new Error(&quot;Tha Callback parameter must be a function.\nError Code: 300\nCheck the docs for more details&quot;)
+    &quot;300&quot; : new Error(&quot;The Callback parameter must be a function.\nError Code: 300\nCheck the docs for more details&quot;),
+    &quot;401&quot; : new Error(&quot;The key parameter can&apos;t be null.\nError Code: 401\nCheck the docs for more details&quot;),
+    &quot;402&quot; : new Error(&quot;The key parameter can&apos;t be undefined.\nError Code: 401\nCheck the docs for more details&quot;),
+    &quot;500&quot; : new Error(&quot;Can&apos;t sort an empty list.\nError Code: 500\nCheck the docs for more details&quot;), 
+    &quot;501&quot; : new Error(&quot;The comparer callback can&apos;t be null. \nError Code: 501\nCheck the docs for more details&quot;),
+    &quot;502&quot; : new Error(&quot;The comparer callback can&apos;t be undefined. \nError Code: 502\nCheck the docs for more details&quot;),
+    &quot;503&quot; : new Error(&quot;The comparer callback must be a function. \nError Code: 503\nCheck the docs for more details&quot;) 
 };
 
 export default error;</code></pre>

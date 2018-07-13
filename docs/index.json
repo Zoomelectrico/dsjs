@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/List.js",
-    "content": "import { isNotNull, isNotUndefined, isNull, isUndefined, isFunction, isNotFunction, isArray, isNotArray } from './helper/check';\nimport error from './errors/errors';\n\n/**\n * List class, this class allow you to use a LinkedList DS based on an array\n * @example\n * let list = new List();\n * @access public\n * @author Jose Roberto Quevedo\n * @version 1.0.0\n * @since 0.1.0\n */\nexport default class List {\n  /**\n   * @constructor this is constructor of the class, here an empty array is initialize\n   * @since 0.1.0\n   * @access public\n   */\n  constructor() {\n    /**\n     * @member {Array} array this is a way for easy implementing list and for making the lib more quick\n     * @access private\n     * @since 0.1.0\n     */\n    this.array = [];\n  }\n\n  /**\n   * @function builder\n   * This method is an interface for the class to create a list from the operation aplided to the other;\n   * @access private\n   * @since 0.1.0\n   * @param {Array} array\n   */\n  builder(array) {\n    let list = new List();\n    list.array = array;\n    return list;\n  } \n\n  /**\n   * @function isEmpty\n   * This method say if a list is empty or not.\n   * @access public\n   * @since 0.1.0\n   * @return { List } true if the list is empty or false otherwaise\n   * @example\n   * let boolean = list.isEmpty();\n   */\n  isEmpty() {\n    return this.array.length <= 0;\n  }\n\n  /**\n   * @function size\n   * this method say what is the size of the list\n   * @access public\n   * @since 0.1.0\n   * @return { List } 0 if the list is empty or an positive integer representing the list size\n   * @example\n   * let boolean = list.isEmpty();\n   */\n  size() {\n    return this.array.length;\n  }\n\n  /**\n   * @function addFirst\n   * This method allow you to add an element in the first position of the list \n   * @param {any} data the element than you whan to add to the list\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @example \n   * let l = list.addFirst(1);\n   */\n  addFirst(data) {\n    if(isNotUndefined(data) && isNotNull(data)) {\n      return this.builder([data, ...this.array]);\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function addLast\n   * This method allow you to add an element in the last position of the list \n   * @param {any} data the element than you whan to add to the list\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @example \n   * let l = list.addLast(1);\n   */\n  addLast(data) {\n    if(isNotUndefined(data) && isNotNull(data)) {\n      return this.builder([...this.array, data]);\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function add\n   * This method allow you to add an element in the position i of the list \n   * @param {any} data the element than you whan to add to the list\n   * @param {number} i the index value in which to add the element [0, list.size())\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @throws {Error110} when the index is null\n   * @throws {Error111} when the index is undefined\n   * @throws {Error112} when the index is Not a Number\n   * @example \n   * let l = list.add(1, 0);\n   */\n  add(data, i) {\n    if(!isNaN(i) && isNotUndefined(data) && isNotUndefined(i) && isNotNull(data) && isNotNull(i)) {\n      if (i === 0) {\n        return this.addFirst(data);\n      } else if (i === this.size() - 1) {\n        return this.addLast(data);\n      } else if (i < 0) {\n        return this.add(data, this.size() + i);\n      } else if (i >= this.size()) {\n        throw error[\"113\"];\n      } else {\n        let vec = [];\n        for (let j = 0; j < this.array.length; j++) {\n          if(i === j) {\n            vec.push(data);\n          }\n          vec.push(this.array[j]);\n          if(j === this.array.length - 1) {\n            return this.builder(vec);\n          }\n        }\n      }\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else if (isNull(i)) {\n      throw error[\"110\"];\n    } else if (isUndefined(i)) {\n      throw error[\"111\"];\n    } else  if (isNaN(i)) {\n      throw error[\"112\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function addAll\n   * This method allow you to add an collection of elements to the list \n   * @param {any[]} collection an Array of elements to add \n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new elements added\n   * @throws {Error001} when shit go bad\n   * @throws {Error102} when collection is null\n   * @throws {Error103} when collection is undefined\n   * @throws {Error104} when collection is not an array\n   * @example \n   * let l = list.addAll([1,'a',3]);\n   */\n  addAll(collection) {\n    if(isNotUndefined(collection) && isNotNull(collection) && isArray(collection)) {\n      return this.builder([...this.array, ...collection]);\n    } else if (isNotArray(collection)) {\n      throw error[\"104\"];\n    } else if (isNull(collection)) {\n      throw error[\"102\"];\n    } else if (isUndefined(collection)) {\n      throw error[\"103\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function deleteFirst\n   * This method allow you to delete the first element of the list  \n   * @access public\n   * @since 0.1.0\n   * @return { List } null is the list is empty or a new instance of the class with the elements of the other list except from the first\n   * @example \n   * let l = list.deleteFirst();\n   */\n  deleteFirst() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.builder(this.array.slice(1, this.array.length));\n    }\n  }\n\n  /**\n   * @function deleteLast\n   * This method allow you to last the first element of the list  \n   * @access public\n   * @since 0.1.0\n   * @return { List } null is the list is empty or a new instance of the class with the elements of the other list except from the first\n   * @example \n   * let l = list.deleteLast();\n   */\n  deleteLast() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.builder(this.array.slice(0, this.array.length - 1));\n    }\n  }\n\n  /**\n   * @function delete\n   * This method allow you to delete the element i from the list\n   * @param {number} i the index of the element to eliminate [0, list.size())\n   * @access public\n   * @since 0.1.0\n   * @return { List } null if the list is empty a new instance of the class with the elements of the other list except the element i\n   * @throws {Error001} when shit go bad\n   * @throws {Error110} when i is null\n   * @throws {Error111} when i is undefined\n   * @throws {Error112} when i is Not a Number\n   * @throws {Error113} when i is bigger than the list size\n   * @example \n   * let l = list.delete(0);\n   */\n  delete(i) {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      if(isNotUndefined(i) && isNotNull(i) && !isNaN(i)) {\n        if(i === 0) {\n          return this.deleteFirst();\n        } else if (i === this.size() - 1) {\n          return this.deleteLast();\n        } else if(i < 0) {\n          this.delete(this.size() + i);\n        } else if (i >= this.size()) {\n          throw error[\"113\"];\n        } else {\n          let vec = [];\n          for (let j = 0; j < this.array.length; j++) {\n            if(i !== j) {\n              vec.push(this.array[j]);\n            }\n          }\n          return this.builder(vec); \n        }\n      } else if (isNaN(i)) {\n        throw error[\"112\"];\n      } else  if (isNull(i)) {\n        throw error[\"110\"];\n      } else if (isUndefined(i)) {\n        throw error[\"111\"];\n      } else {\n        throw error[\"001\"];\n      }\n    }\n  }\n\n  /**\n   * @function clear\n   * WARNING: This method delete all the element of the original list.\n   * This should be used carefully\n   * @access public\n   * @since 0.1.0\n   * @example\n   * list.clear();\n   */\n  clear() {\n    if(!this.isEmpty()) {\n      console.warn(\"DS.js Warning: You're clearing the list all the data will be erased. You have 5s to cancel the operation\");\n      setTimeout(() => {\n        console.log(\"DS.js Warning: The data is being erased...\");\n        this.array = [];\n      }, 5000);\n    } else {\n      console.log(\"Your list doesn't have any data to delete\");\n    }\n  }\n\n  /**\n   * @function forEach\n   * This method allow us to iterate over the list\n   * @param {function (value: any, i: number, vec: array)} callback this is a callback function that will be execute for every element in the list, it should not mutated the element of the list\n   * @since 0.1.0\n   * @access public\n   * @throws {Error001} when shit go bad\n   * @throws {Error200} when the list is empty\n   * @throws {Error300} when callback is not a function \n   * @example\n   * list.forEach((x,i,vec) => {\n   *  console.log(`Value: ${x}, Index: ${i}`);\n   * });\n   */\n  forEach(callback) {\n    if(isFunction(callback) && !this.isEmpty()) {\n      let vec = this.array;\n      let list = this.builder(vec);\n      for (let i = 0; i < vec.length; i++) {\n        callback(vec[i], i, list);  \n      } \n    } else if (this.isEmpty()) {\n      throw error[\"200\"];\n    } else if (isNotFunction(callback)) {\n      throw error[\"300\"];\n    } else {\n      throw error[\"001\"]\n    }\n  }\n\n  /**\n   * @function map\n   * This method allow us to map over the list\n   * @param {function (value: any, i: number, vec: array)} callback this is a callback function that will be execute for every element in the list, and it should mutated the element of the list\n   * @since 0.1.0\n   * @access public\n   * @throws {Error001} when shit go bad\n   * @throws {Error200} when the list is empty\n   * @throws {Error300} when callback is not a function\n   * @return { List } An instance of the class with the mutated elements \n   * @example \n   * let l = list.map((x,i,vec) => x * x);\n   */\n  map(callback) {\n    if(!this.isEmpty() && isFunction(callback)) {\n      let vec = this.array;\n      let aux = [];\n      for (let i = 0; i < vec.length; i++) {\n        aux.push(callback(vec[i], i, vec));\n        if(i === vec.length - 1) {\n          return this.builder(aux);\n        } \n      }\n    } else if (this.isEmpty()) {\n      throw error[\"200\"];\n    } else if (isNotFunction(callback)) {\n      throw error[\"300\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function toString\n   * This method convert the current list to and string, just like this: 1,2,3,4\n   * @access public\n   * @since 0.1.0\n   * @return null if the list is empty or a string representig the list\n   * @example\n   * let string = list.string();\n   */\n  toString() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.array.join();\n    }\n  }\n\n  /**\n   * @function toJSON\n   * This method parse the list to a JSON\n   * @access public\n   * @since 0.1.0\n   * @return null if the list is empty or an object representing the list\n   * @example\n   * let json = list.toJSON();\n   */\n  toJSON() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      let json = {};\n      for (let i = 0; i < this.array.length; i++) {\n        json[i] = this.array[i];\n      }\n      return json;\n    }\n  }\n}",
+    "content": "import { isNotNull, isNotUndefined, isNull, isUndefined, isFunction, isNotFunction, isArray, isNotArray } from './helper/check';\nimport error from './errors/errors';\n\n/**\n * List class, this class allow you to use a LinkedList DS based on an array\n * @example\n * let list = new List();\n * @access public\n * @author Jose Roberto Quevedo\n * @version 1.1.0\n * @since 0.1.0\n */\nexport default class List {\n  /**\n   * @constructor this is constructor of the class, here an empty array is initialize\n   * @since 0.1.0\n   * @access public\n   */\n  constructor() {\n    /**\n     * @member {Array} array this is a way for easy implementing list and for making the lib more quick\n     * @access private\n     * @since 0.1.0\n     */\n    this.array = [];\n  }\n\n  /**\n   * @function builder\n   * This method is an interface for the class to create a list from the operation aplided to the other;\n   * @access private\n   * @since 0.1.0\n   * @param {Array} array\n   */\n  builder(array) {\n    let list = new List();\n    list.array = array;\n    return list;\n  } \n\n  /**\n   * @function isEmpty\n   * This method say if a list is empty or not.\n   * @access public\n   * @since 0.1.0\n   * @return { List } true if the list is empty or false otherwaise\n   * @example\n   * let boolean = list.isEmpty();\n   */\n  isEmpty() {\n    return this.array.length <= 0;\n  }\n\n  /**\n   * @function size\n   * this method say what is the size of the list\n   * @access public\n   * @since 0.1.0\n   * @return {number} 0 if the list is empty or an positive integer representing the list size\n   * @example\n   * let boolean = list.isEmpty();\n   */\n  size() {\n    return this.array.length;\n  }\n\n  /**\n   * @function addFirst\n   * This method allow you to add an element in the first position of the list \n   * @param {any} data the element than you whan to add to the list\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @example \n   * let l = list.addFirst(1);\n   */\n  addFirst(data) {\n    if(isNotUndefined(data) && isNotNull(data)) {\n      return this.builder([data, ...this.array]);\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function addLast\n   * This method allow you to add an element in the last position of the list \n   * @param {any} data the element than you whan to add to the list\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @example \n   * let l = list.addLast(1);\n   */\n  addLast(data) {\n    if(isNotUndefined(data) && isNotNull(data)) {\n      return this.builder([...this.array, data]);\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function add\n   * This method allow you to add an element in the position i of the list \n   * @param {any} data the element than you whan to add to the list\n   * @param {number} i the index value in which to add the element [0, list.size())\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @throws {Error110} when the index is null\n   * @throws {Error111} when the index is undefined\n   * @throws {Error112} when the index is Not a Number\n   * @example \n   * let l = list.add(1, 0);\n   */\n  add(data, i) {\n    if(!isNaN(i) && isNotUndefined([data, i]) && isNotNull([data, i])) {\n      if (i === 0) {\n        return this.addFirst(data);\n      } else if (i === this.size() - 1) {\n        return this.addLast(data);\n      } else if (i < 0) {\n        return this.add(data, this.size() + i);\n      } else if (i >= this.size()) {\n        throw error[\"113\"];\n      } else {\n        let vec = [];\n        for (let j = 0; j < this.array.length; j++) {\n          if(i === j) {\n            vec.push(data);\n          }\n          vec.push(this.array[j]);\n          if(j === this.array.length - 1) {\n            return this.builder(vec);\n          }\n        }\n      }\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else if (isNull(i)) {\n      throw error[\"110\"];\n    } else if (isUndefined(i)) {\n      throw error[\"111\"];\n    } else  if (isNaN(i)) {\n      throw error[\"112\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function addAll\n   * This method allow you to add an collection of elements to the list \n   * @param {any[]} collection an Array of elements to add \n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new elements added\n   * @throws {Error001} when shit go bad\n   * @throws {Error102} when collection is null\n   * @throws {Error103} when collection is undefined\n   * @throws {Error104} when collection is not an array\n   * @example \n   * let l = list.addAll([1,'a',3]);\n   */\n  addAll(collection) {\n    if(isNotUndefined(collection) && isNotNull(collection) && isArray(collection)) {\n      return this.builder([...this.array, ...collection]);\n    } else if (isNotArray(collection)) {\n      throw error[\"104\"];\n    } else if (isNull(collection)) {\n      throw error[\"102\"];\n    } else if (isUndefined(collection)) {\n      throw error[\"103\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function deleteFirst\n   * This method allow you to delete the first element of the list  \n   * @access public\n   * @since 0.1.0\n   * @return { List } null is the list is empty or a new instance of the class with the elements of the other list except from the first\n   * @example \n   * let l = list.deleteFirst();\n   */\n  deleteFirst() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.builder(this.array.slice(1, this.array.length));\n    }\n  }\n\n  /**\n   * @function deleteLast\n   * This method allow you to last the first element of the list  \n   * @access public\n   * @since 0.1.0\n   * @return { List } null is the list is empty or a new instance of the class with the elements of the other list except from the first\n   * @example \n   * let l = list.deleteLast();\n   */\n  deleteLast() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.builder(this.array.slice(0, this.array.length - 1));\n    }\n  }\n\n  /**\n   * @function delete\n   * This method allow you to delete the element i from the list\n   * @param {number} i the index of the element to eliminate [0, list.size())\n   * @access public\n   * @since 0.1.0\n   * @return { List } null if the list is empty a new instance of the class with the elements of the other list except the element i\n   * @throws {Error001} when shit go bad\n   * @throws {Error110} when i is null\n   * @throws {Error111} when i is undefined\n   * @throws {Error112} when i is Not a Number\n   * @throws {Error113} when i is bigger than the list size\n   * @example \n   * let l = list.delete(0);\n   */\n  delete(i) {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      if(isNotUndefined(i) && isNotNull(i) && !isNaN(i)) {\n        if(i === 0) {\n          return this.deleteFirst();\n        } else if (i === this.size() - 1) {\n          return this.deleteLast();\n        } else if(i < 0) {\n          this.delete(this.size() + i);\n        } else if (i >= this.size()) {\n          throw error[\"113\"];\n        } else {\n          let vec = [];\n          for (let j = 0; j < this.array.length; j++) {\n            if(i !== j) {\n              vec.push(this.array[j]);\n            }\n          }\n          return this.builder(vec); \n        }\n      } else if (isNaN(i)) {\n        throw error[\"112\"];\n      } else  if (isNull(i)) {\n        throw error[\"110\"];\n      } else if (isUndefined(i)) {\n        throw error[\"111\"];\n      } else {\n        throw error[\"001\"];\n      }\n    }\n  }\n\n  /**\n   * @function clear\n   * WARNING: This method delete all the element of the original list.\n   * This should be used carefully\n   * @access public\n   * @since 0.1.0\n   * @example\n   * list.clear();\n   */\n  clear() {\n    if(!this.isEmpty()) {\n      console.warn(\"DS.js Warning: You're clearing the list all the data will be erased. You have 5s to cancel the operation\");\n      setTimeout(() => {\n        console.log(\"DS.js Warning: The data is being erased...\");\n        this.array = [];\n      }, 5000);\n    } else {\n      console.log(\"Your list doesn't have any data to delete\");\n    }\n  }\n\n  /**\n   * @function forEach\n   * This method allow us to iterate over the list\n   * @param {function (value: any, i: number, vec: array)} callback this is a callback function that will be execute for every element in the list, it should not mutated the element of the list\n   * @since 0.1.0\n   * @access public\n   * @throws {Error001} when shit go bad\n   * @throws {Error200} when the list is empty\n   * @throws {Error300} when callback is not a function \n   * @example\n   * list.forEach((x,i,vec) => {\n   *  console.log(`Value: ${x}, Index: ${i}`);\n   * });\n   */\n  forEach(callback) {\n    if(isFunction(callback) && !this.isEmpty()) {\n      let vec = this.array;\n      let list = this.builder(vec);\n      for (let i = 0; i < vec.length; i++) {\n        callback(vec[i], i, list);  \n      } \n    } else if (this.isEmpty()) {\n      throw error[\"200\"];\n    } else if (isNotFunction(callback)) {\n      throw error[\"300\"];\n    } else {\n      throw error[\"001\"]\n    }\n  }\n\n  /**\n   * @function map\n   * This method allow us to map over the list\n   * @param {function (value: any, i: number, vec: array)} callback this is a callback function that will be execute for every element in the list, and it should mutated the element of the list\n   * @since 0.1.0\n   * @access public\n   * @throws {Error001} when shit go bad\n   * @throws {Error200} when the list is empty\n   * @throws {Error300} when callback is not a function\n   * @return { List } An instance of the class with the mutated elements \n   * @example \n   * let l = list.map((x,i,vec) => x * x);\n   */\n  map(callback) {\n    if(!this.isEmpty() && isFunction(callback)) {\n      let vec = this.array;\n      let aux = [];\n      for (let i = 0; i < vec.length; i++) {\n        aux.push(callback(vec[i], i, vec));\n        if(i === vec.length - 1) {\n          return this.builder(aux);\n        } \n      }\n    } else if (this.isEmpty()) {\n      throw error[\"200\"];\n    } else if (isNotFunction(callback)) {\n      throw error[\"300\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function toString\n   * This method convert the current list to and string, just like this: 1,2,3,4\n   * @access public\n   * @since 0.1.0\n   * @return null if the list is empty or a string representig the list\n   * @example\n   * let string = list.string();\n   */\n  toString() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.array.join();\n    }\n  }\n\n  /**\n   * @function toJSON\n   * This method parse the list to a JSON\n   * @access public\n   * @since 0.1.0\n   * @return {object} null if the list is empty or an object representing the list\n   * @example\n   * let json = list.toJSON();\n   */\n  toJSON() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      let json = {};\n      for (let i = 0; i < this.array.length; i++) {\n        json[i] = this.array[i];\n      }\n      return json;\n    }\n  }\n\n  /**\n   * @function toArray\n   * this method convert the list into an array\n   * @access public\n   * @since 0.2.0\n   * @return {Array<any>} return an array with the elements contained in the list or null if the list is empty\n   * @example\n   * let vec = list.toArray();\n   */\n  toArray() {\n    if (this.isEmpty()) {\n      return null;\n    } else {\n      return [...this.array];\n    }\n  }\n\n  /**\n   * @function indexOf\n   * This method returns the current index of an element\n   * @access public\n   * @since 0.2.0\n   * @param {any} key the element that we are searching in the list\n   * @param {function(key: any, value: any)} comparer a function that return true when the two values are equals\n   * @throws {Error001} When shits go bad\n   * @throws {Error401} When the key is null\n   * @throws {Error402} When the key is undefined\n   * @throws {Error501} When the comparer is null\n   * @throws {Error503} When the comparer is not a function\n   * @return {number} the index of the element or -1 if the element isn't in the list\n   * @example\n   * let i = list.indexOf(3);\n   * let j = list.indexOf(3, (x, y) => x === y[\"x\"]);\n   */\n  indexOf(key, comparer) {\n    if (isNotUndefined(key) && isNotNull(key) && isUndefined(comparer)) {\n      let idx = -1;\n      for (let i = 0; i < this.array.length; i++) {\n        if(this.array[i] === key) {\n          idx = i;\n          break;\n        }\n      }\n      return idx;\n    } else if (isNotUndefined([key, comparer]) && isNotUndefined([key, comparer]) && isFunction(comparer)) {\n      let idx = -1;\n      for (let i = 0; i < this.array.length; i++) {\n        if (comparer(key, this.array[i])) {\n          idx = i;\n          break;\n        }\n      }\n      return idx;\n    } else if(isNull(key)) {\n      throw error[\"401\"];\n    } else if (isUndefined(key)) {\n      throw error[\"402\"];\n    } else if (isNull(comparer)) {\n      throw error[\"501\"];\n    } else  if (isNotFunction(comparer)) {\n      throw error[\"503\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function sort\n   * This function sort the list if according to a comparer function \n   * if the comparer parameter is undefined (not provided) the list will be order ascending\n   * @access public\n   * @since 0.2.0\n   * @param {function(key: any, value: any)} comparer a function that allow the library to decided what element should be put first\n   * @throws {Error501} when the comparer is null\n   * @throws {Error503} when the comparer isn't a function\n   * @throws {Error001} when shits go bad\n   * @return {List} an new instance of the class with the list sorted;\n   * @example\n   * let l = list.sort((x, y) => y > x);\n   */\n  sort(comparer) {\n    if (this.isEmpty()) {\n      throw error[\"500\"];\n    } else {\n      if (isNotUndefined(comparer) && isNotNull(comparer) && isFunction(comparer)) {\n        let vec = [...this.array];\n        return this.builder(vec.sort(comparer));\n      } else if (isNull(comparer)) {\n        throw error[\"501\"];\n      } else if (isUndefined(comparer)) {\n        comparer = (x, y) => x > y;\n        let vec = [...this.array];\n        return this.builder(vec.sort(comparer));\n      } else if (isNotFunction(comparer)) {\n        throw error[\"503\"];\n      } else {\n        throw error[\"001\"];\n      }\n    }\n  }\n\n}",
     "static": true,
     "longname": "/home/zoomelectrico/Desktop/work/DSJS/src/List.js",
     "access": "public",
@@ -591,7 +591,7 @@
     ],
     "lineNumber": 13,
     "since": "0.1.0",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "unknown": [
       {
         "tagName": "@author",
@@ -731,7 +731,7 @@
     "return": {
       "nullable": null,
       "types": [
-        " List "
+        "number"
       ],
       "spread": false,
       "description": "0 if the list is empty or an positive integer representing the list size"
@@ -1364,7 +1364,7 @@
     "return": {
       "nullable": null,
       "types": [
-        "*"
+        "object"
       ],
       "spread": false,
       "description": "null if the list is empty or an object representing the list"
@@ -1373,9 +1373,189 @@
   },
   {
     "__docId__": 68,
+    "kind": "method",
+    "name": "toArray",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#toArray",
+    "access": "public",
+    "description": "",
+    "examples": [
+      "let vec = list.toArray();"
+    ],
+    "lineNumber": 412,
+    "since": "0.2.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "toArray\nthis method convert the list into an array"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Array<any>"
+      ],
+      "spread": false,
+      "description": "return an array with the elements contained in the list or null if the list is empty"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 69,
+    "kind": "method",
+    "name": "indexOf",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#indexOf",
+    "access": "public",
+    "description": "",
+    "examples": [
+      "let i = list.indexOf(3);\nlet j = list.indexOf(3, (x, y) => x === y[\"x\"]);"
+    ],
+    "lineNumber": 437,
+    "since": "0.2.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "indexOf\nThis method returns the current index of an element"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "any"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "key",
+        "description": "the element that we are searching in the list"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(key: any, value: any)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "comparer",
+        "description": "a function that return true when the two values are equals"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": "the index of the element or -1 if the element isn't in the list"
+    },
+    "throws": [
+      {
+        "types": [
+          "Error001"
+        ],
+        "description": "When shits go bad"
+      },
+      {
+        "types": [
+          "Error401"
+        ],
+        "description": "When the key is null"
+      },
+      {
+        "types": [
+          "Error402"
+        ],
+        "description": "When the key is undefined"
+      },
+      {
+        "types": [
+          "Error501"
+        ],
+        "description": "When the comparer is null"
+      },
+      {
+        "types": [
+          "Error503"
+        ],
+        "description": "When the comparer is not a function"
+      }
+    ]
+  },
+  {
+    "__docId__": 70,
+    "kind": "method",
+    "name": "sort",
+    "memberof": "src/List.js~List",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/List.js~List#sort",
+    "access": "public",
+    "description": "",
+    "examples": [
+      "let l = list.sort((x, y) => y > x);"
+    ],
+    "lineNumber": 483,
+    "since": "0.2.0",
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": "sort\nThis function sort the list if according to a comparer function \nif the comparer parameter is undefined (not provided) the list will be order ascending"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function(key: any, value: any)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "comparer",
+        "description": "a function that allow the library to decided what element should be put first"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "List"
+      ],
+      "spread": false,
+      "description": "an new instance of the class with the list sorted;"
+    },
+    "throws": [
+      {
+        "types": [
+          "Error501"
+        ],
+        "description": "when the comparer is null"
+      },
+      {
+        "types": [
+          "Error503"
+        ],
+        "description": "when the comparer isn't a function"
+      },
+      {
+        "types": [
+          "Error001"
+        ],
+        "description": "when shits go bad"
+      }
+    ]
+  },
+  {
+    "__docId__": 71,
     "kind": "file",
     "name": "src/errors/errors.js",
-    "content": "/**\n * @constant\n * @author Jose Roberto Quevedo\n * @since 0.1.0\n * @version 1.0.0\n * @description\n * This object POJO contain the most commmon errors of our library the codes are the following\n * \"001\" : \"OMG, You have broken the library.\n * \"100\" : \"The Data parameter can't be null.\n*  \"101\" : \"The Data parameter can't be undefined.\n*  \"102\" : \"The Collection parameter can't be null.\n*  \"103\" : \"The Collection parameter can't be undefined.\n*  \"104\" : \"The Collection parameter must be an Array.\n*  \"110\" : \"The index parameter can't be null.\n*  \"111\" : \"The index parameter can't be undefined.\n*  \"112\" : \"The index must be a integer.\n*  \"113\" : \"The index can't greater or equal than the list size.\n*  \"200\" : \"Can't iterate over an empty list.\n*  \"300\" : \"Tha Callback parameter must be a function.\n * @example\n * throw error[\"001\"]\n */\nconst error = {\n    \"001\" : new Error(\"OMG, You have broken the library.\\nError Code: 001\\nCheck the docs for more details\"),\n    \"100\" : new Error(\"The Data parameter can't be null.\\nError Code: 100\\nCheck the docs for more details\"),\n    \"101\" : new Error(\"The Data parameter can't be undefined.\\nError Code: 101\\nCheck the docs for more details\"),\n    \"102\" : new Error(\"The Collection parameter can't be null.\\nError Code: 102\\nCheck the docs for more details\"),\n    \"103\" : new Error(\"The Collection parameter can't be undefined.\\nError Code: 103\\nCheck the docs for more details\"),\n    \"104\" : new Error(\"The Collection parameter must be an Array.\\nError Code: 104\\nCheck the docs for more details\"),\n    \"110\" : new Error(\"The index parameter can't be null.\\nError Code: 110\\nCheck the docs for more details\"),\n    \"111\" : new Error(\"The index parameter can't be undefined.\\nError Code: 111\\nCheck the docs for more details\"),\n    \"112\" : new Error(\"The index must be a integer.\\nError Code: 112\\nCheck the docs for more details\"),\n    \"113\" : new Error(\"The index can't greater or equal than the list size.\\nError Code: 113\\nCheck the docs for more details\"),\n    \"200\" : new Error(\"Can't iterate over an empty list.\\nError Code: 200\\nCheck the docs for more details\"),\n    \"300\" : new Error(\"Tha Callback parameter must be a function.\\nError Code: 300\\nCheck the docs for more details\")\n};\n\nexport default error;",
+    "content": "/**\n * @member {object} error \n * This object POJO contain the most commmon errors of our library the codes are the following\n * \"001\" : OMG, You have broken the library.\n * \"100\" : The Data parameter can't be null.\n * \"101\" : The Data parameter can't be undefined.\n * \"102\" : The Collection parameter can't be null.\n * \"103\" : The Collection parameter can't be undefined.\n * \"104\" : The Collection parameter must be an Array.\n * \"110\" : The index parameter can't be null.\n * \"111\" : The index parameter can't be undefined.\n * \"112\" : The index must be a integer.\n * \"113\" : The index can't greater or equal than the list size.\n * \"200\" : Can't iterate over an empty list.\n * \"300\" : Tha Callback parameter must be a function.\n * \"401\" : The key parameter can't be null.\n * \"402\" : The key parameter can't be undefined.\n * \"500\" : Can't sort an empty list.\n * \"501\" : The comparer callback can't be null.\n * \"502\" : The comparer callback can't be undefined. \n * \"503\" : The comparer callback must be a function. \n * @author Jose Roberto Quevedo\n * @since 0.1.0\n * @version 1.0.0\n * @example\n * throw error[\"001\"]\n */\nconst error = {\n    \"001\" : new Error(\"OMG, You have broken the library.\\nError Code: 001\\nCheck the docs for more details\"),\n    \"100\" : new Error(\"The Data parameter can't be null.\\nError Code: 100\\nCheck the docs for more details\"),\n    \"101\" : new Error(\"The Data parameter can't be undefined.\\nError Code: 101\\nCheck the docs for more details\"),\n    \"102\" : new Error(\"The Collection parameter can't be null.\\nError Code: 102\\nCheck the docs for more details\"),\n    \"103\" : new Error(\"The Collection parameter can't be undefined.\\nError Code: 103\\nCheck the docs for more details\"),\n    \"104\" : new Error(\"The Collection parameter must be an Array.\\nError Code: 104\\nCheck the docs for more details\"),\n    \"110\" : new Error(\"The index parameter can't be null.\\nError Code: 110\\nCheck the docs for more details\"),\n    \"111\" : new Error(\"The index parameter can't be undefined.\\nError Code: 111\\nCheck the docs for more details\"),\n    \"112\" : new Error(\"The index must be a integer.\\nError Code: 112\\nCheck the docs for more details\"),\n    \"113\" : new Error(\"The index can't greater or equal than the list size.\\nError Code: 113\\nCheck the docs for more details\"),\n    \"200\" : new Error(\"Can't iterate over an empty list.\\nError Code: 200\\nCheck the docs for more details\"),\n    \"300\" : new Error(\"The Callback parameter must be a function.\\nError Code: 300\\nCheck the docs for more details\"),\n    \"401\" : new Error(\"The key parameter can't be null.\\nError Code: 401\\nCheck the docs for more details\"),\n    \"402\" : new Error(\"The key parameter can't be undefined.\\nError Code: 401\\nCheck the docs for more details\"),\n    \"500\" : new Error(\"Can't sort an empty list.\\nError Code: 500\\nCheck the docs for more details\"), \n    \"501\" : new Error(\"The comparer callback can't be null. \\nError Code: 501\\nCheck the docs for more details\"),\n    \"502\" : new Error(\"The comparer callback can't be undefined. \\nError Code: 502\\nCheck the docs for more details\"),\n    \"503\" : new Error(\"The comparer callback must be a function. \\nError Code: 503\\nCheck the docs for more details\") \n};\n\nexport default error;",
     "static": true,
     "longname": "/home/zoomelectrico/Desktop/work/DSJS/src/errors/errors.js",
     "access": "public",
@@ -1383,7 +1563,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 69,
+    "__docId__": 72,
     "kind": "variable",
     "name": "error",
     "memberof": "src/errors/errors.js",
@@ -1397,34 +1577,26 @@
     "examples": [
       "throw error[\"001\"]"
     ],
-    "lineNumber": 23,
+    "lineNumber": 28,
     "since": "0.1.0",
     "version": "1.0.0",
     "unknown": [
       {
-        "tagName": "@constant",
-        "tagValue": ""
-      },
-      {
         "tagName": "@author",
         "tagValue": "Jose Roberto Quevedo"
-      },
-      {
-        "tagName": "@description",
-        "tagValue": "This object POJO contain the most commmon errors of our library the codes are the following\n\"001\" : \"OMG, You have broken the library.\n\"100\" : \"The Data parameter can't be null.\n \"101\" : \"The Data parameter can't be undefined.\n \"102\" : \"The Collection parameter can't be null.\n \"103\" : \"The Collection parameter can't be undefined.\n \"104\" : \"The Collection parameter must be an Array.\n \"110\" : \"The index parameter can't be null.\n \"111\" : \"The index parameter can't be undefined.\n \"112\" : \"The index must be a integer.\n \"113\" : \"The index can't greater or equal than the list size.\n \"200\" : \"Can't iterate over an empty list.\n \"300\" : \"Tha Callback parameter must be a function."
       }
     ],
     "type": {
       "types": [
-        "{\"001\": *, \"100\": *, \"101\": *, \"102\": *, \"103\": *, \"104\": *, \"110\": *, \"111\": *, \"112\": *, \"113\": *, \"200\": *, \"300\": *}"
+        "{\"001\": *, \"100\": *, \"101\": *, \"102\": *, \"103\": *, \"104\": *, \"110\": *, \"111\": *, \"112\": *, \"113\": *, \"200\": *, \"300\": *, \"401\": *, \"402\": *, \"500\": *, \"501\": *, \"502\": *, \"503\": *}"
       ]
     }
   },
   {
-    "__docId__": 70,
+    "__docId__": 73,
     "kind": "file",
     "name": "src/helper/check.js",
-    "content": "/**\n * @function isNotNull\n * This is a helpers function that check if an element isn't null\n * @param {any} data the element to check\n * @return true if the element isn't null or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isNotNull(data) {\n    return data !== null;\n}\n\n/**\n * @function isNotUndefined\n * This is a helpers function that check if an element isn't undefined\n * @param {any} data the element to check\n * @return true if the element isn't undefined or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isNotUndefined(data) {\n    return typeof data !== \"undefined\";\n}\n\n/**\n * @function isNull\n * This is a helpers function that check if an element is null\n * @param {any} data the element to check\n * @return true if the element is null or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isNull(data) {\n    return data === null;\n}\n\n/**\n * @function isUndefined\n * This is a helpers function that check if an element is undefined\n * @param {any} data the element to check\n * @return true if the element is undefined or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isUndefined(data) {\n    return typeof data === \"undefined\";\n}\n\n/**\n * @function isFunction\n * This is a helpers function that check if an element is a function\n * @param {any} func the element to check\n * @return true if the element is function or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isFunction(func) {\n    return typeof func === \"function\";\n}\n\n/**\n * @function isNotFunction\n * This is a helpers function that check if an element isn't function\n * @param {any} func the element to check\n * @return true if the element isn't function or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isNotFunction(func) {\n    return typeof func !== \"function\";\n}\n\n/**\n * @function isArray\n * This is a helpers function that check if an element is an Array\n * @param {any} collection the element to check\n * @return true if the element is an Array or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isArray(collection) {\n    return collection instanceof Array;\n}\n\n/**\n * @function isNotArray\n * This is a helpers function that check if an element is't an Array\n * @param {any} collection the element to check\n * @return true if the element is't an Array or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isNotArray(collection) {\n    return !(collection instanceof Array);\n}",
+    "content": "/**\n * @function isNotNull\n * This is a helpers function that check if an element isn't null\n * @param {any} data the elements to check\n * @return {boolean} true if the element isn't null or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isNotNull(...data) {\n    let bool = true;\n    for (let i = 0; i < data.length; i++) {\n        if(data[i] === null) {\n            bool = false;\n            break;\n        }\n    }\n    return bool;\n}\n\n/**\n * @function isNotUndefined\n * This is a helpers function that check if an element isn't undefined\n * @param {any} data the elements to check\n * @return {boolean} true if the element isn't undefined or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isNotUndefined(...data) {\n    return typeof data !== \"undefined\";\n}\n\n/**\n * @function isNull\n * This is a helpers function that check if an element is null\n * @param {any} data the element to check\n * @return {boolean} true if the element is null or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isNull(data) {\n    return data === null;\n}\n\n/**\n * @function isUndefined\n * This is a helpers function that check if an element is undefined\n * @param {any} data the element to check\n * @return {boolean} true if the element is undefined or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isUndefined(data) {\n    return typeof data === \"undefined\";\n}\n\n/**\n * @function isFunction\n * This is a helpers function that check if an element is a function\n * @param {any} func the element to check\n * @return {boolean} true if the element is function or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isFunction(func) {\n    return typeof func === \"function\";\n}\n\n/**\n * @function isNotFunction\n * This is a helpers function that check if an element isn't function\n * @param {any} func the element to check\n * @return {boolean} true if the element isn't function or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isNotFunction(func) {\n    return typeof func !== \"function\";\n}\n\n/**\n * @function isArray\n * This is a helpers function that check if an element is an Array\n * @param {any} collection the element to check\n * @return {boolean} true if the element is an Array or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isArray(collection) {\n    return collection instanceof Array;\n}\n\n/**\n * @function isNotArray\n * This is a helpers function that check if an element is't an Array\n * @param {any} collection the element to check\n * @return {boolean} true if the element is't an Array or false otherwise\n * @access public\n * @since 0.1.0\n */\nexport function isNotArray(collection) {\n    return !(collection instanceof Array);\n}",
     "static": true,
     "longname": "/home/zoomelectrico/Desktop/work/DSJS/src/helper/check.js",
     "access": "public",
@@ -1432,7 +1604,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 71,
+    "__docId__": 74,
     "kind": "function",
     "name": "isNotNull",
     "memberof": "src/helper/check.js",
@@ -1462,20 +1634,20 @@
         "spread": false,
         "optional": false,
         "name": "data",
-        "description": "the element to check"
+        "description": "the elements to check"
       }
     ],
     "return": {
       "nullable": null,
       "types": [
-        "*"
+        "boolean"
       ],
       "spread": false,
       "description": "true if the element isn't null or false otherwise"
     }
   },
   {
-    "__docId__": 72,
+    "__docId__": 75,
     "kind": "function",
     "name": "isNotUndefined",
     "memberof": "src/helper/check.js",
@@ -1488,7 +1660,7 @@
     "importPath": "listas/src/helper/check.js",
     "importStyle": "{isNotUndefined}",
     "description": "",
-    "lineNumber": 21,
+    "lineNumber": 28,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1505,20 +1677,20 @@
         "spread": false,
         "optional": false,
         "name": "data",
-        "description": "the element to check"
+        "description": "the elements to check"
       }
     ],
     "return": {
       "nullable": null,
       "types": [
-        "*"
+        "boolean"
       ],
       "spread": false,
       "description": "true if the element isn't undefined or false otherwise"
     }
   },
   {
-    "__docId__": 73,
+    "__docId__": 76,
     "kind": "function",
     "name": "isNull",
     "memberof": "src/helper/check.js",
@@ -1531,7 +1703,7 @@
     "importPath": "listas/src/helper/check.js",
     "importStyle": "{isNull}",
     "description": "",
-    "lineNumber": 33,
+    "lineNumber": 40,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1554,14 +1726,14 @@
     "return": {
       "nullable": null,
       "types": [
-        "*"
+        "boolean"
       ],
       "spread": false,
       "description": "true if the element is null or false otherwise"
     }
   },
   {
-    "__docId__": 74,
+    "__docId__": 77,
     "kind": "function",
     "name": "isUndefined",
     "memberof": "src/helper/check.js",
@@ -1574,7 +1746,7 @@
     "importPath": "listas/src/helper/check.js",
     "importStyle": "{isUndefined}",
     "description": "",
-    "lineNumber": 45,
+    "lineNumber": 52,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1597,14 +1769,14 @@
     "return": {
       "nullable": null,
       "types": [
-        "*"
+        "boolean"
       ],
       "spread": false,
       "description": "true if the element is undefined or false otherwise"
     }
   },
   {
-    "__docId__": 75,
+    "__docId__": 78,
     "kind": "function",
     "name": "isFunction",
     "memberof": "src/helper/check.js",
@@ -1617,7 +1789,7 @@
     "importPath": "listas/src/helper/check.js",
     "importStyle": "{isFunction}",
     "description": "",
-    "lineNumber": 57,
+    "lineNumber": 64,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1640,14 +1812,14 @@
     "return": {
       "nullable": null,
       "types": [
-        "*"
+        "boolean"
       ],
       "spread": false,
       "description": "true if the element is function or false otherwise"
     }
   },
   {
-    "__docId__": 76,
+    "__docId__": 79,
     "kind": "function",
     "name": "isNotFunction",
     "memberof": "src/helper/check.js",
@@ -1660,7 +1832,7 @@
     "importPath": "listas/src/helper/check.js",
     "importStyle": "{isNotFunction}",
     "description": "",
-    "lineNumber": 69,
+    "lineNumber": 76,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1683,14 +1855,14 @@
     "return": {
       "nullable": null,
       "types": [
-        "*"
+        "boolean"
       ],
       "spread": false,
       "description": "true if the element isn't function or false otherwise"
     }
   },
   {
-    "__docId__": 77,
+    "__docId__": 80,
     "kind": "function",
     "name": "isArray",
     "memberof": "src/helper/check.js",
@@ -1703,7 +1875,7 @@
     "importPath": "listas/src/helper/check.js",
     "importStyle": "{isArray}",
     "description": "",
-    "lineNumber": 81,
+    "lineNumber": 88,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1726,14 +1898,14 @@
     "return": {
       "nullable": null,
       "types": [
-        "*"
+        "boolean"
       ],
       "spread": false,
       "description": "true if the element is an Array or false otherwise"
     }
   },
   {
-    "__docId__": 78,
+    "__docId__": 81,
     "kind": "function",
     "name": "isNotArray",
     "memberof": "src/helper/check.js",
@@ -1746,7 +1918,7 @@
     "importPath": "listas/src/helper/check.js",
     "importStyle": "{isNotArray}",
     "description": "",
-    "lineNumber": 93,
+    "lineNumber": 100,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1769,7 +1941,7 @@
     "return": {
       "nullable": null,
       "types": [
-        "*"
+        "boolean"
       ],
       "spread": false,
       "description": "true if the element is't an Array or false otherwise"
@@ -1777,7 +1949,7 @@
   },
   {
     "kind": "index",
-    "content": "# Listas\nListas js is an library that implements the List Data Structure, but we implemented a inmutable version of this Data Stucture\n\nListas js es una libreria libre de dependencias la cual implementa a la Estructuras de Datos \"Lista\", lo interesante de esta libreria es que hace una implementación inmutable de las listas.\n\nTo install you must execute the following command\n\nPara instalarla solo deberas ejecutar el siguiente comando:\n```shell\n  $ npm install --save al\n```\nOnce installed the only thing you need to do is require in your file and start playing\n\nUna vez instala la Librería solo necesitas hacer lo siguiente para tenerla disponible en tu programas:\n```javascript\n// Require the Library\n// Importa la libreria\nconst List = require('al');\n\n// We create an instance of the list and ready\n// Creamos una instancia de la lista y listo podemos empezar a aplicar métodos\nlet l = new List();\n\nlet list = l.addFirst(1);\n```\n* * *\n\n### Docs - Documentación\nTo chechk the docs follow this [link]()\n\nPara revisar la documentación deberás ir al siguiente enlace [haz click aquí]()\n\n#### Contributors - Colaboradores\n\n* José Roberto Quevedo [\\(@zoomelectrico\\)](https://github.com/zoomelectrico)\n\n### License - Licencia\nMIT\n\n### Community\nFeel free to fork and make some modification to the library and then make a Pull Request, or if you want to make ask for something else in the lib open an issue or email me to (jose.quevedo2011@gmail.com) \n",
+    "content": "# Listas\nListas js is an library that implements the List Data Structure, but we implemented a inmutable version of this Data Stucture\n\nListas js es una libreria libre de dependencias la cual implementa a la Estructuras de Datos \"Lista\", lo interesante de esta libreria es que hace una implementación inmutable de las listas.\n\nTo install you must execute the following command\n\nPara instalarla solo deberas ejecutar el siguiente comando:\n```shell\n  $ npm install --save listas\n```\nOnce installed the only thing you need to do is require in your file and start playing\n\nUna vez instala la Librería solo necesitas hacer lo siguiente para tenerla disponible en tu programas:\n```javascript\n// Require the Library\n// Importa la libreria\nconst List = require('listas');\n\n// We create an instance of the list and ready\n// Creamos una instancia de la lista y listo podemos empezar a aplicar métodos\nlet l = new List();\n\nlet list = l.addFirst(1);\n```\n* * *\n\n### Docs - Documentación\nTo check the docs follow this [link](https://zoomelectrico.github.io/dsjs)\n\nPara revisar la documentación deberás ir al siguiente enlace [haz click aquí](https://zoomelectrico.github.io/dsjs)\n\n#### Contributors - Colaboradores\n\n* José Roberto Quevedo [\\(@zoomelectrico\\)](https://github.com/zoomelectrico)\n\n### License - Licencia\nMIT\n\n### Community\nFeel free to fork and make some modification to the library and then make a Pull Request, or if you want to make ask for something else in the lib open an issue or email me to (jose.quevedo2011@gmail.com) \n",
     "longname": "/home/zoomelectrico/Desktop/work/DSJS/README.md",
     "name": "./README.md",
     "static": true,
@@ -1785,7 +1957,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"listas\",\n  \"version\": \"0.1.0\",\n  \"scripts\": {\n    \"build\": \"babel src -d lib\",\n    \"build-docs\": \"./node_modules/.bin/esdoc\",\n    \"test\": \"jest\"\n  },\n  \"description\": \"An inmutable implementation of Data Structures\",\n  \"main\": \"index.js\",\n  \"directories\": {\n    \"doc\": \"docs\"\n  },\n  \"keywords\": [\n    \"Data\",\n    \"Structures\",\n    \"Javascript\",\n    \"Inmutable\",\n    \"dependecies\",\n    \"free\",\n    \"data\"\n  ],\n  \"author\": \"Jose Roberto Quevedo\",\n  \"license\": \"MIT\",\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-preset-env\": \"^1.7.0\",\n    \"jest\": \"^23.3.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"listas\",\n  \"version\": \"0.2.0\",\n  \"scripts\": {\n    \"build\": \"babel src -d lib\",\n    \"build-docs\": \"./node_modules/.bin/esdoc\",\n    \"test\": \"jest\"\n  },\n  \"description\": \"An inmutable implementation of Data Structures\",\n  \"main\": \"index.js\",\n  \"directories\": {\n    \"doc\": \"docs\"\n  },\n  \"keywords\": [\n    \"Data\",\n    \"Structures\",\n    \"Javascript\",\n    \"Inmutable\",\n    \"dependecies free\",\n    \"data\"\n  ],\n  \"author\": \"Jose Roberto Quevedo\",\n  \"license\": \"MIT\",\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-preset-env\": \"^1.7.0\",\n    \"jest\": \"^23.3.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\"\n  }\n}\n",
     "longname": "/home/zoomelectrico/Desktop/work/DSJS/package.json",
     "name": "package.json",
     "static": true,

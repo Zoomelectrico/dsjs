@@ -420,6 +420,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/list.js~list#indexof",
+    "class/src/List.js~List.html#instance-method-indexOf",
+    "src/List.js~List#indexOf",
+    "method"
+  ],
+  [
     "src/list.js~list#isempty",
     "class/src/List.js~List.html#instance-method-isEmpty",
     "src/List.js~List#isEmpty",
@@ -435,6 +441,18 @@ window.esdocSearchIndex = [
     "src/list.js~list#size",
     "class/src/List.js~List.html#instance-method-size",
     "src/List.js~List#size",
+    "method"
+  ],
+  [
+    "src/list.js~list#sort",
+    "class/src/List.js~List.html#instance-method-sort",
+    "src/List.js~List#sort",
+    "method"
+  ],
+  [
+    "src/list.js~list#toarray",
+    "class/src/List.js~List.html#instance-method-toArray",
+    "src/List.js~List#toArray",
     "method"
   ],
   [

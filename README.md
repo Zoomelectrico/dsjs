@@ -7,7 +7,7 @@ To install you must execute the following command
 
 Para instalarla solo deberas ejecutar el siguiente comando:
 ```shell
-  $ npm install --save al
+  $ npm install --save listas
 ```
 Once installed the only thing you need to do is require in your file and start playing
 
@@ -15,7 +15,7 @@ Una vez instala la Librería solo necesitas hacer lo siguiente para tenerla disp
 ```javascript
 // Require the Library
 // Importa la libreria
-const List = require('al');
+const List = require('listas');
 
 // We create an instance of the list and ready
 // Creamos una instancia de la lista y listo podemos empezar a aplicar métodos
@@ -26,9 +26,9 @@ let list = l.addFirst(1);
 * * *
 
 ### Docs - Documentación
-To chechk the docs follow this [link]()
+To check the docs follow this [link](https://zoomelectrico.github.io/dsjs)
 
-Para revisar la documentación deberás ir al siguiente enlace [haz click aquí]()
+Para revisar la documentación deberás ir al siguiente enlace [haz click aquí](https://zoomelectrico.github.io/dsjs)
 
 #### Contributors - Colaboradores
 

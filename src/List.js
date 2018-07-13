@@ -7,7 +7,7 @@ import error from './errors/errors';
  * let list = new List();
  * @access public
  * @author Jose Roberto Quevedo
- * @version 1.0.0
+ * @version 1.1.0
  * @since 0.1.0
  */
 export default class List {
@@ -56,7 +56,7 @@ export default class List {
    * this method say what is the size of the list
    * @access public
    * @since 0.1.0
-   * @return { List } 0 if the list is empty or an positive integer representing the list size
+   * @return {number} 0 if the list is empty or an positive integer representing the list size
    * @example
    * let boolean = list.isEmpty();
    */
@@ -132,7 +132,7 @@ export default class List {
    * let l = list.add(1, 0);
    */
   add(data, i) {
-    if(!isNaN(i) && isNotUndefined(data) && isNotUndefined(i) && isNotNull(data) && isNotNull(i)) {
+    if(!isNaN(i) && isNotUndefined([data, i]) && isNotNull([data, i])) {
       if (i === 0) {
         return this.addFirst(data);
       } else if (i === this.size() - 1) {
@@ -384,7 +384,7 @@ export default class List {
    * This method parse the list to a JSON
    * @access public
    * @since 0.1.0
-   * @return null if the list is empty or an object representing the list
+   * @return {object} null if the list is empty or an object representing the list
    * @example
    * let json = list.toJSON();
    */
@@ -399,4 +399,106 @@ export default class List {
       return json;
     }
   }
+
+  /**
+   * @function toArray
+   * this method convert the list into an array
+   * @access public
+   * @since 0.2.0
+   * @return {Array<any>} return an array with the elements contained in the list or null if the list is empty
+   * @example
+   * let vec = list.toArray();
+   */
+  toArray() {
+    if (this.isEmpty()) {
+      return null;
+    } else {
+      return [...this.array];
+    }
+  }
+
+  /**
+   * @function indexOf
+   * This method returns the current index of an element
+   * @access public
+   * @since 0.2.0
+   * @param {any} key the element that we are searching in the list
+   * @param {function(key: any, value: any)} comparer a function that return true when the two values are equals
+   * @throws {Error001} When shits go bad
+   * @throws {Error401} When the key is null
+   * @throws {Error402} When the key is undefined
+   * @throws {Error501} When the comparer is null
+   * @throws {Error503} When the comparer is not a function
+   * @return {number} the index of the element or -1 if the element isn't in the list
+   * @example
+   * let i = list.indexOf(3);
+   * let j = list.indexOf(3, (x, y) => x === y["x"]);
+   */
+  indexOf(key, comparer) {
+    if (isNotUndefined(key) && isNotNull(key) && isUndefined(comparer)) {
+      let idx = -1;
+      for (let i = 0; i < this.array.length; i++) {
+        if(this.array[i] === key) {
+          idx = i;
+          break;
+        }
+      }
+      return idx;
+    } else if (isNotUndefined([key, comparer]) && isNotUndefined([key, comparer]) && isFunction(comparer)) {
+      let idx = -1;
+      for (let i = 0; i < this.array.length; i++) {
+        if (comparer(key, this.array[i])) {
+          idx = i;
+          break;
+        }
+      }
+      return idx;
+    } else if(isNull(key)) {
+      throw error["401"];
+    } else if (isUndefined(key)) {
+      throw error["402"];
+    } else if (isNull(comparer)) {
+      throw error["501"];
+    } else  if (isNotFunction(comparer)) {
+      throw error["503"];
+    } else {
+      throw error["001"];
+    }
+  }
+
+  /**
+   * @function sort
+   * This function sort the list if according to a comparer function 
+   * if the comparer parameter is undefined (not provided) the list will be order ascending
+   * @access public
+   * @since 0.2.0
+   * @param {function(key: any, value: any)} comparer a function that allow the library to decided what element should be put first
+   * @throws {Error501} when the comparer is null
+   * @throws {Error503} when the comparer isn't a function
+   * @throws {Error001} when shits go bad
+   * @return {List} an new instance of the class with the list sorted;
+   * @example
+   * let l = list.sort((x, y) => y > x);
+   */
+  sort(comparer) {
+    if (this.isEmpty()) {
+      throw error["500"];
+    } else {
+      if (isNotUndefined(comparer) && isNotNull(comparer) && isFunction(comparer)) {
+        let vec = [...this.array];
+        return this.builder(vec.sort(comparer));
+      } else if (isNull(comparer)) {
+        throw error["501"];
+      } else if (isUndefined(comparer)) {
+        comparer = (x, y) => x > y;
+        let vec = [...this.array];
+        return this.builder(vec.sort(comparer));
+      } else if (isNotFunction(comparer)) {
+        throw error["503"];
+      } else {
+        throw error["001"];
+      }
+    }
+  }
+
 }

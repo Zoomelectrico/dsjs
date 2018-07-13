@@ -19,8 +19,7 @@ log2();
 l = l.add(3, 2);
 log(l);
 log2();
-l = l.map(x => 2*x);
-log(l)
-log2()
-log(l.toString());
-log(l.toJSON());
+log(l.indexOf(3));
+log2();
+log(l.sort((x, y) => y > x));
+log(l.addAll([6,7,8]));

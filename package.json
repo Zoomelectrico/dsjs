@@ -1,6 +1,6 @@
 {
   "name": "listas",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scripts": {
     "build": "babel src -d lib",
     "build-docs": "./node_modules/.bin/esdoc",
@@ -16,8 +16,7 @@
     "Structures",
     "Javascript",
     "Inmutable",
-    "dependecies",
-    "free",
+    "dependecies free",
     "data"
   ],
   "author": "Jose Roberto Quevedo",

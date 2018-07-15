@@ -1,4 +1,13 @@
-import { isNotNull, isNotUndefined, isNull, isUndefined, isFunction, isNotFunction, isArray, isNotArray } from './helper/check';
+import { 
+  isNotNull, 
+  isNotUndefined, 
+  isNull, 
+  isUndefined, 
+  isFunction, 
+  isNotFunction, 
+  isArray, 
+  isNotArray 
+  } from './helper/check';
 import error from './errors/errors';
 
 /**
@@ -148,10 +157,8 @@ export default class List {
             vec.push(data);
           }
           vec.push(this.array[j]);
-          if(j === this.array.length - 1) {
-            return this.builder(vec);
-          }
         }
+        return this.builder(vec);
       }
     } else if (isNull(data)) {
       throw error["100"];
@@ -316,7 +323,7 @@ export default class List {
    */
   forEach(callback) {
     if(isFunction(callback) && !this.isEmpty()) {
-      let vec = this.array;
+      let vec = [...this.array];
       let list = this.builder(vec);
       for (let i = 0; i < vec.length; i++) {
         callback(vec[i], i, list);  
@@ -345,7 +352,7 @@ export default class List {
    */
   map(callback) {
     if(!this.isEmpty() && isFunction(callback)) {
-      let vec = this.array;
+      let vec = [...this.array];
       let aux = [];
       for (let i = 0; i < vec.length; i++) {
         aux.push(callback(vec[i], i, vec));
@@ -375,7 +382,7 @@ export default class List {
     if(this.isEmpty()) {
       return null;
     } else {
-      return this.array.join();
+      return [...this.array].join();
     }
   }
 
@@ -472,7 +479,7 @@ export default class List {
    * if the comparer parameter is undefined (not provided) the list will be order ascending
    * @access public
    * @since 0.2.0
-   * @param {function(key: any, value: any)} comparer a function that allow the library to decided what element should be put first
+   * @param { function(key: any, value: any) } comparer a function that allow the library to decided what element should be put first
    * @throws {Error501} when the comparer is null
    * @throws {Error503} when the comparer isn't a function
    * @throws {Error001} when shits go bad

@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/List.js",
-    "content": "import { isNotNull, isNotUndefined, isNull, isUndefined, isFunction, isNotFunction, isArray, isNotArray } from './helper/check';\nimport error from './errors/errors';\n\n/**\n * List class, this class allow you to use a LinkedList DS based on an array\n * @example\n * let list = new List();\n * @access public\n * @author Jose Roberto Quevedo\n * @version 1.1.0\n * @since 0.1.0\n */\nexport default class List {\n  /**\n   * @constructor this is constructor of the class, here an empty array is initialize\n   * @since 0.1.0\n   * @access public\n   */\n  constructor() {\n    /**\n     * @member {Array} array this is a way for easy implementing list and for making the lib more quick\n     * @access private\n     * @since 0.1.0\n     */\n    this.array = [];\n  }\n\n  /**\n   * @function builder\n   * This method is an interface for the class to create a list from the operation aplided to the other;\n   * @access private\n   * @since 0.1.0\n   * @param {Array} array\n   */\n  builder(array) {\n    let list = new List();\n    list.array = array;\n    return list;\n  } \n\n  /**\n   * @function isEmpty\n   * This method say if a list is empty or not.\n   * @access public\n   * @since 0.1.0\n   * @return { List } true if the list is empty or false otherwaise\n   * @example\n   * let boolean = list.isEmpty();\n   */\n  isEmpty() {\n    return this.array.length <= 0;\n  }\n\n  /**\n   * @function size\n   * this method say what is the size of the list\n   * @access public\n   * @since 0.1.0\n   * @return {number} 0 if the list is empty or an positive integer representing the list size\n   * @example\n   * let boolean = list.isEmpty();\n   */\n  size() {\n    return this.array.length;\n  }\n\n  /**\n   * @function addFirst\n   * This method allow you to add an element in the first position of the list \n   * @param {any} data the element than you whan to add to the list\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @example \n   * let l = list.addFirst(1);\n   */\n  addFirst(data) {\n    if(isNotUndefined(data) && isNotNull(data)) {\n      return this.builder([data, ...this.array]);\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function addLast\n   * This method allow you to add an element in the last position of the list \n   * @param {any} data the element than you whan to add to the list\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @example \n   * let l = list.addLast(1);\n   */\n  addLast(data) {\n    if(isNotUndefined(data) && isNotNull(data)) {\n      return this.builder([...this.array, data]);\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function add\n   * This method allow you to add an element in the position i of the list \n   * @param {any} data the element than you whan to add to the list\n   * @param {number} i the index value in which to add the element [0, list.size())\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @throws {Error110} when the index is null\n   * @throws {Error111} when the index is undefined\n   * @throws {Error112} when the index is Not a Number\n   * @example \n   * let l = list.add(1, 0);\n   */\n  add(data, i) {\n    if(!isNaN(i) && isNotUndefined([data, i]) && isNotNull([data, i])) {\n      if (i === 0) {\n        return this.addFirst(data);\n      } else if (i === this.size() - 1) {\n        return this.addLast(data);\n      } else if (i < 0) {\n        return this.add(data, this.size() + i);\n      } else if (i >= this.size()) {\n        throw error[\"113\"];\n      } else {\n        let vec = [];\n        for (let j = 0; j < this.array.length; j++) {\n          if(i === j) {\n            vec.push(data);\n          }\n          vec.push(this.array[j]);\n          if(j === this.array.length - 1) {\n            return this.builder(vec);\n          }\n        }\n      }\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else if (isNull(i)) {\n      throw error[\"110\"];\n    } else if (isUndefined(i)) {\n      throw error[\"111\"];\n    } else  if (isNaN(i)) {\n      throw error[\"112\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function addAll\n   * This method allow you to add an collection of elements to the list \n   * @param {any[]} collection an Array of elements to add \n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new elements added\n   * @throws {Error001} when shit go bad\n   * @throws {Error102} when collection is null\n   * @throws {Error103} when collection is undefined\n   * @throws {Error104} when collection is not an array\n   * @example \n   * let l = list.addAll([1,'a',3]);\n   */\n  addAll(collection) {\n    if(isNotUndefined(collection) && isNotNull(collection) && isArray(collection)) {\n      return this.builder([...this.array, ...collection]);\n    } else if (isNotArray(collection)) {\n      throw error[\"104\"];\n    } else if (isNull(collection)) {\n      throw error[\"102\"];\n    } else if (isUndefined(collection)) {\n      throw error[\"103\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function deleteFirst\n   * This method allow you to delete the first element of the list  \n   * @access public\n   * @since 0.1.0\n   * @return { List } null is the list is empty or a new instance of the class with the elements of the other list except from the first\n   * @example \n   * let l = list.deleteFirst();\n   */\n  deleteFirst() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.builder(this.array.slice(1, this.array.length));\n    }\n  }\n\n  /**\n   * @function deleteLast\n   * This method allow you to last the first element of the list  \n   * @access public\n   * @since 0.1.0\n   * @return { List } null is the list is empty or a new instance of the class with the elements of the other list except from the first\n   * @example \n   * let l = list.deleteLast();\n   */\n  deleteLast() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.builder(this.array.slice(0, this.array.length - 1));\n    }\n  }\n\n  /**\n   * @function delete\n   * This method allow you to delete the element i from the list\n   * @param {number} i the index of the element to eliminate [0, list.size())\n   * @access public\n   * @since 0.1.0\n   * @return { List } null if the list is empty a new instance of the class with the elements of the other list except the element i\n   * @throws {Error001} when shit go bad\n   * @throws {Error110} when i is null\n   * @throws {Error111} when i is undefined\n   * @throws {Error112} when i is Not a Number\n   * @throws {Error113} when i is bigger than the list size\n   * @example \n   * let l = list.delete(0);\n   */\n  delete(i) {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      if(isNotUndefined(i) && isNotNull(i) && !isNaN(i)) {\n        if(i === 0) {\n          return this.deleteFirst();\n        } else if (i === this.size() - 1) {\n          return this.deleteLast();\n        } else if(i < 0) {\n          this.delete(this.size() + i);\n        } else if (i >= this.size()) {\n          throw error[\"113\"];\n        } else {\n          let vec = [];\n          for (let j = 0; j < this.array.length; j++) {\n            if(i !== j) {\n              vec.push(this.array[j]);\n            }\n          }\n          return this.builder(vec); \n        }\n      } else if (isNaN(i)) {\n        throw error[\"112\"];\n      } else  if (isNull(i)) {\n        throw error[\"110\"];\n      } else if (isUndefined(i)) {\n        throw error[\"111\"];\n      } else {\n        throw error[\"001\"];\n      }\n    }\n  }\n\n  /**\n   * @function clear\n   * WARNING: This method delete all the element of the original list.\n   * This should be used carefully\n   * @access public\n   * @since 0.1.0\n   * @example\n   * list.clear();\n   */\n  clear() {\n    if(!this.isEmpty()) {\n      console.warn(\"DS.js Warning: You're clearing the list all the data will be erased. You have 5s to cancel the operation\");\n      setTimeout(() => {\n        console.log(\"DS.js Warning: The data is being erased...\");\n        this.array = [];\n      }, 5000);\n    } else {\n      console.log(\"Your list doesn't have any data to delete\");\n    }\n  }\n\n  /**\n   * @function forEach\n   * This method allow us to iterate over the list\n   * @param {function (value: any, i: number, vec: array)} callback this is a callback function that will be execute for every element in the list, it should not mutated the element of the list\n   * @since 0.1.0\n   * @access public\n   * @throws {Error001} when shit go bad\n   * @throws {Error200} when the list is empty\n   * @throws {Error300} when callback is not a function \n   * @example\n   * list.forEach((x,i,vec) => {\n   *  console.log(`Value: ${x}, Index: ${i}`);\n   * });\n   */\n  forEach(callback) {\n    if(isFunction(callback) && !this.isEmpty()) {\n      let vec = this.array;\n      let list = this.builder(vec);\n      for (let i = 0; i < vec.length; i++) {\n        callback(vec[i], i, list);  \n      } \n    } else if (this.isEmpty()) {\n      throw error[\"200\"];\n    } else if (isNotFunction(callback)) {\n      throw error[\"300\"];\n    } else {\n      throw error[\"001\"]\n    }\n  }\n\n  /**\n   * @function map\n   * This method allow us to map over the list\n   * @param {function (value: any, i: number, vec: array)} callback this is a callback function that will be execute for every element in the list, and it should mutated the element of the list\n   * @since 0.1.0\n   * @access public\n   * @throws {Error001} when shit go bad\n   * @throws {Error200} when the list is empty\n   * @throws {Error300} when callback is not a function\n   * @return { List } An instance of the class with the mutated elements \n   * @example \n   * let l = list.map((x,i,vec) => x * x);\n   */\n  map(callback) {\n    if(!this.isEmpty() && isFunction(callback)) {\n      let vec = this.array;\n      let aux = [];\n      for (let i = 0; i < vec.length; i++) {\n        aux.push(callback(vec[i], i, vec));\n        if(i === vec.length - 1) {\n          return this.builder(aux);\n        } \n      }\n    } else if (this.isEmpty()) {\n      throw error[\"200\"];\n    } else if (isNotFunction(callback)) {\n      throw error[\"300\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function toString\n   * This method convert the current list to and string, just like this: 1,2,3,4\n   * @access public\n   * @since 0.1.0\n   * @return null if the list is empty or a string representig the list\n   * @example\n   * let string = list.string();\n   */\n  toString() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.array.join();\n    }\n  }\n\n  /**\n   * @function toJSON\n   * This method parse the list to a JSON\n   * @access public\n   * @since 0.1.0\n   * @return {object} null if the list is empty or an object representing the list\n   * @example\n   * let json = list.toJSON();\n   */\n  toJSON() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      let json = {};\n      for (let i = 0; i < this.array.length; i++) {\n        json[i] = this.array[i];\n      }\n      return json;\n    }\n  }\n\n  /**\n   * @function toArray\n   * this method convert the list into an array\n   * @access public\n   * @since 0.2.0\n   * @return {Array<any>} return an array with the elements contained in the list or null if the list is empty\n   * @example\n   * let vec = list.toArray();\n   */\n  toArray() {\n    if (this.isEmpty()) {\n      return null;\n    } else {\n      return [...this.array];\n    }\n  }\n\n  /**\n   * @function indexOf\n   * This method returns the current index of an element\n   * @access public\n   * @since 0.2.0\n   * @param {any} key the element that we are searching in the list\n   * @param {function(key: any, value: any)} comparer a function that return true when the two values are equals\n   * @throws {Error001} When shits go bad\n   * @throws {Error401} When the key is null\n   * @throws {Error402} When the key is undefined\n   * @throws {Error501} When the comparer is null\n   * @throws {Error503} When the comparer is not a function\n   * @return {number} the index of the element or -1 if the element isn't in the list\n   * @example\n   * let i = list.indexOf(3);\n   * let j = list.indexOf(3, (x, y) => x === y[\"x\"]);\n   */\n  indexOf(key, comparer) {\n    if (isNotUndefined(key) && isNotNull(key) && isUndefined(comparer)) {\n      let idx = -1;\n      for (let i = 0; i < this.array.length; i++) {\n        if(this.array[i] === key) {\n          idx = i;\n          break;\n        }\n      }\n      return idx;\n    } else if (isNotUndefined([key, comparer]) && isNotUndefined([key, comparer]) && isFunction(comparer)) {\n      let idx = -1;\n      for (let i = 0; i < this.array.length; i++) {\n        if (comparer(key, this.array[i])) {\n          idx = i;\n          break;\n        }\n      }\n      return idx;\n    } else if(isNull(key)) {\n      throw error[\"401\"];\n    } else if (isUndefined(key)) {\n      throw error[\"402\"];\n    } else if (isNull(comparer)) {\n      throw error[\"501\"];\n    } else  if (isNotFunction(comparer)) {\n      throw error[\"503\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function sort\n   * This function sort the list if according to a comparer function \n   * if the comparer parameter is undefined (not provided) the list will be order ascending\n   * @access public\n   * @since 0.2.0\n   * @param {function(key: any, value: any)} comparer a function that allow the library to decided what element should be put first\n   * @throws {Error501} when the comparer is null\n   * @throws {Error503} when the comparer isn't a function\n   * @throws {Error001} when shits go bad\n   * @return {List} an new instance of the class with the list sorted;\n   * @example\n   * let l = list.sort((x, y) => y > x);\n   */\n  sort(comparer) {\n    if (this.isEmpty()) {\n      throw error[\"500\"];\n    } else {\n      if (isNotUndefined(comparer) && isNotNull(comparer) && isFunction(comparer)) {\n        let vec = [...this.array];\n        return this.builder(vec.sort(comparer));\n      } else if (isNull(comparer)) {\n        throw error[\"501\"];\n      } else if (isUndefined(comparer)) {\n        comparer = (x, y) => x > y;\n        let vec = [...this.array];\n        return this.builder(vec.sort(comparer));\n      } else if (isNotFunction(comparer)) {\n        throw error[\"503\"];\n      } else {\n        throw error[\"001\"];\n      }\n    }\n  }\n\n}",
+    "content": "import { \n  isNotNull, \n  isNotUndefined, \n  isNull, \n  isUndefined, \n  isFunction, \n  isNotFunction, \n  isArray, \n  isNotArray \n  } from './helper/check';\nimport error from './errors/errors';\n\n/**\n * List class, this class allow you to use a LinkedList DS based on an array\n * @example\n * let list = new List();\n * @access public\n * @author Jose Roberto Quevedo\n * @version 1.1.0\n * @since 0.1.0\n */\nexport default class List {\n  /**\n   * @constructor this is constructor of the class, here an empty array is initialize\n   * @since 0.1.0\n   * @access public\n   */\n  constructor() {\n    /**\n     * @member {Array} array this is a way for easy implementing list and for making the lib more quick\n     * @access private\n     * @since 0.1.0\n     */\n    this.array = [];\n  }\n\n  /**\n   * @function builder\n   * This method is an interface for the class to create a list from the operation aplided to the other;\n   * @access private\n   * @since 0.1.0\n   * @param {Array} array\n   */\n  builder(array) {\n    let list = new List();\n    list.array = array;\n    return list;\n  } \n\n  /**\n   * @function isEmpty\n   * This method say if a list is empty or not.\n   * @access public\n   * @since 0.1.0\n   * @return { List } true if the list is empty or false otherwaise\n   * @example\n   * let boolean = list.isEmpty();\n   */\n  isEmpty() {\n    return this.array.length <= 0;\n  }\n\n  /**\n   * @function size\n   * this method say what is the size of the list\n   * @access public\n   * @since 0.1.0\n   * @return {number} 0 if the list is empty or an positive integer representing the list size\n   * @example\n   * let boolean = list.isEmpty();\n   */\n  size() {\n    return this.array.length;\n  }\n\n  /**\n   * @function addFirst\n   * This method allow you to add an element in the first position of the list \n   * @param {any} data the element than you whan to add to the list\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @example \n   * let l = list.addFirst(1);\n   */\n  addFirst(data) {\n    if(isNotUndefined(data) && isNotNull(data)) {\n      return this.builder([data, ...this.array]);\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function addLast\n   * This method allow you to add an element in the last position of the list \n   * @param {any} data the element than you whan to add to the list\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @example \n   * let l = list.addLast(1);\n   */\n  addLast(data) {\n    if(isNotUndefined(data) && isNotNull(data)) {\n      return this.builder([...this.array, data]);\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function add\n   * This method allow you to add an element in the position i of the list \n   * @param {any} data the element than you whan to add to the list\n   * @param {number} i the index value in which to add the element [0, list.size())\n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new element added\n   * @throws {Error001} when shit go bad\n   * @throws {Error100} when data is null\n   * @throws {Error101} when data is undefined\n   * @throws {Error110} when the index is null\n   * @throws {Error111} when the index is undefined\n   * @throws {Error112} when the index is Not a Number\n   * @example \n   * let l = list.add(1, 0);\n   */\n  add(data, i) {\n    if(!isNaN(i) && isNotUndefined([data, i]) && isNotNull([data, i])) {\n      if (i === 0) {\n        return this.addFirst(data);\n      } else if (i === this.size() - 1) {\n        return this.addLast(data);\n      } else if (i < 0) {\n        return this.add(data, this.size() + i);\n      } else if (i >= this.size()) {\n        throw error[\"113\"];\n      } else {\n        let vec = [];\n        for (let j = 0; j < this.array.length; j++) {\n          if(i === j) {\n            vec.push(data);\n          }\n          vec.push(this.array[j]);\n        }\n        return this.builder(vec);\n      }\n    } else if (isNull(data)) {\n      throw error[\"100\"];\n    } else if (isUndefined(data)) {\n      throw error[\"101\"];\n    } else if (isNull(i)) {\n      throw error[\"110\"];\n    } else if (isUndefined(i)) {\n      throw error[\"111\"];\n    } else  if (isNaN(i)) {\n      throw error[\"112\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function addAll\n   * This method allow you to add an collection of elements to the list \n   * @param {any[]} collection an Array of elements to add \n   * @access public\n   * @since 0.1.0\n   * @return { List } a new instance of the class with the elements of the other list and the new elements added\n   * @throws {Error001} when shit go bad\n   * @throws {Error102} when collection is null\n   * @throws {Error103} when collection is undefined\n   * @throws {Error104} when collection is not an array\n   * @example \n   * let l = list.addAll([1,'a',3]);\n   */\n  addAll(collection) {\n    if(isNotUndefined(collection) && isNotNull(collection) && isArray(collection)) {\n      return this.builder([...this.array, ...collection]);\n    } else if (isNotArray(collection)) {\n      throw error[\"104\"];\n    } else if (isNull(collection)) {\n      throw error[\"102\"];\n    } else if (isUndefined(collection)) {\n      throw error[\"103\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function deleteFirst\n   * This method allow you to delete the first element of the list  \n   * @access public\n   * @since 0.1.0\n   * @return { List } null is the list is empty or a new instance of the class with the elements of the other list except from the first\n   * @example \n   * let l = list.deleteFirst();\n   */\n  deleteFirst() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.builder(this.array.slice(1, this.array.length));\n    }\n  }\n\n  /**\n   * @function deleteLast\n   * This method allow you to last the first element of the list  \n   * @access public\n   * @since 0.1.0\n   * @return { List } null is the list is empty or a new instance of the class with the elements of the other list except from the first\n   * @example \n   * let l = list.deleteLast();\n   */\n  deleteLast() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return this.builder(this.array.slice(0, this.array.length - 1));\n    }\n  }\n\n  /**\n   * @function delete\n   * This method allow you to delete the element i from the list\n   * @param {number} i the index of the element to eliminate [0, list.size())\n   * @access public\n   * @since 0.1.0\n   * @return { List } null if the list is empty a new instance of the class with the elements of the other list except the element i\n   * @throws {Error001} when shit go bad\n   * @throws {Error110} when i is null\n   * @throws {Error111} when i is undefined\n   * @throws {Error112} when i is Not a Number\n   * @throws {Error113} when i is bigger than the list size\n   * @example \n   * let l = list.delete(0);\n   */\n  delete(i) {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      if(isNotUndefined(i) && isNotNull(i) && !isNaN(i)) {\n        if(i === 0) {\n          return this.deleteFirst();\n        } else if (i === this.size() - 1) {\n          return this.deleteLast();\n        } else if(i < 0) {\n          this.delete(this.size() + i);\n        } else if (i >= this.size()) {\n          throw error[\"113\"];\n        } else {\n          let vec = [];\n          for (let j = 0; j < this.array.length; j++) {\n            if(i !== j) {\n              vec.push(this.array[j]);\n            }\n          }\n          return this.builder(vec); \n        }\n      } else if (isNaN(i)) {\n        throw error[\"112\"];\n      } else  if (isNull(i)) {\n        throw error[\"110\"];\n      } else if (isUndefined(i)) {\n        throw error[\"111\"];\n      } else {\n        throw error[\"001\"];\n      }\n    }\n  }\n\n  /**\n   * @function clear\n   * WARNING: This method delete all the element of the original list.\n   * This should be used carefully\n   * @access public\n   * @since 0.1.0\n   * @example\n   * list.clear();\n   */\n  clear() {\n    if(!this.isEmpty()) {\n      console.warn(\"DS.js Warning: You're clearing the list all the data will be erased. You have 5s to cancel the operation\");\n      setTimeout(() => {\n        console.log(\"DS.js Warning: The data is being erased...\");\n        this.array = [];\n      }, 5000);\n    } else {\n      console.log(\"Your list doesn't have any data to delete\");\n    }\n  }\n\n  /**\n   * @function forEach\n   * This method allow us to iterate over the list\n   * @param {function (value: any, i: number, vec: array)} callback this is a callback function that will be execute for every element in the list, it should not mutated the element of the list\n   * @since 0.1.0\n   * @access public\n   * @throws {Error001} when shit go bad\n   * @throws {Error200} when the list is empty\n   * @throws {Error300} when callback is not a function \n   * @example\n   * list.forEach((x,i,vec) => {\n   *  console.log(`Value: ${x}, Index: ${i}`);\n   * });\n   */\n  forEach(callback) {\n    if(isFunction(callback) && !this.isEmpty()) {\n      let vec = [...this.array];\n      let list = this.builder(vec);\n      for (let i = 0; i < vec.length; i++) {\n        callback(vec[i], i, list);  \n      } \n    } else if (this.isEmpty()) {\n      throw error[\"200\"];\n    } else if (isNotFunction(callback)) {\n      throw error[\"300\"];\n    } else {\n      throw error[\"001\"]\n    }\n  }\n\n  /**\n   * @function map\n   * This method allow us to map over the list\n   * @param {function (value: any, i: number, vec: array)} callback this is a callback function that will be execute for every element in the list, and it should mutated the element of the list\n   * @since 0.1.0\n   * @access public\n   * @throws {Error001} when shit go bad\n   * @throws {Error200} when the list is empty\n   * @throws {Error300} when callback is not a function\n   * @return { List } An instance of the class with the mutated elements \n   * @example \n   * let l = list.map((x,i,vec) => x * x);\n   */\n  map(callback) {\n    if(!this.isEmpty() && isFunction(callback)) {\n      let vec = [...this.array];\n      let aux = [];\n      for (let i = 0; i < vec.length; i++) {\n        aux.push(callback(vec[i], i, vec));\n        if(i === vec.length - 1) {\n          return this.builder(aux);\n        } \n      }\n    } else if (this.isEmpty()) {\n      throw error[\"200\"];\n    } else if (isNotFunction(callback)) {\n      throw error[\"300\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function toString\n   * This method convert the current list to and string, just like this: 1,2,3,4\n   * @access public\n   * @since 0.1.0\n   * @return null if the list is empty or a string representig the list\n   * @example\n   * let string = list.string();\n   */\n  toString() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      return [...this.array].join();\n    }\n  }\n\n  /**\n   * @function toJSON\n   * This method parse the list to a JSON\n   * @access public\n   * @since 0.1.0\n   * @return {object} null if the list is empty or an object representing the list\n   * @example\n   * let json = list.toJSON();\n   */\n  toJSON() {\n    if(this.isEmpty()) {\n      return null;\n    } else {\n      let json = {};\n      for (let i = 0; i < this.array.length; i++) {\n        json[i] = this.array[i];\n      }\n      return json;\n    }\n  }\n\n  /**\n   * @function toArray\n   * this method convert the list into an array\n   * @access public\n   * @since 0.2.0\n   * @return {Array<any>} return an array with the elements contained in the list or null if the list is empty\n   * @example\n   * let vec = list.toArray();\n   */\n  toArray() {\n    if (this.isEmpty()) {\n      return null;\n    } else {\n      return [...this.array];\n    }\n  }\n\n  /**\n   * @function indexOf\n   * This method returns the current index of an element\n   * @access public\n   * @since 0.2.0\n   * @param {any} key the element that we are searching in the list\n   * @param {function(key: any, value: any)} comparer a function that return true when the two values are equals\n   * @throws {Error001} When shits go bad\n   * @throws {Error401} When the key is null\n   * @throws {Error402} When the key is undefined\n   * @throws {Error501} When the comparer is null\n   * @throws {Error503} When the comparer is not a function\n   * @return {number} the index of the element or -1 if the element isn't in the list\n   * @example\n   * let i = list.indexOf(3);\n   * let j = list.indexOf(3, (x, y) => x === y[\"x\"]);\n   */\n  indexOf(key, comparer) {\n    if (isNotUndefined(key) && isNotNull(key) && isUndefined(comparer)) {\n      let idx = -1;\n      for (let i = 0; i < this.array.length; i++) {\n        if(this.array[i] === key) {\n          idx = i;\n          break;\n        }\n      }\n      return idx;\n    } else if (isNotUndefined([key, comparer]) && isNotUndefined([key, comparer]) && isFunction(comparer)) {\n      let idx = -1;\n      for (let i = 0; i < this.array.length; i++) {\n        if (comparer(key, this.array[i])) {\n          idx = i;\n          break;\n        }\n      }\n      return idx;\n    } else if(isNull(key)) {\n      throw error[\"401\"];\n    } else if (isUndefined(key)) {\n      throw error[\"402\"];\n    } else if (isNull(comparer)) {\n      throw error[\"501\"];\n    } else  if (isNotFunction(comparer)) {\n      throw error[\"503\"];\n    } else {\n      throw error[\"001\"];\n    }\n  }\n\n  /**\n   * @function sort\n   * This function sort the list if according to a comparer function \n   * if the comparer parameter is undefined (not provided) the list will be order ascending\n   * @access public\n   * @since 0.2.0\n   * @param { function(key: any, value: any) } comparer a function that allow the library to decided what element should be put first\n   * @throws {Error501} when the comparer is null\n   * @throws {Error503} when the comparer isn't a function\n   * @throws {Error001} when shits go bad\n   * @return {List} an new instance of the class with the list sorted;\n   * @example\n   * let l = list.sort((x, y) => y > x);\n   */\n  sort(comparer) {\n    if (this.isEmpty()) {\n      throw error[\"500\"];\n    } else {\n      if (isNotUndefined(comparer) && isNotNull(comparer) && isFunction(comparer)) {\n        let vec = [...this.array];\n        return this.builder(vec.sort(comparer));\n      } else if (isNull(comparer)) {\n        throw error[\"501\"];\n      } else if (isUndefined(comparer)) {\n        comparer = (x, y) => x > y;\n        let vec = [...this.array];\n        return this.builder(vec.sort(comparer));\n      } else if (isNotFunction(comparer)) {\n        throw error[\"503\"];\n      } else {\n        throw error[\"001\"];\n      }\n    }\n  }\n\n}",
     "static": true,
     "longname": "/home/zoomelectrico/Desktop/work/DSJS/src/List.js",
     "access": "public",
@@ -589,7 +589,7 @@
     "examples": [
       "let list = new List();"
     ],
-    "lineNumber": 13,
+    "lineNumber": 22,
     "since": "0.1.0",
     "version": "1.1.0",
     "unknown": [
@@ -611,7 +611,7 @@
     "longname": "src/List.js~List#constructor",
     "access": "public",
     "description": "",
-    "lineNumber": 19,
+    "lineNumber": 28,
     "since": "0.1.0",
     "unknown": [
       {
@@ -629,7 +629,7 @@
     "longname": "src/List.js~List#array",
     "access": "private",
     "description": "",
-    "lineNumber": 25,
+    "lineNumber": 34,
     "since": "0.1.0",
     "type": {
       "types": [
@@ -648,7 +648,7 @@
     "longname": "src/List.js~List#builder",
     "access": "private",
     "description": "",
-    "lineNumber": 35,
+    "lineNumber": 44,
     "since": "0.1.0",
     "unknown": [
       {
@@ -688,7 +688,7 @@
     "examples": [
       "let boolean = list.isEmpty();"
     ],
-    "lineNumber": 50,
+    "lineNumber": 59,
     "since": "0.1.0",
     "unknown": [
       {
@@ -720,7 +720,7 @@
     "examples": [
       "let boolean = list.isEmpty();"
     ],
-    "lineNumber": 63,
+    "lineNumber": 72,
     "since": "0.1.0",
     "unknown": [
       {
@@ -752,7 +752,7 @@
     "examples": [
       "let l = list.addFirst(1);"
     ],
-    "lineNumber": 80,
+    "lineNumber": 89,
     "since": "0.1.0",
     "unknown": [
       {
@@ -815,7 +815,7 @@
     "examples": [
       "let l = list.addLast(1);"
     ],
-    "lineNumber": 105,
+    "lineNumber": 114,
     "since": "0.1.0",
     "unknown": [
       {
@@ -878,7 +878,7 @@
     "examples": [
       "let l = list.add(1, 0);"
     ],
-    "lineNumber": 134,
+    "lineNumber": 143,
     "since": "0.1.0",
     "unknown": [
       {
@@ -969,7 +969,7 @@
     "examples": [
       "let l = list.addAll([1,'a',3]);"
     ],
-    "lineNumber": 185,
+    "lineNumber": 192,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1038,7 +1038,7 @@
     "examples": [
       "let l = list.deleteFirst();"
     ],
-    "lineNumber": 208,
+    "lineNumber": 215,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1070,7 +1070,7 @@
     "examples": [
       "let l = list.deleteLast();"
     ],
-    "lineNumber": 225,
+    "lineNumber": 232,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1102,7 +1102,7 @@
     "examples": [
       "let l = list.delete(0);"
     ],
-    "lineNumber": 248,
+    "lineNumber": 255,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1177,7 +1177,7 @@
     "examples": [
       "list.clear();"
     ],
-    "lineNumber": 291,
+    "lineNumber": 298,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1202,7 +1202,7 @@
     "examples": [
       "list.forEach((x,i,vec) => {\n console.log(`Value: ${x}, Index: ${i}`);\n});"
     ],
-    "lineNumber": 317,
+    "lineNumber": 324,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1258,7 +1258,7 @@
     "examples": [
       "let l = list.map((x,i,vec) => x * x);"
     ],
-    "lineNumber": 346,
+    "lineNumber": 353,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1321,7 +1321,7 @@
     "examples": [
       "let string = list.string();"
     ],
-    "lineNumber": 374,
+    "lineNumber": 381,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1353,7 +1353,7 @@
     "examples": [
       "let json = list.toJSON();"
     ],
-    "lineNumber": 391,
+    "lineNumber": 398,
     "since": "0.1.0",
     "unknown": [
       {
@@ -1385,7 +1385,7 @@
     "examples": [
       "let vec = list.toArray();"
     ],
-    "lineNumber": 412,
+    "lineNumber": 419,
     "since": "0.2.0",
     "unknown": [
       {
@@ -1417,7 +1417,7 @@
     "examples": [
       "let i = list.indexOf(3);\nlet j = list.indexOf(3, (x, y) => x === y[\"x\"]);"
     ],
-    "lineNumber": 437,
+    "lineNumber": 444,
     "since": "0.2.0",
     "unknown": [
       {
@@ -1502,7 +1502,7 @@
     "examples": [
       "let l = list.sort((x, y) => y > x);"
     ],
-    "lineNumber": 483,
+    "lineNumber": 490,
     "since": "0.2.0",
     "unknown": [
       {
@@ -1514,7 +1514,7 @@
       {
         "nullable": null,
         "types": [
-          "function(key: any, value: any)"
+          " function(key: any, value: any) "
         ],
         "spread": false,
         "optional": false,
